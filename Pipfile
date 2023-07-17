@@ -9,7 +9,7 @@ flask-babel = "*"
 
 [dev-packages]
 isort = "*"
-black = "*"
+black-with-tabs = "*"
 
 [requires]
 python_version = "3.11"
