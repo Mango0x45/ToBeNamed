@@ -19,7 +19,8 @@ Once you’ve got those two, create a new Python virtual environment with
 libraries with `pipenv install --dev`.
 
 You should now be able to run the development environment with `python3
-src/app.py`.
+src/app.py` so long as you’ve got the virtual environment active.  You can enter
+the virtual environment with `pipenv shell`.
 
 
 ### Making a Contribution
