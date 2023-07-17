@@ -22,4 +22,21 @@ You should now be able to run the development environment with `python3
 src/app.py`.
 
 
+### Making a Contribution
+
+Just some general rules for contributing:
+
+- Start your commit messages with capital letter
+
+- Run `make format` to format your code _before_ you commit
+
+  - This will require you to either be on a UNIX-like system, or to use WSL.
+    But if you’re on Windows you should be using WSL anyways.
+
+- Do each new thing on a seperate branch
+
+  - Making 5 unrelated changes on the same branch is just annoying to deal with.
+    `git branch` is your best friend.
+
+
 [1]: https://pypi.org/project/pipenv/
