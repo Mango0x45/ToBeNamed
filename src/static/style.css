@@ -4,14 +4,167 @@
 
 body {
 	margin: 0;
+	font-size: 18px;
 }
 
 header {
 	width: 100%;
-	display: flex;
 	justify-content: center;
+	display: flex;
 }
 
 footer p {
 	text-align: center;
+}
+
+nav {
+	height: 5rem;
+	background: blue;
+	z-index: 991;
+}
+
+nav menu {
+	display: flex;
+	gap: 1.5rem;
+	height: 100%;
+	padding: 0;
+	padding-inline-end: 1rem;
+	margin: 0;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 990;
+}
+
+nav li {
+	list-style: none;
+	flex-grow: 1;
+	height: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	color: unset;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+nav :is(input, #hamburger) {
+	display: none;
+}
+
+nav :is(#logo, #logo-mobile) {
+	--size: 4rem;
+
+	margin-block: .5rem;
+	margin-inline: 1rem;
+	height: var(--size);
+	width: var(--size);
+}
+
+nav #logo-mobile {
+	display: none;
+}
+
+/* Navigation bar styles for mobile */
+@media (max-width: 1000px) {
+	nav menu {
+		align-items: unset;
+		justify-content: flex-start;
+		flex-direction: column;
+		padding: 8rem 2rem;
+		inset: 0 0 0 30%;
+		position: fixed;
+		background: steelblue;
+		transition: transform 300ms ease-out;
+		transform: translateX(100%);
+		z-index: 990;
+	}
+
+	nav input:checked ~ menu {
+		transform: translateX(0);
+	}
+
+	nav a {
+		width: 100%;
+	}
+
+	nav li:has(#logo) {
+		display: none;
+	}
+
+	nav #logo-mobile {
+		position: absolute;
+		display: block;
+	}
+
+	nav :is(input, #hamburger) {
+		--size: 3rem;
+		--offset: 1rem;
+
+		cursor: pointer;
+		display: block;
+	}
+
+	nav input {
+		position: absolute;
+		margin: 0;
+		border: 0;
+		width: var(--size);;
+		aspect-ratio: 1;
+		opacity: 0;
+		top: var(--offset);
+		right: var(--offset);
+		z-index: 1000;
+	}
+
+	nav #hamburger {
+		position: absolute;
+		top: var(--offset);
+		right: var(--offset);
+		width: var(--size);
+		height: var(--size);
+		z-index: 999;
+	}
+
+	nav #hamburger path {
+		fill: none;
+		stroke: black;
+		stroke-width: 6;
+		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+			stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	nav #hamburger path:nth-child(1) {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+
+	nav #hamburger path:nth-child(2) {
+		stroke-dasharray: 60 60;
+		stroke-width: 6;
+	}
+
+	nav #hamburger path:nth-child(3) {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+
+	nav input:checked + #hamburger path:nth-child(1) {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+
+	nav input:checked + #hamburger path:nth-child(2) {
+		stroke-dasharray: 1 60;
+		stroke-dashoffset: -30;
+		stroke-width: 6;
+	}
+
+	nav input:checked + #hamburger path:nth-child(3) {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
 }
