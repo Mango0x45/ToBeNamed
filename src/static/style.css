@@ -1,17 +1,146 @@
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
+	font-size: 18px;
 }
 
 header {
 	width: 100%;
-	display: flex;
 	justify-content: center;
 }
 
 footer p {
 	text-align: center;
+}
+
+nav {
+	height: 5rem;
+	background: blue;
+	z-index: 991;
+}
+
+nav menu {
+	padding: 0;
+	margin: 0;
+	justify-content: flex-end;
+}
+
+nav li {
+	list-style: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: unset;
+}
+
+nav :is(input, svg) {
+	display: none;
+}
+
+/* Navigation bar styles for mobile */
+@media (max-width: 35em) {
+	nav menu {
+		justify-content: flex-start;
+		flex-direction: column;
+		padding: 8rem 2em;
+		inset: 0 0 0 30%;
+		position: fixed;
+		background: steelblue;
+		transition: transform 300ms ease-out;
+		transform: translateX(100%);
+		z-index: 990
+	}
+
+	nav input:checked ~ menu {
+		transform: translateX(0);
+	}
+
+	nav li {
+		flex-grow: 1;
+	}
+
+	nav a {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	nav :is(input, svg) {
+		--size: 3rem;
+		--offset: 1rem;
+
+		display: block;
+	}
+
+	nav input {
+		position: absolute;
+		margin: 0;
+		border: 0;
+		width: var(--size);;
+		aspect-ratio: 1;
+		opacity: 0;
+		top: var(--offset);
+		right: var(--offset);
+		z-index: 1000;
+	}
+
+	nav svg {
+		position: absolute;
+		top: var(--offset);
+		right: var(--offset);
+		width: var(--size);
+		height: var(--size);
+		z-index: 999;
+	}
+
+	nav svg path {
+		fill: none;
+		stroke: black;
+		stroke-width: 6;
+		transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+			stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	nav svg path:nth-child(1) {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+
+	nav svg path:nth-child(2) {
+		stroke-dasharray: 60 60;
+		stroke-width: 6;
+	}
+
+	nav svg path:nth-child(3) {
+		stroke-dasharray: 60 207;
+		stroke-width: 6;
+	}
+
+	nav input:checked + svg path:nth-child(1) {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
+
+	nav input:checked + svg path:nth-child(2) {
+		stroke-dasharray: 1 60;
+		stroke-dashoffset: -30;
+		stroke-width: 6;
+	}
+
+	nav input:checked + svg path:nth-child(3) {
+		stroke-dasharray: 90 207;
+		stroke-dashoffset: -134;
+		stroke-width: 6;
+	}
 }
