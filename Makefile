@@ -2,6 +2,9 @@ PROJECT = TO-BE-NAMED
 
 all:
 
+fonts:
+	wget -nc -i font-list -P src/static/fonts/
+
 format:
 	find src -name '*.py' -exec black {} +
 	find src -name '*.py' -exec isort {} +

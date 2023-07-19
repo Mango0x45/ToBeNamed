@@ -10,3 +10,6 @@ pyrightconfig.json
 
 # Emacs backup files
 *~
+
+# Font files
+src/static/fonts/

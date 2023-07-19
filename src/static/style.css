@@ -1,9 +1,41 @@
+@font-face {
+	font-family: 'Ysabeau';
+	src: url('/static/fonts/Ysabeau-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ysabeau';
+	src: url('/static/fonts/Ysabeau-MediumItalic.otf') format('opentype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Ysabeau';
+	src: url('/static/fonts/Ysabeau-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ysabeau';
+	src: url('/static/fonts/Ysabeau-BoldItalic.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
+	font-family: 'Ysabeau', 'Helvetica', sans-serif;
+	font-variant-numeric: lining-nums;
+	font-feature-settings: 'ss02';
+	font-weight: 500;
 	font-size: 18px;
 }
 
