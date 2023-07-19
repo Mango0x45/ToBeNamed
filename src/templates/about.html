@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	<h1>{{ _("About Us") }}</h1>
+</header>
+
+<main>
+	<p>{{
+		_("This website is a collaborative effort between the developers who
+		built the site, the researchers who found all the data found on the
+		site, and the translators who helped make the site accessible to a wider
+		audience.")
+	}}</p>
+
+	<h2>{{ _("Special Thanks") }}</h2>
+	<ul>
+		<li>
+			{{ _("Development") }}
+			<ul>
+				<li>Thomas</li>
+				<li>Darian</li>
+				<li>Runnobs</li>
+			</ul>
+		</li>
+		<li>
+			{{ _("Research") }}
+			<ul>
+				<li>Borja</li>
+			</ul>
+		</li>
+		<li>
+			{{ _("Translations") }}
+			<ul>
+				<li>Thomas ({{ _("American- and British English") }})</li>
+			</ul>
+		</li>
+	</ul>
+</main>
+
+{% endblock content %}
