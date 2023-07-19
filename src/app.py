@@ -1,8 +1,10 @@
 from typing import Mapping
 
 import flask
-from flask import Flask
+from flask import Blueprint, Flask
 from flask_babel import Babel
+
+import blueprints
 
 AVAILABLE_LOCALES = {"en_GB", "en_US"}
 
@@ -22,10 +24,8 @@ def inject_params() -> Mapping[str, any]:
 	}
 
 
-@app.route("/", methods=["GET"])
-def index() -> str:
-	return flask.render_template("index.html")
-
+for bp in blueprints.BLUEPRINTS:
+	app.register_blueprint(bp)
 
 if __name__ == "__main__":
 	app.run(debug=True)
