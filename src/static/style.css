@@ -12,20 +12,6 @@
 	font-style: italic;
 }
 
-@font-face {
-	font-family: 'Ysabeau';
-	src: url('/static/fonts/ysabeau-bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Ysabeau';
-	src: url('/static/fonts/ysabeau-bold-italic.woff2') format('woff2');
-	font-weight: bold;
-	font-style: italic;
-}
-
 *, *::before, *::after {
 	box-sizing: border-box;
 }
