@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Relevant Jargon") }}</h1>
+		<p>{{ _("All the terms you might see thrown around") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>{{
+		_("There are various related cash and cash-collecting terms that you may
+		see used on this website, in online forums, and elsewhere.  This page
+		will hopefully get you up to speed with the common- and important terms
+		you may see used.")
+	}}</p>
+
+	<p>{{
+		_("All terms defined below can be used as clickable links which
+		highlight the selected term.  It is recommended to use these
+		links when sharing this page to others, so that the relevant
+		terms are highlighted.")
+	}}</p>
+
+	<hr>
+
+	<dl>
+		<dt><a id="UNC" href="#UNC">UNC</a></dt>
+		<dd>{{
+			_("Short for “uncirculated”, this term refers to coins that have
+			never been used in a monetary exchange.  The term “UNC” is often
+			mistakenly used to refer to coins in very good condition, but this
+			is incorrect.  A coin in poor condition that has never been
+			<em>circulated</em> is still considered an “UNC” coin.")
+		}}</dd>
+
+		<dt><a id="AU" href="#AU">AU</a></dt>
+		<dd>{{
+			_("Short for “almost uncirculated”, this term refers to coins that
+			are in impeccable condition as a result of limited use in
+			circulation.  Unlike the term “UNC”, this term is a description of
+			the coins <em>quality</em>, not its usage.")
+		}}</dd>
+
+		<dt><a id="NIFC" href="#NIFC">NIFC</a></dt>
+		<dd>{{
+			_("Short for “not intended for circulation”, NIFC coins are exactly
+			what their name implies.  It is not uncommon for a country to only
+			mint a certain coin with the intention of selling it to collectors
+			as opposed to putting it into general circulation.  These coins —
+			even when found in circulation, which inevitably happens — are
+			referred to as “NIFC”.")
+		}}</dd>
+	</dl>
+</main>
+
+{% endblock content %}
