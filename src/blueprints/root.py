@@ -9,6 +9,11 @@ def index() -> str:
 	return flask.render_template("index.html")
 
 
+@root_bp.route("/jargon", methods=["GET"])
+def jargon() -> str:
+	return flask.render_template("jargon.html")
+
+
 @root_bp.route("/about", methods=["GET"])
 def about() -> str:
 	return flask.render_template("about.html")
