@@ -1709,11 +1709,11 @@ nav menu {
 	list-style: none;
 	white-space: nowrap;
 }
-nav menu:first-of-type {
-	margin-left: calc(var(--nav-element-spacing-horizontal) * -1);
+nav menu:first-of-type li:first-child a {
+	padding-inline-start: 0;
 }
-nav menu:last-of-type {
-	margin-right: calc(var(--nav-element-spacing-horizontal) * -1);
+nav menu:last-of-type li:last-child a {
+	padding-inline-end: 0;
 }
 nav li {
 	display: inline-block;
