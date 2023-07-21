@@ -1700,13 +1700,13 @@ nav menu {
 
 nav {
 	justify-content: space-between;
+	overflow-x: scroll;
 }
 nav menu {
 	align-items: center;
 	margin-bottom: 0;
 	padding: 0;
 	list-style: none;
-	overflow-x: scroll;
 	white-space: nowrap;
 }
 nav menu:first-of-type {
