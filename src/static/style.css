@@ -591,6 +591,10 @@ body > footer {
 	}
 }
 
+body > header {
+	padding-top: 0;
+}
+
 /**
  * Section
  * Responsive spacings for section
@@ -1691,6 +1695,8 @@ nav menu {
 	margin-bottom: 0;
 	padding: 0;
 	list-style: none;
+	overflow-x: scroll;
+	white-space: nowrap;
 }
 nav menu:first-of-type {
 	margin-left: calc(var(--nav-element-spacing-horizontal) * -1);
