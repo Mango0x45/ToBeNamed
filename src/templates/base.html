@@ -7,11 +7,10 @@
 		<title>{{ _(title) }}</title>
 	</head>
 	<body>
-		{% include "nav.html" %}
-
 		{% block content %}
 		{% endblock content %}
-
-		{% include "footer.html" %}
+		<footer>
+			<p>{{ _("Copyright © 2023 The WEBSITE NAME Contributors") }}</p>
+		</footer>
 	</body>
 </html>

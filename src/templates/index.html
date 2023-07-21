@@ -2,7 +2,50 @@
 {% block content %}
 
 <header>
-	<h1>{{ _("WEBSITE NAME HERE") }}</h1>
+	{% include "root-nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("The Euro Cash Compendium") }}</h1>
+		<p>{{ _("United in <del>diversity</del> <ins>cash</ins>") }}</p>
+	</hgroup>
 </header>
+
+<main>
+	<p>{{
+		_("Welcome to the Euro Cash Compendium.  On this site we aim to be a
+		resource for you to discover everything there is to know about the coins
+		and banknotes of a currency that spans 26 countries and 350 million
+		people.  We also have sections dedicated to the collecting of coins, and
+		also Euro banknotes!")
+	}}</p>
+
+	<hr>
+
+	<h2>{{ _("Recent News") }}</h2>
+
+	<section>
+		<article>
+			<header>
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<time datetime="2023-06-22">{{ _("June 22, 2023") }}</time>
+			</header>
+			<main>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Blandit cursus risus at ultrices mi tempus imperdiet nulla
+				malesuada. Scelerisque felis imperdiet proin fermentum leo vel
+				orci porta non. Diam vel quam elementum pulvinar etiam non quam
+				lacus suspendisse. Sed risus ultricies tristique nulla aliquet
+				enim tortor at. Sit amet consectetur adipiscing elit
+				pellentesque habitant morbi tristique. Non curabitur gravida
+				arcu ac tortor dignissim convallis aenean et. Rhoncus urna neque
+				viverra justo nec ultrices dui sapien. Lacus viverra vitae
+				congue eu. Id ornare arcu odio ut sem nulla pharetra. Ac orci
+				phasellus egestas tellus rutrum tellus. Quis enim lobortis
+				scelerisque fermentum dui faucibus in ornare quam.
+			</main>
+		</article>
+	</section>
+</main>
 
 {% endblock content %}

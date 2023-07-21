@@ -1,4 +1,5 @@
 <nav>
+	<!--
 	<input type="checkbox">
 	<svg id="hamburger" width="100" height="100" viewBox="0 0 100 100">
 		<path d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
@@ -10,14 +11,9 @@
 		<circle cx="50" cy="50" r="50" />
 		<text x="10" y="60" fill="white" style="font-size: 40px;">Logo</text>
 	</svg>
+	-->
 
 	<menu>
-		<li>
-			<svg id="logo" width="100" height="100" viewBox="0 0 100 100">
-				<circle cx="50" cy="50" r="50" />
-				<text x="10" y="60" fill="white" style="font-size: 40px;">Logo</text>
-			</svg>
-		</li>
 		<li><a href='{{ url_for("root.index") }}'>{{ _("Home") }}</a></li>
 		<li><a href="#">{{ _("News") }}</a></li>
 		<li><a href="#">{{ _("Coin Hunting") }}</a></li>
