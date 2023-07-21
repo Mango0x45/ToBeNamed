@@ -50,6 +50,8 @@
 	--typography-spacing-vertical: 1.5rem;
 	--block-spacing-vertical: calc(var(--spacing) * 2);
 	--block-spacing-horizontal: var(--spacing);
+	--grid-spacing-vertical: 0;
+	--grid-spacing-horizontal: var(--spacing);
 	--form-element-spacing-vertical: 0.75rem;
 	--form-element-spacing-horizontal: 1rem;
 	--nav-element-spacing-vertical: 1rem;
@@ -119,6 +121,10 @@ dialog > article {
 
 a {
 	--text-decoration: none;
+}
+
+a.no-deco {
+	text-decoration: none;
 }
 
 small {
@@ -1647,6 +1653,11 @@ details[open] > summary::after {
 /**
  * Card (<article>)
  */
+.grid article {
+	min-height: 100%;
+	margin: 0;
+}
+
 article {
 	margin: var(--block-spacing-vertical) 0;
 	padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
@@ -2194,4 +2205,31 @@ textarea,
 		transition-delay: 0s !important;
 		transition-duration: 0s !important;
 	}
+}
+
+/**
+* Grid
+* Minimal grid system with auto-layout columns
+*/
+.grid {
+	grid-column-gap: var(--grid-spacing-horizontal);
+	grid-row-gap: var(--grid-spacing-vertical);
+	display: grid;
+	grid-template-columns: 1fr;
+
+	margin: 0;
+}
+
+.grid:first-of-type {
+	/* Kind of a hack until Firefox supports :has() */
+	margin-top: var(--block-spacing-vertical);
+}
+
+@media (min-width: 992px) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+	}
+}
+.grid > * {
+	min-width: 0;
 }
