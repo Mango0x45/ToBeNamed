@@ -1678,11 +1678,6 @@ article > header h2 {
 /**
  * Nav
  */
-:where(nav li)::before {
-	float: left;
-	content: "​";
-}
-
 nav,
 nav menu {
 	display: flex;
