@@ -2234,3 +2234,7 @@ textarea,
 .grid > * {
 	min-width: 0;
 }
+
+dt {
+	margin-top: var(--spacing);
+}
