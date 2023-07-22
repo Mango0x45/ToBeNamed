@@ -1,4 +1,4 @@
-from .coins import coins_bp
-from .root import root_bp
+from .coins import coins
+from .root import root
 
-BLUEPRINTS = (coins_bp, root_bp)
+BLUEPRINTS = (coins, root)
