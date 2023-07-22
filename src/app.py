@@ -13,15 +13,17 @@ def get_locale() -> str:
 	return flask.request.accept_languages.best_match(AVAILABLE_LOCALES) or "en_GB"
 
 
+def loc_to_lang(locale: str) -> str:
+	return locale.replace("_", "-")
+
+
 app = Flask(__name__)
 babel = Babel(app, locale_selector=get_locale)
 
 
 @app.context_processor
 def inject_params() -> Mapping[str, any]:
-	return {
-		"lang": get_locale().replace("_", "-"),
-	}
+	return {"lang": loc_to_lang(get_locale())}
 
 
 for bp in blueprints.BLUEPRINTS:
