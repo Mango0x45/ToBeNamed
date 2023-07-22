@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Select Your Language") }}</h1>
+		<p>{{ _("Or your dialect, for the Americans") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{{ _("Select your preferred language to use on the site.") }}
+	</p>
+	<p>
+		If you are an American user, it’s suggested that you select American
+		English instead of British English.  This will ensure that dates will be
+		formatted with the month before the day.
+	</p>
+
+	<hr>
+
+	<h2>{{ _("Eurozone Languages") }}</h2>
+	<form action="/set-language" method="POST">
+		<div class="lang-grid">
+			<button type="submit" name="locale" value="de_DE" disabled>
+				<span data-code="DE">Deutsch</span>
+			</button>
+			<button type="submit" name="locale" value="el_GR" disabled>
+				<span data-code="EL">ελληνικά</span>
+			</button>
+			<button type="submit" name="locale" value="en_GB">
+				<span data-code="EN">English</span>
+			</button>
+			<button type="submit" name="locale" value="es_ES" disabled>
+				<span data-code="ES">español</span>
+			</button>
+			<button type="submit" name="locale" value="et_EE" disabled>
+				<span data-code="ET">eesti</span>
+			</button>
+			<button type="submit" name="locale" value="fi_FI" disabled>
+				<span data-code="FI">suomi</span>
+			</button>
+			<button type="submit" name="locale" value="fr_FR" disabled>
+				<span data-code="FR">français</span>
+			</button>
+			<button type="submit" name="locale" value="ga_IE" disabled>
+				<span data-code="GA">Gaeilge</span>
+			</button>
+			<button type="submit" name="locale" value="hr_HR" disabled>
+				<span data-code="HR">hrvatski</span>
+			</button>
+			<button type="submit" name="locale" value="it_IT" disabled>
+				<span data-code="IT">italiano</span>
+			</button>
+			<button type="submit" name="locale" value="lt_LT" disabled>
+				<span data-code="LT">lietuvių</span>
+			</button>
+			<button type="submit" name="locale" value="lv_LV" disabled>
+				<span data-code="LV">latviešu</span>
+			</button>
+			<button type="submit" name="locale" value="mt_MT" disabled>
+				<span data-code="MT">Malti</span>
+			</button>
+			<button type="submit" name="locale" value="nl_NL" disabled>
+				<span data-code="NL">Nederlands</span>
+			</button>
+			<button type="submit" name="locale" value="pt_PT" disabled>
+				<span data-code="PT">português</span>
+			</button>
+			<button type="submit" name="locale" value="sk_SK" disabled>
+				<span data-code="SK">slovenčina</span>
+			</button>
+			<button type="submit" name="locale" value="sl_SI" disabled>
+				<span data-code="SL">slovenščina</span>
+			</button>
+		</div>
+	</form>
+
+	<h2>{{ _("Other Languages") }}</h2>
+	<form action="/set-language" method="POST">
+		<div class="lang-grid">
+			<button type="submit" name="locale" value="en_US">
+				<span data-code="EN">English&nbsp;(US)</span>
+			</button>
+		</div>
+	</form>
+</main>
+
+{% endblock content %}

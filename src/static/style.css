@@ -2248,3 +2248,21 @@ dt {
 dd {
 	grid-column-start: 2;
 }
+
+.lang-grid {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(180px, 100%), 1fr)
+	);
+	column-gap: var(--grid-spacing-horizontal);
+}
+
+.lang-grid button {
+	text-align: left;
+}
+
+.lang-grid span::before {
+	content: attr(data-code) '\2002';
+	font-weight: bold;
+}
