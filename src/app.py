@@ -14,7 +14,7 @@ from config import Cookie
 def get_locale() -> str:
 	r = flask.request
 	return (
-		r.cookies.get("locale")
+		r.cookies.get(Cookie.LOCALE)
 		or r.accept_languages.best_match(config.AVAILABLE_LOCALES)
 		or "en_GB"
 	)
@@ -50,7 +50,9 @@ def pre_request_hook() -> Response | None:
 	):
 		return
 
-	resp = flask.make_response(flask.render_template("languages.html"))
+	resp = flask.make_response(
+		flask.render_template("languages.html", cname=Cookie.LOCALE)
+	)
 	resp.set_cookie(
 		key=Cookie.REDIRECT,
 		value=get_redirect(),

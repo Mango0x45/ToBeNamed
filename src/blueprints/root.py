@@ -32,7 +32,10 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 		loc = r.form[Cookie.LOCALE]
 		assert loc in config.AVAILABLE_LOCALES
 	except KeyError:
-		return '"locale" key missing from request form', HTTPStatus.BAD_REQUEST
+		return (
+			f'"{Cookie.LOCALE}" key missing from request form',
+			HTTPStatus.BAD_REQUEST,
+		)
 	except AssertionError:
 		return f'Locale "{loc}" is not an available locale', HTTPStatus.BAD_REQUEST  # type: ignore
 
