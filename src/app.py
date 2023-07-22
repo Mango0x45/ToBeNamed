@@ -1,4 +1,4 @@
-from typing import Mapping
+from typing import Any
 
 import flask
 from flask import Blueprint, Flask
@@ -22,7 +22,7 @@ babel = Babel(app, locale_selector=get_locale)
 
 
 @app.context_processor
-def inject_params() -> Mapping[str, any]:
+def inject_params() -> dict[str, Any]:
 	return {"lang": loc_to_lang(get_locale())}
 
 
