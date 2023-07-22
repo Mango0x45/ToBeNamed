@@ -31,21 +31,8 @@
 
 	<dl>
 		<dt>
-			<a id="UNC" href="#UNC">
-				<abbr data-tooltip="Uncirculated">UNC</abbr>
-			</a>
-		</dt>
-		<dd>{{
-			_("Short for “uncirculated”, this term refers to coins that have
-			never been used in a monetary exchange.  The term “UNC” is often
-			mistakenly used to refer to coins in very good condition, but this
-			is incorrect.  A coin in poor condition that has never been
-			<em>circulated</em> is still considered an “UNC” coin.")
-		}}</dd>
-
-		<dt>
 			<a id="AU" href="#AU">
-				<abbr data-tooltip="Almost Uncirculated">AU</abbr>
+				<abbr data-tooltip='{{ _("Almost Uncirculated") }}'>AU</abbr>
 			</a>
 		</dt>
 		<dd>{{
@@ -57,7 +44,7 @@
 
 		<dt>
 			<a id="NIFC" href="#NIFC">
-				<abbr data-tooltip="Not Intended For Circulation">NIFC</abbr>
+				<abbr data-tooltip='{{ _("Not Intended For Circulation") }}'>NIFC</abbr>
 			</a>
 		</dt>
 		<dd>{{
@@ -68,6 +55,19 @@
 			even when found in circulation, which inevitably happens — are
 			referred to as “NIFC”.")
 		}}</dd>
+
+		<dt>
+			<a id="UNC" href="#UNC">
+				<abbr data-tooltip='{{ _("Uncirculated") }}'>UNC</abbr>
+			</a>
+		</dt>
+		<dd>{{
+			_("Short for “uncirculated”, this term refers to coins that have
+			never been used in a monetary exchange.  The term “UNC” is often
+			mistakenly used to refer to coins in very good condition, but this
+			is incorrect.  A coin in poor condition that has never been
+			<em>circulated</em> is still considered an “UNC” coin.")
+		}}</dd>
 	</dl>
 
 	<h2>{{ _("Collector-Specific Terms") }}</h2>
@@ -75,7 +75,7 @@
 	<dl>
 		<dt>
 			<a id="CRH" href="#CRH">
-				<abbr data-tooltip="Coin Roll Hunting">CRH</abbr>
+				<abbr data-tooltip='{{ _("Coin Roll Hunting") }}'>CRH</abbr>
 			</a>
 		</dt>
 		<dd>{{
