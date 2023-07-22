@@ -1,7 +1,7 @@
 from typing import Any
 
 import flask
-from flask import Blueprint, Flask
+from flask import Flask
 from flask_babel import Babel
 
 import blueprints
