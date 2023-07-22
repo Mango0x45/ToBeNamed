@@ -9,17 +9,17 @@ from config import Cookie
 root = Blueprint("root", __name__, url_prefix="/")
 
 
-@root.route("/", methods=["GET"])
+@root.route("/", methods=[HTTPMethod.GET])
 def index() -> str:
 	return flask.render_template("index.html")
 
 
-@root.route("/jargon", methods=["GET"])
+@root.route("/jargon", methods=[HTTPMethod.GET])
 def jargon() -> str:
 	return flask.render_template("jargon.html")
 
 
-@root.route("/about", methods=["GET"])
+@root.route("/about", methods=[HTTPMethod.GET])
 def about() -> str:
 	return flask.render_template("about.html")
 
