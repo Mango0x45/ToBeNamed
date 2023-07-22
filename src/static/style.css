@@ -677,8 +677,8 @@ a,
 	transition: background-color var(--transition), color var(--transition), text-decoration var(--transition), box-shadow var(--transition);
 	transition: background-color var(--transition), color var(--transition), text-decoration var(--transition), box-shadow var(--transition), -webkit-text-decoration var(--transition);
 }
-a:is([aria-current], :hover, :active, :focus),
-[role=link]:is([aria-current], :hover, :active, :focus) {
+a:is([aria-current], :hover, :active),
+[role=link]:is([aria-current], :hover, :active) {
 	--color: var(--primary-hover);
 	--text-decoration: underline;
 }
@@ -771,6 +771,7 @@ ul li {
 	list-style: square;
 }
 
+:target,
 mark {
 	padding: 0.125rem 0.25rem;
 	background-color: var(--mark-background-color);
@@ -2232,4 +2233,18 @@ textarea,
 }
 .grid > * {
 	min-width: 0;
+}
+
+dl {
+	display: grid;
+	grid-template-columns: max-content auto;
+	row-gap: var(--spacing);
+}
+
+dt {
+	grid-column-start: 1;
+}
+
+dd {
+	grid-column-start: 2;
 }
