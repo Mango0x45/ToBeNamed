@@ -45,6 +45,7 @@ def pre_request_hook() -> Response | None:
 		return req.full_path or "/"
 
 	req = flask.request
+
 	if (
 		req.method == HTTPMethod.POST
 		or req.endpoint == "static"
