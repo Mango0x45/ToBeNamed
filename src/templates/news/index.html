@@ -26,14 +26,22 @@
 	<hr>
 
 	<h2>{{ _("Articles") }}</h2>
-	<ul id="article-list">
-		{% for article in articles %}
-		<li>
-			<time datetime="{{ article.iso_8601 }}">{{ article.date }}</time>
-			<a href="{{ article.iso_8601 }}">{{ _(article.headline) }}</a>
-		</li>
-		{% endfor %}
-	</ul>
+	<figure>
+		<table id="article-list">
+			<tbody>
+				{% for article in articles %}
+				<tr>
+					<td>
+						<time datetime="{{ article.iso_8601 }}">{{ article.date }}</time>
+					</td>
+					<td>
+						<a href="{{ article.iso_8601 }}">{{ _(article.headline) }}</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</figure>
 </main>
 
 {% endblock content %}
