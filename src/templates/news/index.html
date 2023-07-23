@@ -26,7 +26,7 @@
 	<hr>
 
 	<h2>{{ _("Articles") }}</h2>
-	<ul>
+	<ul id="article-list">
 		{% for article in articles %}
 		<li>
 			<time datetime="{{ article.iso_8601 }}">{{ article.date }}</time>

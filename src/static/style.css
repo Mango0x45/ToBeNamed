@@ -2302,3 +2302,14 @@ dd {
 [data-theme="light"] #nav-theme svg {
 	fill: var(--primary);
 }
+
+#article-list li {
+	display: flex;
+}
+
+#article-list time {
+	text-align: right;
+	flex-grow: 1;
+	max-width: 12ch;
+	margin-inline-end: 1em;
+}
