@@ -1718,10 +1718,6 @@ nav menu:last-of-type li:last-child a {
 	padding-inline-end: 0;
 }
 
-nav menu:last-of-type li:last-child a::after {
-	content: '\2002🌐';
-}
-
 nav li {
 	display: inline-block;
 	margin: 0;
@@ -2273,4 +2269,15 @@ dd {
 	content: attr(data-code) '\2002';
 	font-weight: bold;
 	width: 4ch;
+}
+
+#nav-lang a {
+    display: flex;
+    align-items: center;
+    gap: .5ch;
+}
+
+#nav-lang svg {
+    stroke: var(--color);
+    height: 1rem;
 }
