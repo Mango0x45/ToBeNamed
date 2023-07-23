@@ -11,7 +11,7 @@ from watchdog.observers import Observer
 import article_watcher
 import blueprints
 import config
-from config import Cookie
+from config import Cookie, Theme
 
 
 def get_locale() -> str:
@@ -33,7 +33,10 @@ babel = Babel(app, locale_selector=get_locale)
 
 @app.context_processor
 def inject_params() -> dict[str, Any]:
-	return {"lang": loc_to_lang(get_locale())}
+	return {
+		"lang": loc_to_lang(get_locale()),
+		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
+	}
 
 
 @app.before_request
@@ -61,6 +64,13 @@ def pre_request_hook() -> Response | None:
 		key=Cookie.REDIRECT,
 		value=get_redirect(),
 	)
+
+	# This cookie should always be set.  Obviously when the user uses the site
+	# for the first time it won’t be, so we set it as they also set up their
+	# language settings.
+	if Cookie.THEME not in req.cookies.keys():
+		resp.set_cookie(key=Cookie.THEME, value=Theme.DARK, max_age=2**31 - 1)
+
 	return resp
 
 

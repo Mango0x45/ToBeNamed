@@ -4,7 +4,7 @@ import flask
 from flask import Blueprint, Response
 
 import config
-from config import Cookie
+from config import Cookie, Theme
 
 root = Blueprint("root", __name__, url_prefix="/")
 
@@ -43,5 +43,20 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 	resp = flask.make_response(flask.redirect(url))
 	resp.delete_cookie(Cookie.REDIRECT)
 	resp.set_cookie(key=Cookie.LOCALE, value=loc, max_age=2**31 - 1)
+
+	return resp
+
+
+@root.route("/toggle-theme", methods=[HTTPMethod.POST])
+def toggle_theme() -> Response:
+	r = flask.request
+
+	theme = r.cookies.get(Cookie.THEME)
+	resp = flask.make_response(flask.redirect(r.referrer))
+	resp.set_cookie(
+		key=Cookie.THEME,
+		value=Theme.DARK if theme == Theme.LIGHT else Theme.LIGHT,
+		max_age=2**31 - 1,
+	)
 
 	return resp

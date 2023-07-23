@@ -1705,7 +1705,7 @@ nav {
 }
 nav menu {
 	align-items: center;
-	margin-bottom: 0;
+	margin-block: 0;
 	padding: 0;
 	list-style: none;
 	white-space: nowrap;
@@ -2281,4 +2281,24 @@ dd {
 	stroke: var(--color);
 	height: 1rem;
 }
+
+#nav-theme button {
+	background-color: unset;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1.5rem;
+}
+
+#nav-theme svg {
+	--size: 1.2rem;
+	stroke: var(--primary);
+	stroke-width: .1;
+	height: var(--size);
+	width: var(--size);
+}
+
+[data-theme="light"] #nav-theme svg {
+	fill: var(--primary);
 }
