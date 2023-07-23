@@ -3,8 +3,8 @@ PROJECT = TO-BE-NAMED
 all:
 
 format:
-	find src -name '*.py' -exec black {} +
-	find src -name '*.py' -exec isort {} +
+	find src -name '*.py' -exec black -l 80 {} +
+	find src -name '*.py' -exec isort -l 80 {} +
 
 trans-update:
 	pybabel extract -w 80 -F babel.cfg -o src/messages.pot --no-location \

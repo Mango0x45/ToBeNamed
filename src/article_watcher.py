@@ -5,10 +5,10 @@ import time
 from threading import Lock, Thread
 from typing import NamedTuple, Self
 
-from watchdog.events import (DirCreatedEvent, DirDeletedEvent,
-                             DirModifiedEvent, DirMovedEvent, FileCreatedEvent,
-                             FileDeletedEvent, FileModifiedEvent,
-                             FileMovedEvent, FileSystemEventHandler)
+from watchdog.events import (DirCreatedEvent, DirDeletedEvent, DirModifiedEvent,
+                             DirMovedEvent, FileCreatedEvent, FileDeletedEvent,
+                             FileModifiedEvent, FileMovedEvent,
+                             FileSystemEventHandler)
 
 from list_ext import ListExt
 
@@ -104,7 +104,6 @@ class ArticleWatcher(FileSystemEventHandler):
 			if headline and new:
 				ra = RawArticle(headline=headline, date=new)
 				self.__xs.sorted_insert(ra)
-
 
 	def _process(self) -> None:
 		while True:
