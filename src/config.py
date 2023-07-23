@@ -15,6 +15,6 @@ class Cookie(StrEnum):
 	THEME = "theme"
 
 
-class Theme(StrEnumContains):
+class Theme(StrEnum):
 	DARK = "dark"
 	LIGHT = "light"
