@@ -1,11 +1,14 @@
+import os.path
 import urllib.parse
 from http import HTTPMethod
-from typing import Any
+from typing import Any, Mapping
 
 import flask
 from flask import Flask, Response
 from flask_babel import Babel
+from watchdog.observers import Observer
 
+import article_watcher
 import blueprints
 import config
 from config import Cookie
@@ -60,9 +63,18 @@ def pre_request_hook() -> Response | None:
 	return resp
 
 
+def setup_watcher() -> None:
+	path = os.path.join(os.path.dirname(__file__), "templates/news/articles")
+	article_watcher.watcher.init_articles(path)
+	observer = Observer()
+	observer.schedule(article_watcher.watcher, path=path)
+	observer.start()
+
+
 for bp in blueprints.BLUEPRINTS:
 	app.register_blueprint(bp)
 
 if __name__ == "__main__":
 	HOSTNAME = "localhost"
+	setup_watcher()
 	app.run(debug=True)

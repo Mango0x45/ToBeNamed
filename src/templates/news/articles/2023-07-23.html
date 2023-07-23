@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Hello, World!") }}</h1>
+		<p>{{ _("Let’s see if this works") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>{{
+		_("This is the first article on the site.  There isn’t much to see here,
+		I’m just testing out some of the site features to make sure they work.")
+	}}</p>
+</main>
+
+{% endblock content %}

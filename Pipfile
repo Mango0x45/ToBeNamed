@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-babel = "*"
+watchdog = "*"
 
 [dev-packages]
 isort = "*"
