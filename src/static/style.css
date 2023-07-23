@@ -1713,9 +1713,15 @@ nav menu {
 nav menu:first-of-type li:first-child a {
 	padding-inline-start: 0;
 }
+
 nav menu:last-of-type li:last-child a {
 	padding-inline-end: 0;
 }
+
+nav menu:last-of-type li:last-child a::after {
+	content: '\2002🌐';
+}
+
 nav li {
 	display: inline-block;
 	margin: 0;
