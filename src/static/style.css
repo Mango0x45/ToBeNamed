@@ -2269,6 +2269,8 @@ dd {
 }
 
 .lang-grid span::before {
+	display: inline-block;
 	content: attr(data-code) '\2002';
 	font-weight: bold;
+	width: 4ch;
 }
