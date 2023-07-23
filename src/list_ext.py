@@ -5,11 +5,11 @@ from typing import Generic, Protocol, Self, TypeVar
 
 class Comparable(Protocol):
 	@abstractmethod
-	def __lt__(self: Self, value: Self) -> bool:
+	def __lt__(self, value: Self) -> bool:
 		...
 
 	@abstractmethod
-	def __eq__(self: Self, value: Self) -> bool:
+	def __eq__(self, value: Self) -> bool:
 		...
 
 
