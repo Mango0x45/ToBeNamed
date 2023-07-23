@@ -1,7 +1,7 @@
 import os.path
 import urllib.parse
 from http import HTTPMethod
-from typing import Any, Mapping
+from typing import Any
 
 import flask
 from flask import Flask, Response
