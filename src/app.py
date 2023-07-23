@@ -10,21 +10,16 @@ from watchdog.observers import Observer
 
 import article_watcher
 import blueprints
-import config
-from config import Cookie, Theme
+from config import Cookie, Locale, Theme
 
 
-def get_locale() -> str:
+def get_locale() -> Locale:
 	r = flask.request
-	return (
-		r.cookies.get(Cookie.LOCALE)
-		or r.accept_languages.best_match(config.AVAILABLE_LOCALES)
-		or "en_GB"
-	)
 
-
-def loc_to_lang(locale: str) -> str:
-	return locale.replace("_", "-")
+	try:
+		return Locale(r.cookies.get(Cookie.LOCALE))
+	except ValueError:
+		return Locale(r.accept_languages.best_match(Locale) or Locale.EN_GB)
 
 
 app = Flask(__name__)
@@ -34,7 +29,7 @@ babel = Babel(app, locale_selector=get_locale)
 @app.context_processor
 def inject_params() -> dict[str, Any]:
 	return {
-		"lang": loc_to_lang(get_locale()),
+		"lang": get_locale().as_html_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
 	}
 

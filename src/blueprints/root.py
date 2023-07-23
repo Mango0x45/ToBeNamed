@@ -3,8 +3,7 @@ from http import HTTPMethod, HTTPStatus
 import flask
 from flask import Blueprint, Response
 
-import config
-from config import Cookie, Theme
+from config import Cookie, Locale, Theme
 
 root = Blueprint("root", __name__, url_prefix="/")
 
@@ -30,7 +29,7 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 
 	try:
 		loc = r.form[Cookie.LOCALE]
-		assert loc in config.AVAILABLE_LOCALES
+		assert loc in Locale
 	except KeyError:
 		return (
 			f'"{Cookie.LOCALE}" key missing from request form',

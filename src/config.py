@@ -1,12 +1,14 @@
-from enum import StrEnum
+from enum import EnumMeta, StrEnum
+from typing import Any
 
-AVAILABLE_LOCALES = {"en_GB", "en_US"}
 
-
-class StrEnumContains(StrEnum):
-	@classmethod
-	def __contains__(cls, key: str) -> bool:
-		return key in cls.__members__.values()
+class EnumContains(EnumMeta):
+	def __contains__(cls, other: Any) -> bool:
+		try:
+			cls(other)
+		except ValueError:
+			return False
+		return True
 
 
 class Cookie(StrEnum):
@@ -18,3 +20,14 @@ class Cookie(StrEnum):
 class Theme(StrEnum):
 	DARK = "dark"
 	LIGHT = "light"
+
+
+class Locale(StrEnum, metaclass=EnumContains):
+	# Eurozone
+	EN_GB = "en_GB"
+
+	# International
+	EN_US = "en_US"
+
+	def as_html_lang(self) -> str:
+		return self.replace("_", "-")
