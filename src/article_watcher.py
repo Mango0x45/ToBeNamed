@@ -18,7 +18,9 @@ class RawArticle(NamedTuple):
 	date: datetime.date
 
 	def __lt__(self, value: Self) -> bool:
-		return self.date < value.date
+		# We make the bisect module work with our list in descending order by
+		# tricking it into thinking it’s ascending.
+		return self.date > value.date
 
 	def __eq__(self, value: Self) -> bool:
 		return self.date == value.date
