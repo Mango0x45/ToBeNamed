@@ -11,4 +11,4 @@ def index() -> str:
 
 @news.route("/<date>", methods=["GET"])
 def article(date: str) -> str:
-	return flask.render_template(f"news/{date}")
+	return flask.render_template(f"news/articles/{date}.html")
