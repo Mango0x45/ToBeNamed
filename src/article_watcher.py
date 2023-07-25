@@ -5,10 +5,14 @@ import time
 from threading import Lock, Thread
 from typing import NamedTuple, Self
 
-from watchdog.events import (DirCreatedEvent, DirDeletedEvent, DirModifiedEvent,
-                             DirMovedEvent, FileCreatedEvent, FileDeletedEvent,
-                             FileModifiedEvent, FileMovedEvent,
-                             FileSystemEventHandler)
+from watchdog.events import (
+	FileCreatedEvent,
+	FileDeletedEvent,
+	FileModifiedEvent,
+	FileMovedEvent,
+	FileSystemEvent,
+	FileSystemEventHandler,
+)
 
 from list_ext import ListExt
 
@@ -38,10 +42,18 @@ class ArticleWatcher(FileSystemEventHandler):
 		self._thread.daemon = True
 		self._thread.start()
 
-	def on_created(self, event: DirCreatedEvent | FileCreatedEvent) -> None:
-		if event.is_directory:
-			return
+	def dispatch(self, event: FileSystemEvent) -> None:
+		match event:
+			case FileCreatedEvent():
+				self.on_created(event)
+			case FileDeletedEvent():
+				self.on_deleted(event)
+			case FileModifiedEvent():
+				self.on_modified(event)
+			case FileMovedEvent():
+				self.on_moved(event)
 
+	def on_created(self, event: FileCreatedEvent) -> None:
 		headline = extract_header(event.src_path)
 		date = file_to_date(event.src_path)
 		if not headline or not date:
@@ -51,20 +63,14 @@ class ArticleWatcher(FileSystemEventHandler):
 		with self.__lock:
 			self.__xs.sorted_insert(ra)
 
-	def on_deleted(self, event: DirDeletedEvent | FileDeletedEvent) -> None:
-		if event.is_directory:
-			return
-
+	def on_deleted(self, event: FileDeletedEvent) -> None:
 		if (date := file_to_date(event.src_path)) is None:
 			return
 
 		with self.__lock:
 			self.__xs.try_remove(RawArticle(headline="", date=date))
 
-	def on_modified(self, event: DirModifiedEvent | FileModifiedEvent) -> None:
-		if event.is_directory:
-			return
-
+	def on_modified(self, event: FileModifiedEvent) -> None:
 		headline = extract_header(event.src_path)
 		date = file_to_date(event.src_path)
 		if not headline or not date:
@@ -75,10 +81,7 @@ class ArticleWatcher(FileSystemEventHandler):
 			self.__xs.try_remove(ra)
 			self.__xs.sorted_insert(ra)
 
-	def on_moved(self, event: DirMovedEvent | FileMovedEvent) -> None:
-		if event.is_directory:
-			return
-
+	def on_moved(self, event: FileMovedEvent) -> None:
 		headline = extract_header(event.dest_path)
 		old = file_to_date(event.src_path)
 		new = file_to_date(event.dest_path)
