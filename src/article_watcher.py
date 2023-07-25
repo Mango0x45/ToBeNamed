@@ -104,10 +104,10 @@ class ArticleWatcher(FileSystemEventHandler):
 	def init_articles(self, path: str) -> None:
 		for f in os.listdir(path):
 			headline = extract_header(os.path.join(path, f))
-			new = file_to_date(f)
+			date = file_to_date(f)
 
-			if headline and new:
-				ra = RawArticle(headline=headline, date=new)
+			if headline and date:
+				ra = RawArticle(headline=headline, date=date)
 				self.__xs.sorted_insert(ra)
 
 	def _process(self) -> None:
