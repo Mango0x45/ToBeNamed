@@ -88,11 +88,11 @@ class ArticleWatcher(FileSystemEventHandler):
 		if not headline or not new:
 			return
 
-		ra = RawArticle(headline=headline, date=new)  # type: ignore
+		ra = RawArticle(headline=headline, date=new)
 
 		with self.__lock:
 			if old is not None:
-				self.__xs.try_remove(RawArticle(headline="", date=old))  # type: ignore
+				self.__xs.try_remove(RawArticle(headline="", date=old))
 			self.__xs.try_remove(ra)
 			self.__xs.sorted_insert(ra)
 
