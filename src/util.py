@@ -7,3 +7,16 @@ T = TypeVar("T")
 # translating, and build those translation strings for us.
 def _(x: T) -> T:
 	return x
+
+
+def strip_jinja(s: str) -> str:
+	s = s.strip().removeprefix("{{").removesuffix("}}").strip()
+	if s.startswith("_("):
+		s = (
+			s.removeprefix("_(")
+			.removesuffix(")")
+			.strip()
+			.removeprefix('"')
+			.removesuffix('"')
+		)
+	return s

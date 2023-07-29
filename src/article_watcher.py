@@ -1,10 +1,10 @@
 import datetime
 import os
-import re
 import time
 from threading import Lock, Thread
 from typing import NamedTuple, Self
 
+from selectolax.parser import HTMLParser
 from watchdog.events import (
 	FileCreatedEvent,
 	FileDeletedEvent,
@@ -14,7 +14,9 @@ from watchdog.events import (
 	FileSystemEventHandler,
 )
 
+import util
 from list_ext import ListExt
+from util import _
 
 
 class RawArticle(NamedTuple):
@@ -118,12 +120,15 @@ class ArticleWatcher(FileSystemEventHandler):
 def extract_header(filename: str) -> str | None:
 	try:
 		with open(filename, "r", encoding="UTF-8") as f:
-			txt = f.read()
+			p = HTMLParser(f.read())
 	except FileNotFoundError:
 		return
-	if (match := re.search(r'<h1>[^"]*"(.*)"[^"]*</h1>', txt)) is None:
-		return
-	return match.groups()[0]
+
+	return (
+		util.strip_jinja(s.text())
+		if (s := p.css_first("h1"))
+		else _("No headline found")
+	)
 
 
 def file_to_date(filename: str) -> datetime.date | None:

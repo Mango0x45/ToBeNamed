@@ -1,13 +1,14 @@
 import os
-import re
 from http import HTTPMethod, HTTPStatus
 from typing import NamedTuple
 
 import flask
 import flask_babel
 from flask import Blueprint, Response
+from selectolax.parser import HTMLParser
 
 import article_watcher
+import util
 from config import Cookie, Locale, Theme
 from util import _
 
@@ -32,13 +33,11 @@ def index() -> str:
 	path = os.path.dirname(__file__)
 	path = os.path.join(path, f"../templates/news/articles/{newest.date}.html")
 	with open(path, "r") as f:
-		txt = f.read()
+		p = HTMLParser(f.read())
 
-	ms = re.findall(r'<p>[^"]*"([^"]*)"[^<]*</p>', txt, flags=re.DOTALL)
-	try:
-		print(ms)
-		sample: str = ms[1]
-	except IndexError:
+	if sample := p.css_first("main p"):
+		sample = util.strip_jinja(sample.text())
+	else:
 		sample = _("No article preview found")
 
 	newest = Article(
