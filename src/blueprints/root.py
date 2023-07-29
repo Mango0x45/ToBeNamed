@@ -1,16 +1,53 @@
+import os
+import re
 from http import HTTPMethod, HTTPStatus
+from typing import NamedTuple
 
 import flask
+import flask_babel
 from flask import Blueprint, Response
 
+import article_watcher
 from config import Cookie, Locale, Theme
+from util import _
+
+
+class Article(NamedTuple):
+	headline: str
+	iso_8601: str
+	date: str
+	sample: str
+
 
 root = Blueprint("root", __name__, url_prefix="/")
 
 
 @root.route("/", methods=[HTTPMethod.GET])
 def index() -> str:
-	return flask.render_template("index.html")
+	try:
+		newest = article_watcher.watcher.articles[0]
+	except IndexError:
+		return flask.render_template("index.html", article=None)
+
+	path = os.path.dirname(__file__)
+	path = os.path.join(path, f"../templates/news/articles/{newest.date}.html")
+	with open(path, "r") as f:
+		txt = f.read()
+
+	ms = re.findall(r'<p>[^"]*"([^"]*)"[^<]*</p>', txt, flags=re.DOTALL)
+	try:
+		print(ms)
+		sample: str = ms[1]
+	except IndexError:
+		sample = _("No article preview found")
+
+	newest = Article(
+		headline=newest.headline,
+		iso_8601=newest.date.isoformat(),
+		date=flask_babel.format_date(newest.date, "short"),
+		sample=sample,
+	)
+	return flask.render_template("index.html", article=newest)
 
 
 @root.route("/jargon", methods=[HTTPMethod.GET])
