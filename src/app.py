@@ -17,7 +17,7 @@ def get_locale() -> Locale:
 	r = flask.request
 
 	try:
-		return Locale(r.cookies.get(Cookie.LOCALE))
+		return Locale(r.cookies.get(Cookie.LOCALE))  # type: ignore
 	except ValueError:
 		return Locale(r.accept_languages.best_match(Locale) or Locale.EN_GB)
 
