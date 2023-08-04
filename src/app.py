@@ -4,6 +4,7 @@ from http import HTTPMethod
 from typing import Any
 
 import flask
+import flask_babel
 from flask import Flask, Response
 from flask_babel import Babel
 from watchdog.observers import Observer
@@ -31,6 +32,7 @@ def inject_params() -> dict[str, Any]:
 	return {
 		"lang": get_locale().as_html_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
+		"babel": flask_babel,
 	}
 
 
