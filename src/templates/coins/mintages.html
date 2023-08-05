@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Euro Coin Mintages") }}</h1>
+		<p>{{ _("Can’t trust the Irish") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>{{
+		_("Here you’ll be able to view all the known mintages for all coins.
+		You’ll also be able to filter on country, denomination, etc.  If you have
+		any mintage data that’s missing from our site, feel free to contact us.")
+	}}</p>
+
+	<hr>
+
+	<section>
+		<details open>
+			<summary>{{ _("Compact Mintages") }}</summary>
+
+			<form>
+				<div class="grid">
+					<label for="compact-country">
+						{{ _("Country") }}
+						<select id="compact-country" name="c">
+							{% for c in countries %}
+							<option
+								value="{{ c }}"
+								{% if c == country %}
+								selected
+								{% endif %}
+							>
+								{{ _(c.name) }}
+							</option>
+							{% endfor %}
+						</select>
+					</label>
+
+					<fieldset>
+						<label for="compact-ifc">
+							<input
+								type="checkbox"
+								id="compact-ifc"
+								name="ifc"
+								{% if opts.ifc %}
+								checked
+								{% endif %}
+							>
+							Intended for Circulation
+						</label>
+						<label for="compact-nifc">
+							<input
+								type="checkbox"
+								id="compact-nifc"
+								name="nifc"
+								{% if opts.nifc %}
+								checked
+								{% endif %}
+							>
+							NIFC
+						</label>
+						<label for="compact-proof">
+							<input
+								type="checkbox"
+								id="compact-proof"
+								name="proof"
+								{% if opts.proof %}
+								checked
+								{% endif %}
+							>
+							Proof
+						</label>
+					</fieldset>
+				</div>
+
+				<button type="submit">{{ _("Filter") }}</button>
+			</form>
+
+			<figure>
+				<table id="mintage-table" role="grid">
+					<thead>
+						<th>{{ _("Year") }}</th>
+						{% for d in denoms %}
+						<th>{{ d }}</th>
+						{% endfor %}
+					</thead>
+					<tbody>
+						{% for row in rows %}
+						<tr>
+							<th scope="col">{{ row[0] }}</th>
+							{% for col in row[1:] %}
+							<td>{{ col }}</td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</figure>
+		</details>
+
+		<details>
+			<summary>{{ _("Detailed Mintages") }}</summary>
+			<figure></figure>
+		</details>
+	</section>
+</main>
+
+{% endblock content %}

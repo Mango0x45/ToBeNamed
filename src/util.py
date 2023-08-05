@@ -1,4 +1,5 @@
-from typing import TypeVar
+import os.path
+from typing import LiteralString, TypeVar
 
 T = TypeVar("T")
 
@@ -23,3 +24,7 @@ def strip_jinja(s: str) -> str:
 			.removesuffix('"')
 		)
 	return s
+
+
+def from_root(s: str) -> str:
+	return os.path.join(os.path.dirname(__file__), s)
