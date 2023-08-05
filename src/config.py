@@ -34,7 +34,10 @@ DENOMINATIONS = ("0.01", "0.02", "0.05", "0.10", "0.20", "0.50", "1.00", "2.00")
 
 class Locale(StrEnum, metaclass=EnumContains):
 	# Eurozone
+	DE_DE = "de_DE"
 	EN_GB = "en_GB"
+	FR_FR = "fr_FR"
+	SL_SI = "sl_SI"
 
 	# International
 	EN_US = "en_US"
