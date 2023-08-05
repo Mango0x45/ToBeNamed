@@ -50,6 +50,7 @@ def pre_request_hook() -> Response | None:
 		req.method == HTTPMethod.POST
 		or req.endpoint == "static"
 		or Cookie.LOCALE in req.cookies.keys()
+		and req.cookies.get(Cookie.LOCALE) in Locale
 		and req.endpoint != "root.set_language"
 	):
 		return
