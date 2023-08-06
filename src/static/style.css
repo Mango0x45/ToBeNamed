@@ -2312,11 +2312,11 @@ dd {
 	white-space: nowrap;
 }
 
-#mintage-table tr :where(th, td):first-child {
+.mintage-table tr :where(th, td):first-child {
 	text-align: left;
 }
 
-#mintage-table :where(th, td) {
+.mintage-table :where(th, td) {
 	white-space: nowrap;
 	text-align: right;
 }

@@ -82,7 +82,7 @@
 			</form>
 
 			<figure>
-				<table id="mintage-table" role="grid">
+				<table class="mintage-table" role="grid">
 					<thead>
 						<th>{{ _("Year") }}</th>
 						{% for d in denoms %}
@@ -105,7 +105,31 @@
 
 		<details>
 			<summary>{{ _("Detailed Mintages") }}</summary>
-			<figure></figure>
+			{% for row in detailed %}
+			<details>
+				<summary>{{ row[0] }}</summary>
+				<figure>
+					<table class="mintage-table" role="grid">
+						<thead>
+							<th>{{ _("Type") }}</th>
+							{% for d in denoms %}
+							<th>{{ d }}</th>
+							{% endfor %}
+						</thead>
+						<tbody>
+							{% for k in row[1].keys() %}
+							<tr>
+								<th scope="col">{{ k }}</th>
+								{% for col in row[1:] %}
+								<td>{{ col[k] }}</td>
+								{% endfor %}
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</figure>
+			</details>
+			{% endfor %}
 		</details>
 	</section>
 </main>

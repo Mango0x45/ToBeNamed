@@ -67,6 +67,18 @@ def mintages() -> str:
 	with open(util.from_root(f"data/mintages/{country}.json"), "r") as f:
 		data: MintageJson = json.loads(f.read())
 
+	detailed = []
+	for k, v in data.items():
+		row = tuple(
+			{
+				"ifc": fmt(x["ifc"]),
+				"nifc": fmt(x["nifc"]),
+				"proof": fmt(x["proof"]),
+			}
+			for x in v
+		)
+		detailed.append((k, *row))
+
 	rows = []
 	for k, v in data.items():
 		row = tuple(fmt(mintage(x)) for x in v)
@@ -76,7 +88,10 @@ def mintages() -> str:
 		"coins/mintages.html",
 		country=country,
 		countries=COUNTRIES,
-		denoms=(flask_babel.format_currency(d, "EUR") for d in DENOMINATIONS),
+		denoms=tuple(
+			flask_babel.format_currency(d, "EUR") for d in DENOMINATIONS
+		),
 		rows=rows,
+		detailed=detailed,
 		opts=opts,
 	)
