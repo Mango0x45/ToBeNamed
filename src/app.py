@@ -85,16 +85,17 @@ for bp in blueprints.BLUEPRINTS:
 	app.register_blueprint(bp)
 
 if __name__ == "__main__":
+	debug = False
+	HOSTNAME = "localhost"
+
 	match sys.argv[1:]:
 		case ["-d", s]:
 			debug = True
 			HOSTNAME = s
+		case ["-d"]:
+			debug = True
 		case [s]:
-			debug = False
 			HOSTNAME = s
-		case _:
-			debug = False
-			HOSTNAME = "localhost"
 
 	setup_watcher()
 	app.run(debug=debug)
