@@ -22,3 +22,6 @@ trans-new:
 
 trans-comp:
 	pybabel compile -d src/translations
+
+serve:
+	pipenv run python src/app.py -d

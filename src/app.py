@@ -1,4 +1,5 @@
 import os.path
+import sys
 import urllib.parse
 from http import HTTPMethod
 from typing import Any
@@ -84,6 +85,16 @@ for bp in blueprints.BLUEPRINTS:
 	app.register_blueprint(bp)
 
 if __name__ == "__main__":
-	HOSTNAME = "localhost"
+	match sys.argv[1:]:
+		case ["-d", s]:
+			debug = True
+			HOSTNAME = s
+		case [s]:
+			debug = False
+			HOSTNAME = s
+		case _:
+			debug = False
+			HOSTNAME = "localhost"
+
 	setup_watcher()
-	app.run(debug=True)
+	app.run(debug=debug)
