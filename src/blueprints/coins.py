@@ -10,7 +10,7 @@ import util
 from config import COUNTRIES, DENOMINATIONS
 from util import _
 
-from ..types import MintageCoin, MintageJson
+from xtypes import MintageCoin, MintageJson
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
 
