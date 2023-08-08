@@ -1,5 +1,5 @@
 import os.path
-from typing import LiteralString, TypeVar
+from typing import TypeVar
 
 T = TypeVar("T")
 
