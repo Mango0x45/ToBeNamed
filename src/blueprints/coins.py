@@ -9,7 +9,8 @@ from flask import Blueprint
 import util
 from config import COUNTRIES, DENOMINATIONS
 from util import _
-from xtypes import MintageCoin, MintageJson
+
+from ..types import MintageCoin, MintageJson
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
 
