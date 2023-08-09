@@ -31,8 +31,7 @@ def index() -> str:
 	except IndexError:
 		return flask.render_template("index.html", article=None)
 
-	path = os.path.dirname(__file__)
-	path = os.path.join(path, f"../templates/news/articles/{newest.date}.html")
+	path = util.from_root(f"templates/news/articles/{newest.date}.html")
 	with open(path, "r") as f:
 		p = HTMLParser(f.read())
 
