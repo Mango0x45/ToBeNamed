@@ -1,4 +1,6 @@
 class CaseInsensitiveString(str):
+	__slots__ = ()
+
 	def __str__(self) -> str:
 		return super().__str__().casefold()
 
