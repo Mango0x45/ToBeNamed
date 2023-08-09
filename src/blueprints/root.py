@@ -9,8 +9,9 @@ from selectolax.parser import HTMLParser
 
 import article_watcher
 import util
-from config import Cookie, Locale, Theme
+from config import Cookie, Theme
 from util import _
+from xtypes.locale import LOCALES
 
 
 class Article(NamedTuple):
@@ -65,7 +66,7 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 
 	try:
 		loc = r.form[Cookie.LOCALE]
-		assert loc in Locale
+		assert loc in LOCALES
 	except KeyError:
 		return (
 			f'"{Cookie.LOCALE}" key missing from request form',

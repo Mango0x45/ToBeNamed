@@ -12,16 +12,17 @@ from watchdog.observers import Observer
 
 import article_watcher
 import blueprints
-from config import Cookie, Locale, Theme
+from config import Cookie, Theme
+from xtypes import Locale
+from xtypes.locale import EZ_LOCALES, LOCALES, WORLD_LOCALES
 
 
-def get_locale() -> Locale:
+def get_locale() -> str:
 	r = flask.request
 
-	try:
-		return Locale(r.cookies.get(Cookie.LOCALE))  # type: ignore
-	except ValueError:
-		return Locale(r.accept_languages.best_match(Locale) or Locale.EN_GB)
+	if not (loc := r.cookies.get(Cookie.LOCALE)) in LOCALES:
+		loc = r.accept_languages.best_match(map(str, LOCALES)) or "en_GB"
+	return loc
 
 
 app = Flask(__name__)
@@ -31,7 +32,7 @@ babel = Babel(app, locale_selector=get_locale)
 @app.context_processor
 def inject_params() -> dict[str, Any]:
 	return {
-		"lang": get_locale().as_html_lang(),
+		"lang": Locale.from_str(get_locale()).as_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
 		"babel": flask_babel,
 	}
@@ -51,13 +52,18 @@ def pre_request_hook() -> Response | None:
 		req.method == HTTPMethod.POST
 		or req.endpoint == "static"
 		or Cookie.LOCALE in req.cookies.keys()
-		and req.cookies.get(Cookie.LOCALE) in Locale
+		and req.cookies.get(Cookie.LOCALE) in LOCALES
 		and req.endpoint != "root.set_language"
 	):
 		return
 
 	resp = flask.make_response(
-		flask.render_template("languages.html", cname=Cookie.LOCALE)
+		flask.render_template(
+			"languages.html",
+			cname=Cookie.LOCALE,
+			EZ_LOCALES=EZ_LOCALES,
+			WORLD_LOCALES=WORLD_LOCALES,
+		)
 	)
 	resp.set_cookie(
 		key=Cookie.REDIRECT,

@@ -7,10 +7,8 @@ import flask_babel
 from flask import Blueprint
 
 import util
-from config import COUNTRIES, DENOMINATIONS
 from util import _
-
-from xtypes import MintageCoin, MintageJson
+from xtypes import COIN_DENOMINATIONS, COUNTRIES, MintageCoin, MintageJson
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
 
@@ -89,9 +87,7 @@ def mintages() -> str:
 		"coins/mintages.html",
 		country=country,
 		countries=COUNTRIES,
-		denoms=tuple(
-			flask_babel.format_currency(d, "EUR") for d in DENOMINATIONS
-		),
+		denoms=COIN_DENOMINATIONS,
 		rows=rows,
 		detailed=detailed,
 		opts=opts,

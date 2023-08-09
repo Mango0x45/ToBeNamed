@@ -25,66 +25,22 @@
 	<h2>{{ _("Eurozone Languages") }}</h2>
 	<form action="/set-language" method="POST">
 		<div class="lang-grid">
-			<button type="submit" name="{{ cname }}" value="de_DE">
-				<span data-code="DE">Deutsch</span>
+			{% for locale in EZ_LOCALES %}
+			<button type="submit" name="{{ cname }}" value="{{ locale }}">
+				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
 			</button>
-			<button type="submit" name="{{ cname }}" value="el_GR" disabled>
-				<span data-code="EL">ελληνικά</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="en_GB">
-				<span data-code="EN">English</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="es_ES" disabled>
-				<span data-code="ES">español</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="et_EE" disabled>
-				<span data-code="ET">eesti</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="fi_FI" disabled>
-				<span data-code="FI">suomi</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="fr_FR">
-				<span data-code="FR">français</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="ga_IE" disabled>
-				<span data-code="GA">Gaeilge</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="hr_HR" disabled>
-				<span data-code="HR">hrvatski</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="it_IT" disabled>
-				<span data-code="IT">italiano</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="lt_LT" disabled>
-				<span data-code="LT">lietuvių</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="lv_LV" disabled>
-				<span data-code="LV">latviešu</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="mt_MT" disabled>
-				<span data-code="MT">Malti</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="nl_NL" disabled>
-				<span data-code="NL">Nederlands</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="pt_PT" disabled>
-				<span data-code="PT">português</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="sk_SK" disabled>
-				<span data-code="SK">slovenčina</span>
-			</button>
-			<button type="submit" name="{{ cname }}" value="sl_SI">
-				<span data-code="SL">slovenščina</span>
-			</button>
+			{% endfor %}
 		</div>
 	</form>
 
 	<h2>{{ _("Other Languages") }}</h2>
 	<form action="/set-language" method="POST">
 		<div class="lang-grid">
-			<button type="submit" name="{{ cname }}" value="en_US">
-				<span data-code="EN">English&nbsp;(US)</span>
+			{% for locale in WORLD_LOCALES %}
+			<button type="submit" name="{{ cname }}" value="{{ locale }}">
+				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
 			</button>
+			{% endfor %}
 		</div>
 	</form>
 </main>
