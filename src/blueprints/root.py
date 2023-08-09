@@ -9,9 +9,8 @@ from selectolax.parser import HTMLParser
 
 import article_watcher
 import util
-from config import Cookie, Theme
 from util import _
-from xtypes.locale import LOCALES
+from xtypes import LOCALES, Cookie, Theme
 
 
 class Article(NamedTuple):
