@@ -1,17 +1,19 @@
-from typing import NamedTuple
-
 from util import _
+from xtypes.case_insensitive_string import CaseInsensitiveString
 
 
-class Country(NamedTuple):
+class Country:
 	"""
 	A simple class representing a country.  Every country has two components, a
 	name (such as “The Netherlands”), and an ISO 3166-1 Alpha-2 code (such as
 	“NL”).
 	"""
 
-	iso_3166_1: str
-	name: str
+	__slots__ = ("iso_3166_1", "name")
+
+	def __init__(self, iso_3166_1: str, name: str) -> None:
+		self.iso_3166_1 = CaseInsensitiveString(iso_3166_1)
+		self.name = name
 
 	def __eq__(self, other: object) -> bool:
 		"""
@@ -19,10 +21,10 @@ class Country(NamedTuple):
 		case, who knows if this will ever get compared with a raw country code.
 		"""
 		match other:
-			case str():
-				return self.iso_3166_1.casefold() == other.casefold()
 			case Country():
-				return self.iso_3166_1.casefold() == other.iso_3166_1.casefold()
+				return self.iso_3166_1 == other.iso_3166_1
+			case str():
+				return self.iso_3166_1 == other
 			case _:
 				return False
 

@@ -1,15 +1,21 @@
-from typing import NamedTuple, Self
+from typing import Self
+
+from xtypes.case_insensitive_string import CaseInsensitiveString
 
 
-class Locale(NamedTuple):
-	iso_639_1: str
-	iso_3166_1: str
-	name: str
+class Locale:
+	def __init__(self, iso_639_1: str, iso_3166_1: str, name: str) -> None:
+		self.iso_639_1 = CaseInsensitiveString(iso_639_1)
+		self.iso_3166_1 = CaseInsensitiveString(iso_3166_1)
+		self.name = name
 
 	def __eq__(self, other: object) -> bool:
 		match other:
 			case Locale():
-				return self.iso_639_1.casefold() == other.iso_639_1.casefold()
+				return (
+					self.iso_639_1 == other.iso_639_1
+					and self.iso_3166_1 == other.iso_3166_1
+				)
 			case str():
 				return str(self).casefold() == other.casefold()
 			case _:
