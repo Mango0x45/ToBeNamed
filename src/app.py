@@ -13,8 +13,7 @@ from watchdog.observers import Observer
 import article_watcher
 import blueprints
 from config import Cookie, Theme
-from xtypes import Locale
-from xtypes.locale import EZ_LOCALES, LOCALES, WORLD_LOCALES
+from xtypes.locale import EZ_LOCALES, LOCALES, WORLD_LOCALES, Locale
 
 
 def get_locale() -> str:
