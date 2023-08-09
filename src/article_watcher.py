@@ -15,8 +15,8 @@ from watchdog.events import (
 )
 
 import util
-from list_ext import ListExt
 from util import _
+from xtypes import ListExt
 
 
 class RawArticle(NamedTuple):
