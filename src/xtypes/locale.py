@@ -53,6 +53,10 @@ EZ_LOCALES = (
 	Locale("sl", "SI", "slovenščina"),
 )
 
-WORLD_LOCALES = (Locale("en", "US", "English\x0A(US)"),)
+WORLD_LOCALES = (
+	Locale("bg", "BG", "български"),
+	Locale("en", "US", "English\x0A(US)"),
+	Locale("ro", "RO", "română"),
+)
 
 LOCALES = EZ_LOCALES + WORLD_LOCALES
