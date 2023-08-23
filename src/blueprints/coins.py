@@ -8,7 +8,7 @@ from flask import Blueprint
 
 import util
 from util import _
-from xtypes import COIN_DENOMINATIONS, COUNTRIES, MintageCoin, MintageJson
+from xtypes import COIN_DENOMINATIONS, COUNTRIES, MintageCoin, MintageJson, CoinType
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
 
@@ -45,6 +45,13 @@ def mintages() -> str:
 
 		return -1 if u else s
 
+	def displayable(x: dict[str, str]) -> dict[CoinType, str]:
+		return {
+			CoinType.IFC: x["ifc"],
+			CoinType.NIFC: x["nifc"],
+			CoinType.PROOF: x["proof"],
+		}
+
 	Options = NamedTuple(
 		"Options", (("ifc", bool), ("nifc", bool), ("proof", bool))
 	)
@@ -76,7 +83,8 @@ def mintages() -> str:
 			}
 			for x in v
 		)
-		detailed.append((k, *row))
+		renamed = tuple(map(displayable, row))
+		detailed.append((k, *renamed))
 
 	rows = []
 	for k, v in data.items():
