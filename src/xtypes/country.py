@@ -1,5 +1,5 @@
 from util import _
-from xtypes.case_insensitive_string import CaseInsensitiveString
+from xtypes import CaseInsensitiveString
 
 
 class Country:
