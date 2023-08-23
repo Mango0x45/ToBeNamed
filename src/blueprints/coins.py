@@ -8,7 +8,13 @@ from flask import Blueprint
 
 import util
 from util import _
-from xtypes import COIN_DENOMINATIONS, COUNTRIES, MintageCoin, MintageJson, CoinType
+from xtypes import (
+	COIN_DENOMINATIONS,
+	COUNTRIES,
+	CoinType,
+	MintageCoin,
+	MintageJson,
+)
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
 
