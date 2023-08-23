@@ -4,7 +4,10 @@ from typing import NamedTuple
 
 import flask
 import flask_babel
+import icu
 from flask import Blueprint
+from icu import Collator, InvalidArgsError
+from icu import Locale as IcuLocale
 
 import util
 from util import _
@@ -22,6 +25,19 @@ coins = Blueprint("coins", __name__, url_prefix="/coins")
 @coins.route("/", methods=[HTTPMethod.GET])
 def index() -> str:
 	return flask.render_template("coins/index.html")
+
+
+@coins.route("/designs", methods=[HTTPMethod.GET])
+def designs() -> str:
+	try:
+		locale = IcuLocale(str(flask_babel.get_locale()))
+	except InvalidArgsError:
+		countries = [c.name for c in COUNTRIES]
+	else:
+		collator = Collator.createInstance(locale)
+		countries = sorted((c.name for c in COUNTRIES), key=collator.getSortKey)
+
+	return flask.render_template("coins/designs.html", countries=countries)
 
 
 @coins.route("/mintages", methods=[HTTPMethod.GET])
