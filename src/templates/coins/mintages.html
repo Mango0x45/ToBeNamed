@@ -20,66 +20,66 @@
 	<hr>
 
 	<section>
+		<form>
+			<div class="grid">
+				<label for="compact-country">
+					{{ _("Country") }}
+					<select id="compact-country" name="c">
+						{% for c in countries %}
+						<option
+							value="{{ c }}"
+							{% if c == country %}
+							selected
+							{% endif %}
+						>
+							{{ _(c.name) }}
+						</option>
+						{% endfor %}
+					</select>
+				</label>
+
+				<fieldset>
+					<label for="compact-ifc">
+						<input
+							type="checkbox"
+							id="compact-ifc"
+							name="ifc"
+							{% if opts.ifc %}
+							checked
+							{% endif %}
+						>
+						Intended for Circulation
+					</label>
+					<label for="compact-nifc">
+						<input
+							type="checkbox"
+							id="compact-nifc"
+							name="nifc"
+							{% if opts.nifc %}
+							checked
+							{% endif %}
+						>
+						NIFC
+					</label>
+					<label for="compact-proof">
+						<input
+							type="checkbox"
+							id="compact-proof"
+							name="proof"
+							{% if opts.proof %}
+							checked
+							{% endif %}
+						>
+						Proof
+					</label>
+				</fieldset>
+			</div>
+
+			<button type="submit">{{ _("Filter") }}</button>
+		</form>
+
 		<details open>
 			<summary>{{ _("Compact Mintages") }}</summary>
-
-			<form>
-				<div class="grid">
-					<label for="compact-country">
-						{{ _("Country") }}
-						<select id="compact-country" name="c">
-							{% for c in countries %}
-							<option
-								value="{{ c }}"
-								{% if c == country %}
-								selected
-								{% endif %}
-							>
-								{{ _(c.name) }}
-							</option>
-							{% endfor %}
-						</select>
-					</label>
-
-					<fieldset>
-						<label for="compact-ifc">
-							<input
-								type="checkbox"
-								id="compact-ifc"
-								name="ifc"
-								{% if opts.ifc %}
-								checked
-								{% endif %}
-							>
-							Intended for Circulation
-						</label>
-						<label for="compact-nifc">
-							<input
-								type="checkbox"
-								id="compact-nifc"
-								name="nifc"
-								{% if opts.nifc %}
-								checked
-								{% endif %}
-							>
-							NIFC
-						</label>
-						<label for="compact-proof">
-							<input
-								type="checkbox"
-								id="compact-proof"
-								name="proof"
-								{% if opts.proof %}
-								checked
-								{% endif %}
-							>
-							Proof
-						</label>
-					</fieldset>
-				</div>
-
-				<button type="submit">{{ _("Filter") }}</button>
-			</form>
 
 			<figure>
 				<table class="mintage-table" role="grid">
