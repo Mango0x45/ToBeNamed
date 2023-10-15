@@ -2251,7 +2251,15 @@ dd {
 	grid-column-start: 2;
 }
 
-.lang-grid {
+.country-grid {
+	row-gap: var(--grid-spacing-vertical);
+}
+
+.country-grid:first-of-type {
+	margin-top: var(--block-spacing-vertical);
+}
+
+.country-grid, .lang-grid {
 	display: grid;
 	grid-template-columns: repeat(
 		auto-fit,
@@ -2260,13 +2268,13 @@ dd {
 	column-gap: var(--grid-spacing-horizontal);
 }
 
-.lang-grid button {
+.country-grid a, .lang-grid button {
 	text-align: left;
 }
 
-.lang-grid span::before {
+.country-grid a::before, .lang-grid span::before {
 	display: inline-block;
-	content: attr(data-code) '\2002';
+	content: attr(data-code);
 	font-weight: bold;
 	width: 4ch;
 }
@@ -2319,4 +2327,14 @@ dd {
 .mintage-table :where(th, td) {
 	white-space: nowrap;
 	text-align: right;
+}
+
+a[role=button].outline {
+	--background-color: transparent;
+	--color: var(--primary);
+}
+
+a[role=button].outline:is(:hover, :active, :focus) {
+	--background-color: transparent;
+	--color: var(--primary-hover);
 }

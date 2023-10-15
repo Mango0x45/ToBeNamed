@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+    <h1>{{ _("Euro Coin Designs") }}</h1>
+    <p>{{ _("Too many to count!") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>{{
+		_("Here you’ll be able to view all the coin designs for each country in the
+		Eurozone.  This section of the site doesn’t include minor varieties such as
+		different mintmarks or errors; those are on the <a href=#>varieties</a>
+		page.")
+	}}</p>
+
+	<hr>
+	
+	<div class="country-grid">
+		{% for country in countries %}
+		<a
+			role="button"
+			class="outline"
+			data-code="{{ country.iso_3166_1.upper() }}"
+			href='{{ url_for("coins.designs", code=country.iso_3166_1) }}'
+		>
+			{{ country.name }}
+		</a>
+		{% endfor %}
+	</div>
+</main>
+
+{% endblock %}

@@ -4,7 +4,6 @@ from typing import NamedTuple
 
 import flask
 import flask_babel
-import icu
 from flask import Blueprint
 from icu import Collator, InvalidArgsError
 from icu import Locale as IcuLocale
@@ -14,6 +13,7 @@ from util import _
 from xtypes import (
 	COIN_DENOMINATIONS,
 	COUNTRIES,
+	CaseInsensitiveString,
 	CoinType,
 	MintageCoin,
 	MintageJson,
@@ -28,16 +28,23 @@ def index() -> str:
 
 
 @coins.route("/designs", methods=[HTTPMethod.GET])
-def designs() -> str:
+@coins.route("/designs/<ci_str:code>", methods=[HTTPMethod.GET])
+def designs(code: CaseInsensitiveString | None = None) -> str:
+	if code is not None:
+		return flask.render_template(f"coins/designs/{code}.html", code=code)
+
 	try:
 		locale = IcuLocale(str(flask_babel.get_locale()))
 	except InvalidArgsError:
-		countries = [c.name for c in COUNTRIES]
+		countries = COUNTRIES
 	else:
 		collator = Collator.createInstance(locale)
-		countries = sorted((c.name for c in COUNTRIES), key=collator.getSortKey)
+		countries = sorted(COUNTRIES, key=lambda c: collator.getSortKey(c.name))
 
-	return flask.render_template("coins/designs.html", countries=countries)
+	return flask.render_template(
+		"coins/designs/index.html",
+		countries=countries,
+	)
 
 
 @coins.route("/mintages", methods=[HTTPMethod.GET])
