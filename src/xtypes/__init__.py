@@ -1,4 +1,7 @@
-from .case_insensitive_string import CaseInsensitiveString
+from .case_insensitive_string import (
+	CaseInsensitiveString,
+	CaseInsensitiveStringConverter,
+)
 from .coin_type import CoinType
 from .cookie import Cookie
 from .country import COUNTRIES, Country

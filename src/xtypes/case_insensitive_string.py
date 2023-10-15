@@ -1,3 +1,6 @@
+from werkzeug.routing import BaseConverter
+
+
 class CaseInsensitiveString(str):
 	"""
 	A case-insensitive string type.  Comparisons of strings of this type are
@@ -35,3 +38,10 @@ class CaseInsensitiveString(str):
 	def __ge__(self, other: str) -> bool:
 		return self.casefold() >= other.casefold()
 
+
+class CaseInsensitiveStringConverter(BaseConverter):
+	def to_python(self, value: str) -> CaseInsensitiveString:
+		return CaseInsensitiveString(value)
+
+	def to_url(self, value: CaseInsensitiveString) -> str:
+		return str(value)

@@ -12,7 +12,15 @@ from watchdog.observers import Observer
 
 import article_watcher
 import blueprints
-from xtypes import EZ_LOCALES, LOCALES, WORLD_LOCALES, Cookie, Locale, Theme
+from xtypes import (
+	EZ_LOCALES,
+	LOCALES,
+	WORLD_LOCALES,
+	CaseInsensitiveStringConverter,
+	Cookie,
+	Locale,
+	Theme,
+)
 
 
 def get_locale() -> str:
@@ -24,6 +32,7 @@ def get_locale() -> str:
 
 
 app = Flask(__name__)
+app.url_map.converters["ci_str"] = CaseInsensitiveStringConverter
 babel = Babel(app, locale_selector=get_locale)
 
 
