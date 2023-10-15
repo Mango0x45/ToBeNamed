@@ -829,8 +829,6 @@ del {
 img {
 	width: 30%;
 	max-width: 100%;
-	display: block;
-	margin: 0 auto;
 	height: auto;
 	border-style: none;
 }
@@ -2340,4 +2338,10 @@ a[role=button].outline {
 a[role=button].outline:is(:hover, :active, :focus) {
 	--background-color: transparent;
 	--color: var(--primary-hover);
+}
+
+.design-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }

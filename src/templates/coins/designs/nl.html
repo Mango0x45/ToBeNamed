@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+    <h1>{{ _("Dutch Euro Coin Designs") }}</h1>
+    <p>{{ _("They could use some larger dates") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		From 1999 to 2013, all Dutch denominations bore a portrait of Queen Beatrix
+		of the Netherlands.  Beginning in 2014 following her abdication, the coins
+		began to bear the portrait of her son King Willem-Alexander.
+		{% endtrans %}
+	</p>
+
+	<h2>{{ _("1-, 2-, 5-, 10-, 20-, and 50 Euro Cent Coins") }}</h2>
+	<div class="design-container">
+		<img src="/static/designs/nl/050-beatrix.png">
+		<img src="/static/designs/nl/050-willem-alexander.png">
+	</div>
+	<br>
+	<p>
+		{% trans %}
+		All the denominations under a euro bear the same design.  The coins
+		featuring Queen Beatrix have a small portrait surrounded by various dots and
+		the 12 stars of Europe.  In the coins featuring King Willem-Alexander the
+		stars were moved farther out and the dots removed to allow for a larger and
+		more detailed portrait.
+		{% endtrans %}
+	</p>
+
+	<h2>{{ _("1- and 2 Euro Coins") }}</h2>
+	<div class="design-container">
+		<img src="/static/designs/nl/100-beatrix.png">
+		<img src="/static/designs/nl/100-willem-alexander.png">
+	</div>
+	<br>
+	<p>
+		{% trans %}
+		The 1- and 2 Euro designs have more detailed portraits than the cent coins
+		but follow the same general theme.  In the series featuring King
+		Willem-Alexander the relief of the portrait is far lighter, resulting in
+		coins often looking more worn than their first series counterparts.
+		{% endtrans %}
+	</p>
+</main>
+
+{% endblock %}
