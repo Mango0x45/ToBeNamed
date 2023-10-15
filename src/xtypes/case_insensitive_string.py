@@ -45,6 +45,7 @@ class CaseInsensitiveStringConverter(BaseConverter):
 	routing functions through Flask routes.  To use the converter, simply add a
 	URL parameter with the type ‘ci_str’ such as ‘/foo/bar/<ci_str:baz>’.
 	"""
+
 	def to_python(self, value: str) -> CaseInsensitiveString:
 		return CaseInsensitiveString(value)
 
