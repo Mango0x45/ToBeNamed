@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+    <h1>{{ _("Andorran Euro Coin Designs") }}</h1>
+    <p>{{ _("What even is a chamois?") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<h2>{{ _("1-, 2-, and 5 Euro Cent Coins") }}</h2>
+	<img src="/static/designs/ad/001.png">
+	<br>
+	<p>
+		{{
+			_("These coins prominently feature a Pyrenean chamois in the foreground
+			with a bearded vulture flying above.")
+		}}
+	</p>
+	<p>
+		{{
+			_("This design was introduced in 2014 and continues to be minted to the
+			present day.")
+		}}
+	</p>
+
+	<h2>{{ _("10-, 20-, and 50 Euro Cent Coins") }}</h2>
+	<img src="/static/designs/ad/050.png">
+	<br>
+	<p>
+		{{
+			_("These coins feature the Church of Santa Coloma d’Andorra, the oldest
+			church in Andorra.")
+		}}
+	</p>
+	<p>
+		{{
+			_("This design was introduced in 2014 and continues to be minted to the
+			present day.")
+		}}
+	</p>
+
+	<h2>{{ _("1 Euro Coins") }}</h2>
+	<img src="/static/designs/ad/100.png">
+	<br>
+	<p>
+		{{
+			_("This coin features the Casa de la Vall, the former headquarters of the
+			General Council of Andorra.")
+		}}
+	</p>
+	<p>
+		{{
+			_("This design was introduced in 2014 and continues to be minted to the
+			present day.")
+		}}
+	</p>
+
+	<h2>{{ _("2 Euro Coins") }}</h2>
+	<img src="/static/designs/ad/200.png">
+	<br>
+	<p>
+		{{
+			_("This coin features the Andorran coat of arms.  ")
+		}}
+	</p>
+	<p>
+		{{
+			_("This design was introduced in 2014 and continues to be minted to the
+			present day.")
+		}}
+	</p>
+</main>
+
+{% endblock %}
