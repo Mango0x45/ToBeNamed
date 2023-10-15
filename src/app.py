@@ -32,6 +32,7 @@ def get_locale() -> str:
 
 
 app = Flask(__name__)
+app.jinja_env.policies["ext.i18n.trimmed"] = True
 app.url_map.converters["ci_str"] = CaseInsensitiveStringConverter
 babel = Babel(app, locale_selector=get_locale)
 

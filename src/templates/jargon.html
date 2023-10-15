@@ -11,20 +11,24 @@
 </header>
 
 <main>
-	<p>{{
-		_("There are various related cash and cash-collecting terms that you may
-		see used on this website, in online forums, and elsewhere.  This page
-		will hopefully get you up to speed with the common- and important terms
-		you may see used.")
-	}}</p>
+	<p>
+		{% trans %}
+		There are various related cash and cash-collecting terms that you may see
+		used on this website, in online forums, and elsewhere.  This page will
+		hopefully get you up to speed with the common- and important terms you may
+		see used.
+		{% endtrans %}
+	</p>
 
-	<p>{{
-		_("All terms defined below can be used as clickable links which
-		highlight the selected term.  It is recommended to use these
-		links when sharing this page to others, so that the relevant
-		terms are highlighted.  You can also hover over the relevant terms to
-		see the full-version of the abbreviation if applicable.")
-	}}</p>
+	<p>
+		{% trans %}
+		All terms defined below can be used as clickable links which highlight the
+		selected term.  It is recommended to use these links when sharing this page
+		to others, so that the relevant terms are highlighted.  You can also hover
+		over the relevant terms to see the full-version of the abbreviation if
+		applicable.
+		{% endtrans %}
+	</p>
 
 	<hr>
 
@@ -36,49 +40,56 @@
 				<abbr data-tooltip='{{ _("Almost Uncirculated") }}'>AU</abbr>
 			</a>
 		</dt>
-		<dd>{{
-			_("Refers to coins that are in impeccable condition as a result of
-			limited use in circulation.  Unlike the term “UNC”, this term is a
-			description of the coins <em>quality</em>, not its usage.")
-		}}</dd>
+		<dd>
+			{% trans %}
+			Refers to coins that are in impeccable condition as a result of limited
+			use in circulation.  Unlike the term “UNC”, this term is a description of
+			the coins <em>quality</em>, not its usage.
+			{% endtrans %}
+		</dd>
 
 		<dt>
 			<a id="BU" href="#BU">
 				<abbr data-tooltip='{{ _("Brilliantly Uncirculated") }}'>BU</abbr>
 			</a>
 		</dt>
-		<dd>{{
-			_("Refers to uncirculated coins from coincards and -sets.  These are
-			different from UNC coins in that they are typically handled with
-			more care and struck with higher-quality dies than the coins minted
-			for coin rolls.")
-		}}</dd>
+		<dd>
+			{% trans %}
+			Refers to uncirculated coins from coincards and -sets.  These are
+			different from UNC coins in that they are typically handled with more
+			care and struck with higher-quality dies than the coins minted for coin
+			rolls.
+			{% endtrans %}
+		</dd>
 
 		<dt>
 			<a id="NIFC" href="#NIFC">
 				<abbr data-tooltip='{{ _("Not Intended For Circulation") }}'>NIFC</abbr>
 			</a>
 		</dt>
-		<dd>{{
-			_("NIFC coins are exactly what their name implies — coins minted
-			without the intention of being put into circulation.  These coins
-			are typically minted with the purpose of being put into coincards
-			and -sets aimed at collectors.  While uncommon, NIFC coins are
-			occasionally found by collectors in circulation.")
-		}}</dd>
+		<dd>
+			{% trans %}
+			NIFC coins are exactly what their name implies — coins minted without the
+			intention of being put into circulation.  These coins are typically
+			minted with the purpose of being put into coincards and -sets aimed at
+			collectors.  While uncommon, NIFC coins are occasionally found by
+			collectors in circulation.
+			{% endtrans %}
+		</dd>
 
 		<dt>
 			<a id="UNC" href="#UNC">
 				<abbr data-tooltip='{{ _("Uncirculated") }}'>UNC</abbr>
 			</a>
 		</dt>
-		<dd>{{
-			_("Refers to coins that have never been used in a monetary exchange.
-			The term “UNC” is often mistakenly used to refer to coins in very
-			good condition, but this is incorrect.  A coin in poor condition
-			that has never been <em>circulated</em> is still considered an “UNC”
-			coin.")
-		}}</dd>
+		<dd>
+			{% trans %}
+			Refers to coins that have never been used in a monetary exchange. The
+			term “UNC” is often mistakenly used to refer to coins in very good
+			condition, but this is incorrect.  A coin in poor condition that has
+			never been <em>circulated</em> is still considered an “UNC” coin.
+			{% endtrans %}
+		</dd>
 	</dl>
 
 	<h2>{{ _("Collector-Specific Terms") }}</h2>
@@ -89,11 +100,13 @@
 				<abbr data-tooltip='{{ _("Coin Roll Hunting") }}'>CRH</abbr>
 			</a>
 		</dt>
-		<dd>{{
-			_("This is the activity of purchasing- and opening coin rolls to
-			look for coins to add to a collection.  Coin rolls are often
-			obtained from a bank or coin roll machine.")
-		}}</dd>
+		<dd>
+			{% trans %}
+			This is the activity of purchasing- and opening coin rolls to look for
+			coins to add to a collection.  Coin rolls are often obtained from a bank
+			or coin roll machine.
+			{% endtrans %}
+		</dd>
 	</dl>
 </main>
 
