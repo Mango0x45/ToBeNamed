@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% macro language_grid(lang_set) %}
+	<form action="/set-language" method="POST">
+		<div class="lang-grid">
+			{% for locale in lang_set %}
+			<button type="submit" name="{{ cname }}" value="{{ locale }}">
+				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
+			</button>
+			{% endfor %}
+		</div>
+	</form>
+{% endmacro %}
+
 <header>
 	{% include "nav.html" %}
 
@@ -23,26 +35,10 @@
 	<hr>
 
 	<h2>{{ _("Eurozone Languages") }}</h2>
-	<form action="/set-language" method="POST">
-		<div class="lang-grid">
-			{% for locale in EZ_LOCALES %}
-			<button type="submit" name="{{ cname }}" value="{{ locale }}">
-				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
-			</button>
-			{% endfor %}
-		</div>
-	</form>
+	{{ language_grid(EZ_LOCALES) }}
 
 	<h2>{{ _("Other Languages") }}</h2>
-	<form action="/set-language" method="POST">
-		<div class="lang-grid">
-			{% for locale in WORLD_LOCALES %}
-			<button type="submit" name="{{ cname }}" value="{{ locale }}">
-				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
-			</button>
-			{% endfor %}
-		</div>
-	</form>
+	{{ language_grid(WORLD_LOCALES) }}
 </main>
 
 {% endblock content %}
