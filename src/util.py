@@ -1,4 +1,3 @@
-import copy
 import os.path
 from typing import Callable, Iterable, TypeVar
 
@@ -11,7 +10,7 @@ T = TypeVar("T")
 
 def locale_sort(
 	xs: Iterable[T], key: Callable[[T], str] = lambda x: str(x)
-) -> Iterable[T]:
+) -> list[T]:
 	"""
 	Return a sorted copy of ‘xs’ that takes into account the current locale.
 	You may also specify a ‘key’ function that works identically to the key
@@ -23,7 +22,7 @@ def locale_sort(
 	try:
 		locale = IcuLocale(str(flask_babel.get_locale()))
 	except InvalidArgsError:
-		return copy.copy(xs)
+		return list(xs)
 	else:
 		collator = Collator.createInstance(locale)
 		return sorted(xs, key=lambda x: collator.getSortKey(key(x)))
