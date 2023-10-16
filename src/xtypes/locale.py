@@ -4,6 +4,8 @@ from xtypes.case_insensitive_string import CaseInsensitiveString
 
 
 class Locale:
+	__slots__ = ("iso_639_1", "iso_3166_1", "name")
+
 	def __init__(self, iso_639_1: str, iso_3166_1: str, name: str) -> None:
 		self.iso_639_1 = CaseInsensitiveString(iso_639_1)
 		self.iso_3166_1 = CaseInsensitiveString(iso_3166_1)
