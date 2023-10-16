@@ -6,8 +6,6 @@ import flask
 import flask_babel
 from flask import Blueprint
 from flask_babel import _
-from icu import Collator, InvalidArgsError
-from icu import Locale as IcuLocale
 
 import util
 from xtypes import (
@@ -33,15 +31,7 @@ def designs(code: CaseInsensitiveString | None = None) -> str:
 	if code is not None:
 		return flask.render_template(f"coins/designs/{code}.html", code=code)
 
-	try:
-		locale = IcuLocale(str(flask_babel.get_locale()))
-	except InvalidArgsError:
-		countries = COUNTRIES
-	else:
-		collator = Collator.createInstance(locale)
-		countries = sorted(
-			COUNTRIES, key=lambda c: collator.getSortKey(_(c.name))
-		)
+	countries = util.locale_sort(COUNTRIES, key=lambda x: _(x.name))
 
 	return flask.render_template(
 		"coins/designs/index.html",
@@ -122,10 +112,12 @@ def mintages() -> str:
 		row = tuple(fmt(mintage(x)) for x in v)
 		rows.append((k, *row))
 
+	countries = util.locale_sort(COUNTRIES, key=lambda x: _(x.name))
+
 	return flask.render_template(
 		"coins/mintages.html",
 		country=country,
-		countries=COUNTRIES,
+		countries=countries,
 		denoms=COIN_DENOMINATIONS,
 		rows=rows,
 		detailed=detailed,
