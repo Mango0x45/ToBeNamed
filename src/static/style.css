@@ -743,6 +743,7 @@ hgroup > *:last-child {
 }
 
 p {
+	text-align: justify;
 	margin-bottom: var(--typography-spacing-vertical);
 }
 
