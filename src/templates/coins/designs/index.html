@@ -11,12 +11,14 @@
 </header>
 
 <main>
-	<p>{{
-		_("Here you’ll be able to view all the coin designs for each country in the
+	<p>
+		{% trans %}
+		Here you’ll be able to view all the coin designs for each country in the
 		Eurozone.  This section of the site doesn’t include minor varieties such as
 		different mintmarks or errors; those are on the <a href=#>varieties</a>
-		page.")
-	}}</p>
+		page.
+		{% endtrans %}
+	</p>
 
 	<hr>
 	
@@ -28,7 +30,7 @@
 			data-code="{{ country.iso_3166_1.upper() }}"
 			href='{{ url_for("coins.designs", code=country.iso_3166_1) }}'
 		>
-			{{ country.name }}
+			{{ _(country.name) }}
 		</a>
 		{% endfor %}
 	</div>

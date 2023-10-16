@@ -11,14 +11,13 @@
 </header>
 
 <main>
-	<p>{{
-		_("On this section of the site you can find everything there is to know
-		about the coins of the Eurozone.  For the latest news on new coin- and
-		design releases, check out the <a href='LINK'>news</a> tab!").replace(
-			"LINK",
-			url_for("news.index")
-		)
-	}}</p>
+	<p>
+		{% trans link=url_for("news.index") %}
+		On this section of the site you can find everything there is to know about
+		the coins of the Eurozone.  For the latest news on new coin- and design
+		releases, check out the <a href="{{ link }}">news</a> tab!
+		{% endtrans %}
+	</p>
 
 	<hr>
 

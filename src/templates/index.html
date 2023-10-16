@@ -11,12 +11,14 @@
 </header>
 
 <main>
-	<p>{{
-		_("Welcome to the Euro Cash Compendium.  This sites aims to be a
-		resource for you to discover everything there is to know about the coins
-		and banknotes of a currency that spans 26 countries and 350 million
-		people.  We also have dedicated sections of the site for collectors.")
-	}}</p>
+	<p>
+		{% trans %}
+		Welcome to the Euro Cash Compendium.  This sites aims to be a resource for
+		you to discover everything there is to know about the coins and banknotes of
+		a currency that spans 26 countries and 350 million people.  We also have
+		dedicated sections of the site for collectors.
+		{% endtrans %}
+	</p>
 
 	<hr>
 
@@ -26,13 +28,13 @@
 		<section>
 			<article>
 				<header>
-					<h2>{{ _(article.headline) }}</h2>
+					<h2>{{ article.headline }}</h2>
 					<time datetime="{{ article.iso_8601 }}">
 						{{ article.date }}
 					</time>
 				</header>
 				<main>
-					{{ _(article.sample) }}
+					{{ article.sample }}
 				</main>
 			</article>
 		</section>

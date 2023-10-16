@@ -11,10 +11,12 @@
 </header>
 
 <main>
-	<p>{{
-		_("This is the first article on the site.  There isn’t much to see here,
-		I’m just testing out some of the site features to make sure they work.")
-	}}</p>
+	<p>
+		{% trans %}
+		This is the first article on the site.  There isn’t much to see here, I’m
+		just testing out some of the site features to make sure they work.
+		{% endtrans %}
+	</p>
 </main>
 
 {% endblock content %}

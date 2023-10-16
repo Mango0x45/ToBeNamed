@@ -11,17 +11,20 @@
 </header>
 
 <main>
-	<p>{{
-		_("On this page you can view all of our news articles.  These articles
-		cover all topics we deem relevant such as new coin designs, coin release
-		dates, etc.  You may also find news articles here relating to this site
-		itself.")
-	}}</p>
+	<p>
+		{% trans %}
+		On this page you can view all of our news articles.  These articles cover
+		all topics we deem relevant such as new coin designs, coin release dates,
+		etc.  You may also find news articles here relating to this site itself.
+		{% endtrans %}
+	</p>
 
-	<p>{{
-		_("Due to logistical reasons, we cannot promise that all articles will
-		be translated to your preferred language.  We will try our best though!")
-	}}</p>
+	<p>
+		{% trans %}
+		Due to logistical reasons, we cannot promise that all articles will be
+		translated to your preferred language.  We will try our best though!
+		{% endtrans %}
+	</p>
 
 	<hr>
 
@@ -35,7 +38,7 @@
 						<time datetime="{{ article.iso_8601 }}">{{ article.date }}</time>
 					</td>
 					<td>
-						<a href="{{ article.iso_8601 }}">{{ _(article.headline) }}</a>
+						<a href="{{ article.iso_8601 }}">{{ article.headline }}</a>
 					</td>
 				</tr>
 				{% endfor %}

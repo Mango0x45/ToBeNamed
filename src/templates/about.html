@@ -11,12 +11,13 @@
 </header>
 
 <main>
-	<p>{{
-		_("This website is a collaborative effort between the developers who
-		built the site, the researchers who found all the data found on the
-		site, and the translators who helped make the site accessible to a wider
-		audience.")
-	}}</p>
+	<p>
+		{% trans %}
+		This website is a collaborative effort between the developers who built the
+		site, the researchers who found all the data found on the site, and the
+		translators who helped make the site accessible to a wider audience.
+		{% endtrans %}
+	</p>
 
 	<h2>{{ _("Special Thanks") }}</h2>
 	<table>
