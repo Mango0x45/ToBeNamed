@@ -2345,3 +2345,7 @@ a[role=button].outline:is(:hover, :active, :focus) {
 	justify-content: space-around;
 	align-items: center;
 }
+
+.design-container + p {
+	margin-top: var(--block-spacing-vertical);
+}
