@@ -413,7 +413,7 @@ msgid "Andorra"
 msgstr "Andorra"
 
 msgid "Austria"
-msgstr "Oostenrĳk"
+msgstr "Oostenrijk"
 
 msgid "Belgium"
 msgstr "België"
@@ -434,7 +434,7 @@ msgid "Finland"
 msgstr "Finland"
 
 msgid "France"
-msgstr "Frankrĳk"
+msgstr "Frankrijk"
 
 msgid "Greece"
 msgstr "Griekenland"
@@ -473,7 +473,7 @@ msgid "Slovenia"
 msgstr "Slovenië"
 
 msgid "Slovakia"
-msgstr "Slowakĳe"
+msgstr "Slowakije"
 
 msgid "San Marino"
 msgstr "San Marino"
