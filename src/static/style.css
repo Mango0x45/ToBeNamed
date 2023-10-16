@@ -742,8 +742,11 @@ hgroup > *:last-child {
 	font-family: unset;
 }
 
-p {
+dd, p {
 	text-align: justify;
+}
+
+p {
 	margin-bottom: var(--typography-spacing-vertical);
 }
 
