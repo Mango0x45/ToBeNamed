@@ -1,0 +1,483 @@
+# Dutch (Netherlands) translations for TO-BE-NAMED.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the TO-BE-NAMED project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TO-BE-NAMED VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-10-16 16:17+0200\n"
+"PO-Revision-Date: 2023-10-16 16:15+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: nl_NL\n"
+"Language-Team: nl_NL <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+msgid "No headline found"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "No article preview found"
+msgstr ""
+
+msgid "About Us"
+msgstr ""
+
+msgid "We’re cool aren’t we?"
+msgstr ""
+
+msgid ""
+"This website is a collaborative effort between the developers who built the "
+"site, the researchers who found all the data found on the site, and the "
+"translators who helped make the site accessible to a wider audience."
+msgstr ""
+
+msgid "Special Thanks"
+msgstr ""
+
+msgid "Development"
+msgstr ""
+
+msgid "Research"
+msgstr ""
+
+msgid "Translations"
+msgstr ""
+
+msgid "British- & American English"
+msgstr ""
+
+msgid "Icelandic"
+msgstr ""
+
+msgid "Copyright © 2023 The WEBSITE NAME Contributors"
+msgstr ""
+
+msgid "The Euro Cash Compendium"
+msgstr ""
+
+msgid "United in <del>diversity</del> <ins>cash</ins>"
+msgstr ""
+
+msgid ""
+"Welcome to the Euro Cash Compendium.  This sites aims to be a resource for "
+"you to discover everything there is to know about the coins and banknotes of "
+"a currency that spans 26 countries and 350 million people.  We also have "
+"dedicated sections of the site for collectors."
+msgstr ""
+
+msgid "Recent News"
+msgstr ""
+
+msgid "Relevant Jargon"
+msgstr ""
+
+msgid "All the terms you might see thrown around"
+msgstr ""
+
+msgid ""
+"There are various related cash and cash-collecting terms that you may see "
+"used on this website, in online forums, and elsewhere.  This page will "
+"hopefully get you up to speed with the common- and important terms you may "
+"see used."
+msgstr ""
+
+msgid ""
+"All terms defined below can be used as clickable links which highlight the "
+"selected term.  It is recommended to use these links when sharing this page "
+"to others, so that the relevant terms are highlighted.  You can also hover "
+"over the relevant terms to see the full-version of the abbreviation if "
+"applicable."
+msgstr ""
+
+msgid "General Terms"
+msgstr ""
+
+msgid "Almost Uncirculated"
+msgstr ""
+
+msgid ""
+"Refers to coins that are in impeccable condition as a result of limited use "
+"in circulation.  Unlike the term “UNC”, this term is a description of the "
+"coins <em>quality</em>, not its usage."
+msgstr ""
+
+msgid "Brilliantly Uncirculated"
+msgstr ""
+
+msgid ""
+"Refers to uncirculated coins from coincards and -sets.  These are different "
+"from UNC coins in that they are typically handled with more care and struck "
+"with higher-quality dies than the coins minted for coin rolls."
+msgstr ""
+
+msgid "Not Intended For Circulation"
+msgstr ""
+
+msgid ""
+"NIFC coins are exactly what their name implies — coins minted without the "
+"intention of being put into circulation.  These coins are typically minted "
+"with the purpose of being put into coincards and -sets aimed at collectors.  "
+"While uncommon, NIFC coins are occasionally found by collectors in "
+"circulation."
+msgstr ""
+
+msgid "Uncirculated"
+msgstr ""
+
+msgid ""
+"Refers to coins that have never been used in a monetary exchange. The term "
+"“UNC” is often mistakenly used to refer to coins in very good condition, but "
+"this is incorrect.  A coin in poor condition that has never been "
+"<em>circulated</em> is still considered an “UNC” coin."
+msgstr ""
+
+msgid "Collector-Specific Terms"
+msgstr ""
+
+msgid "Coin Roll Hunting"
+msgstr ""
+
+msgid ""
+"This is the activity of purchasing- and opening coin rolls to look for coins "
+"to add to a collection.  Coin rolls are often obtained from a bank or coin "
+"roll machine."
+msgstr ""
+
+msgid "Select Your Language"
+msgstr ""
+
+msgid "Or your dialect, for the Americans"
+msgstr ""
+
+msgid "Select your preferred language to use on the site."
+msgstr ""
+
+msgid "Eurozone Languages"
+msgstr ""
+
+msgid "Other Languages"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "News"
+msgstr ""
+
+msgid "Coin Hunting"
+msgstr ""
+
+msgid "Coins"
+msgstr ""
+
+msgid "Banknotes"
+msgstr ""
+
+msgid "Jargon"
+msgstr ""
+
+msgid "Discord"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Euro Coins"
+msgstr ""
+
+msgid "Watch out for Kosovo counterfiets"
+msgstr ""
+
+#, python-format
+msgid ""
+"On this section of the site you can find everything there is to know about "
+"the coins of the Eurozone.  For the latest news on new coin- and design "
+"releases, check out the <a href=\"%(link)s\">news</a> tab!"
+msgstr ""
+
+msgid "Designs"
+msgstr ""
+
+msgid "View the 600+ different Euro-coin designs!"
+msgstr ""
+
+msgid "Mintages"
+msgstr ""
+
+msgid "View the mintage figures of all the Euro coins!"
+msgstr ""
+
+msgid "Varieties"
+msgstr ""
+
+msgid "View all the known Euro varieties!"
+msgstr ""
+
+msgid "Euro Coin Mintages"
+msgstr ""
+
+msgid "Can’t trust the Irish"
+msgstr ""
+
+msgid ""
+"Here you’ll be able to view all the known mintages for all coins. You’ll also"
+" be able to filter on country, denomination, etc.  If you have any mintage "
+"data that’s missing from our site, feel free to contact us."
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Compact Mintages"
+msgstr ""
+
+msgid "Year"
+msgstr ""
+
+msgid "Detailed Mintages"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Andorran Euro Coin Designs"
+msgstr ""
+
+msgid "What even is a chamois?"
+msgstr ""
+
+msgid "1-, 2-, and 5 Euro Cent Coins"
+msgstr ""
+
+msgid ""
+"These coins prominently feature a Pyrenean chamois in the foreground with a "
+"bearded vulture flying above.  Both animals are native to Andorra."
+msgstr ""
+
+msgid "10-, 20-, and 50 Euro Cent Coins"
+msgstr ""
+
+msgid ""
+"These coins feature the Church of Santa Coloma d’Andorra, the oldest church "
+"in Andorra.  The church is dedicated to Columba of Sens, the patron saint of "
+"Andorra and dates back to the 8th century."
+msgstr ""
+
+msgid "1 Euro Coins"
+msgstr ""
+
+msgid ""
+"This coin features the Casa de la Vall, the former headquarters of the "
+"General Council of Andorra.  It was built in 1580 as a manor and tower "
+"defense by the Busquets family.  In 1702, it was acquired by the Consell de "
+"la Terra."
+msgstr ""
+
+msgid "2 Euro Coins"
+msgstr ""
+
+msgid ""
+"This coin features the Andorran coat of arms.  The coat of arms features the "
+"four different shields of the Bishop of Urgell, the Count of Foix, Catalonia,"
+" and the Viscounts of Béarn.  At the bottom is the motto ‘Virtus Unita "
+"Fortior’ which translates to ‘Virtue United is Stronger’."
+msgstr ""
+
+msgid "Austrian Euro Coin Designs"
+msgstr ""
+
+msgid "Striving to become Belgium"
+msgstr ""
+
+msgid ""
+"These coins feature various flowers from the Alps.  They were chosen to "
+"symbolize the role of Austria in the development of EU environmental policy. "
+"The coins also feature the Austrian flag underneath their respective flowers."
+msgstr ""
+
+msgid ""
+"These coins feature the different kinds of architecture in Austria.  The "
+"buildings depicted are the St. Stephen’s Cathedral, Belvedere Palace, and "
+"Secession Hall.  Respectively they represent the Gothic-, Baroque-, and Art "
+"Nouveau- architectural styles."
+msgstr ""
+
+msgid "1- and 2 Euro Coins"
+msgstr ""
+
+msgid ""
+"These coins feature the portraits of famous Austrians.  The 1 euro coin "
+"features Wolfgang Amadeus Mozart, the famous Austrian composer from Salzburg."
+"  His signature is also shown on his shoulder.  The 2 euro coin features "
+"Bertha von Suttner, an Austrian winner of the Nobel Peace Prize ‘for her "
+"audacity to oppose the horrors of war’."
+msgstr ""
+
+msgid "Euro Coin Designs"
+msgstr ""
+
+msgid "Too many to count!"
+msgstr ""
+
+msgid ""
+"Here you’ll be able to view all the coin designs for each country in the "
+"Eurozone.  This section of the site doesn’t include minor varieties such as "
+"different mintmarks or errors; those are on the <a href=#>varieties</a> page."
+msgstr ""
+
+msgid "Dutch Euro Coin Designs"
+msgstr ""
+
+msgid "They could use some larger dates"
+msgstr ""
+
+msgid ""
+"From 1999 to 2013, all Dutch denominations bore a portrait of Queen Beatrix "
+"of the Netherlands.  Beginning in 2014 following her abdication, the coins "
+"began to bear the portrait of her son King Willem-Alexander."
+msgstr ""
+
+msgid "1-, 2-, 5-, 10-, 20-, and 50 Euro Cent Coins"
+msgstr ""
+
+msgid ""
+"All the denominations under a euro bear the same design.  The coins featuring"
+" Queen Beatrix have a small portrait surrounded by various dots and the 12 "
+"stars of Europe.  In the coins featuring King Willem-Alexander the stars were"
+" moved farther out and the dots removed to allow for a larger and more "
+"detailed portrait."
+msgstr ""
+
+msgid ""
+"The 1- and 2 Euro designs have more detailed portraits than the cent coins "
+"but follow the same general theme.  In the series featuring King Willem-"
+"Alexander the relief of the portrait is far lighter, resulting in coins often"
+" looking more worn than their first series counterparts."
+msgstr ""
+
+msgid "News Articles"
+msgstr ""
+
+msgid "Site-, coin-, and banknote-related news!"
+msgstr ""
+
+msgid ""
+"On this page you can view all of our news articles.  These articles cover all"
+" topics we deem relevant such as new coin designs, coin release dates, etc.  "
+"You may also find news articles here relating to this site itself."
+msgstr ""
+
+msgid ""
+"Due to logistical reasons, we cannot promise that all articles will be "
+"translated to your preferred language.  We will try our best though!"
+msgstr ""
+
+msgid "Articles"
+msgstr ""
+
+msgid "Hello, World!"
+msgstr ""
+
+msgid "Let’s see if this works"
+msgstr ""
+
+msgid ""
+"This is the first article on the site.  There isn’t much to see here, I’m "
+"just testing out some of the site features to make sure they work."
+msgstr ""
+
+msgid "IFC"
+msgstr ""
+
+msgid "NIFC"
+msgstr ""
+
+msgid "Proof"
+msgstr ""
+
+msgid "Andorra"
+msgstr "Andorra"
+
+msgid "Austria"
+msgstr "Oostenrĳk"
+
+msgid "Belgium"
+msgstr "België"
+
+msgid "Cyprus"
+msgstr "Cyprus"
+
+msgid "Germany"
+msgstr "Duitsland"
+
+msgid "Estonia"
+msgstr "Estland"
+
+msgid "Spain"
+msgstr "Spanje"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "France"
+msgstr "Frankrĳk"
+
+msgid "Greece"
+msgstr "Griekenland"
+
+msgid "Croatia"
+msgstr "Kroatië"
+
+msgid "Ireland"
+msgstr "Ierland"
+
+msgid "Italy"
+msgstr "Italië"
+
+msgid "Lithuania"
+msgstr "Litouwen"
+
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+msgid "Latvia"
+msgstr "Letland"
+
+msgid "Monaco"
+msgstr "Monaco"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Netherlands"
+msgstr "Nederland"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Slovenia"
+msgstr "Slovenië"
+
+msgid "Slovakia"
+msgstr "Slowakĳe"
+
+msgid "San Marino"
+msgstr "San Marino"
+
+msgid "Vatican City"
+msgstr "Vaticaanstad"
+
