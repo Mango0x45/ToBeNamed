@@ -34,6 +34,7 @@ class Locale:
 
 
 EZ_LOCALES = (
+	Locale("ca", "AD", "català"),
 	Locale("de", "DE", "Deutsch"),
 	Locale("el", "GR", "ελληνικά"),
 	Locale("en", "GB", "English"),
