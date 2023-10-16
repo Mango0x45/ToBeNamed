@@ -39,7 +39,9 @@ def designs(code: CaseInsensitiveString | None = None) -> str:
 		countries = COUNTRIES
 	else:
 		collator = Collator.createInstance(locale)
-		countries = sorted(COUNTRIES, key=lambda c: collator.getSortKey(c.name))
+		countries = sorted(
+			COUNTRIES, key=lambda c: collator.getSortKey(_(c.name))
+		)
 
 	return flask.render_template(
 		"coins/designs/index.html",
