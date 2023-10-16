@@ -1,5 +1,8 @@
 PROJECT = TO-BE-NAMED
 
+TRANSDIR = src/translations
+TRANSPOT = src/messages.pot
+
 all:
 
 format:
@@ -7,21 +10,18 @@ format:
 	find src -name '*.py' -exec isort -l 80 {} +
 
 trans-update:
-	pybabel extract -w 80 -F babel.cfg -o src/messages.pot --no-location \
-		--project='${PROJECT}' src/
-	if [ -d src/translations ]; then \
-		pybabel update -w 80 -i src/messages.pot -d src/translations; \
-	fi
+	pybabel extract -w 80 -F babel.cfg -o ${TRANSPOT} --no-location --project='${PROJECT}' src/
+	[ -d src/translations ] && pybabel update -w 80 -i ${TRANSPOT} -d ${TRANSDIR}
 
 trans-new:
-	@if [ -z "${LOCALE}" ]; then \
+	@[ -z "${LOCALE}" ] && { \
 		echo 'Specify a locale: “make trans-new LOCALE=xx_YY”' 2>&1; \
 		exit 1; \
-	fi
-	pybabel init -i src/messages.pot -d src/translations -w 80 -l ${LOCALE}
+	}
+	pybabel init -w 80 -i ${TRANSPOT} -d ${TRANSDIR} -l ${LOCALE}
 
 trans-comp:
-	pybabel compile -d src/translations
+	pybabel compile -d ${TRANSDIR}
 
 serve:
 	pipenv run python src/app.py -d
