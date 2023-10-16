@@ -14,10 +14,10 @@ trans-update:
 	[ -d src/translations ] && pybabel update -w 80 -i ${TRANSPOT} -d ${TRANSDIR}
 
 trans-new:
-	@[ -z "${LOCALE}" ] && { \
+	@if [ -z "${LOCALE}" ]; then \
 		echo 'Specify a locale: “make trans-new LOCALE=xx_YY”' 2>&1; \
 		exit 1; \
-	}
+	fi
 	pybabel init -w 80 -i ${TRANSPOT} -d ${TRANSDIR} -l ${LOCALE}
 
 trans-comp:
