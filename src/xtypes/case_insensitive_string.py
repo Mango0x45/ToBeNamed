@@ -16,6 +16,9 @@ class CaseInsensitiveString(str):
 	def __repr__(self) -> str:
 		return repr(self.casefold())
 
+	def __hash__(self) -> int:
+		return hash(self.casefold())
+
 	def __eq__(self, other: object) -> bool:
 		if type(other) is str:
 			return self.casefold() == other.casefold()
