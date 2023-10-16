@@ -1,4 +1,5 @@
-from util import _
+from flask_babel import _
+
 from xtypes import CaseInsensitiveString
 
 

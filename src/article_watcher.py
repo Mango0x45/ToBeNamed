@@ -4,6 +4,7 @@ import time
 from threading import Lock, Thread
 from typing import NamedTuple, Self
 
+from flask_babel import _
 from selectolax.parser import HTMLParser
 from watchdog.events import (
 	FileCreatedEvent,
@@ -15,7 +16,6 @@ from watchdog.events import (
 )
 
 import util
-from util import _
 from xtypes import ListExt
 
 

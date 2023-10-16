@@ -1,15 +1,14 @@
-import os
 from http import HTTPMethod, HTTPStatus
 from typing import NamedTuple
 
 import flask
 import flask_babel
 from flask import Blueprint, Response
+from flask_babel import _
 from selectolax.parser import HTMLParser
 
 import article_watcher
 import util
-from util import _
 from xtypes import LOCALES, Cookie, Theme
 
 

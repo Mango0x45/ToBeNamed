@@ -5,11 +5,11 @@ from typing import NamedTuple
 import flask
 import flask_babel
 from flask import Blueprint
+from flask_babel import _
 from icu import Collator, InvalidArgsError
 from icu import Locale as IcuLocale
 
 import util
-from util import _
 from xtypes import (
 	COIN_DENOMINATIONS,
 	COUNTRIES,

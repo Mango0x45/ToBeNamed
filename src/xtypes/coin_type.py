@@ -1,6 +1,6 @@
 from enum import StrEnum
 
-from util import _
+from flask_babel import _
 
 
 class CoinType(StrEnum):
