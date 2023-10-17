@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Euro Coin Hunting") }}</h1>
+		<p>{{ _("We all love cigarette machines") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		On this section of the site you can find everything there is to know about
+		collecting Euro coins.  If this is a hobby that interests you, join the
+		Discord server linked at the top!
+		{% endtrans %}
+	</p>
+
+	<hr>
+
+	<section>
+		<div class="grid">
+			<a class="no-deco" href=''>
+				<article>
+					<header>
+						<h3>{{ _("Shop Hunting") }}</h3>
+					</header>
+					<main>
+						{% trans %}
+						All you need to know about coin collecting in shops!
+						{% endtrans %}
+					</main>
+				</article>
+			</a>
+			<a class="no-deco" href=''>
+				<article>
+					<header>
+						<h3>{{ _("Vending Machines") }}</h3>
+					</header>
+					<main>
+						{% trans %}
+						All you need to know about using vending machines to collect coins!
+						{% endtrans %}
+					</main>
+				</article>
+			</a>
+			<a class="no-deco" href=''>
+				<article>
+					<header>
+						<h3>{{ _("Coin Storage") }}</h3>
+					</header>
+					<main>
+						{% trans %}
+						Learn about the different methods and techniques to store your
+						collection!
+						{% endtrans %}
+					</main>
+				</article>
+			</a>
+		</div>
+	</section>
+</main>
+
+{% endblock content %}
