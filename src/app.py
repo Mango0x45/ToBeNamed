@@ -36,6 +36,7 @@ def get_locale() -> str:
 
 	if not (loc := r.cookies.get(Cookie.LOCALE)) in LOCALES:
 		loc = r.accept_languages.best_match(map(str, LOCALES)) or "en_GB"
+		logging.root.debug(f"Assuming locale to be ‘{loc}’")
 	return loc
 
 
