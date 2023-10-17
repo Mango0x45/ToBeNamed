@@ -1,4 +1,5 @@
 import json
+import logging
 from http import HTTPMethod
 from typing import NamedTuple
 
@@ -19,6 +20,7 @@ from xtypes import (
 )
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
+logger = logging.getLogger(__name__)
 
 
 def countries_by_locale() -> list[Country]:
@@ -93,9 +95,12 @@ def mintages() -> str:
 		c if (c := flask.request.args.get("c")) in COUNTRIES else COUNTRIES[0]
 	)
 
-	# TODO: Error handling
-	with open(util.from_root(f"data/mintages/{country}.json"), "r") as f:
-		data: MintageJson = json.loads(f.read())
+	try:
+		with open(util.from_root(f"data/mintages/{country}.json"), "r") as f:
+			data: MintageJson = json.loads(f.read())
+	except Exception as e:
+		data = {}
+		logger.error(e)
 
 	detailed = []
 	for k, v in data.items():
