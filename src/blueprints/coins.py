@@ -118,7 +118,7 @@ def mintages() -> str:
 	return flask.render_template(
 		"coins/mintages.html",
 		country=country,
-		countries=countries_by_locale,
+		countries=countries_by_locale(),
 		denoms=COIN_DENOMINATIONS,
 		rows=rows,
 		detailed=detailed,
