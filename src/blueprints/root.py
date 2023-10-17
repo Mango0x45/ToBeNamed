@@ -71,11 +71,11 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 		assert loc in LOCALES
 	except KeyError:
 		return (
-			f'"{Cookie.LOCALE}" key missing from request form',
+			f'‘{Cookie.LOCALE}’ key missing from request form',
 			HTTPStatus.BAD_REQUEST,
 		)
 	except AssertionError:
-		return f'Locale "{loc}" is not an available locale', HTTPStatus.BAD_REQUEST  # type: ignore
+		return f'Locale ‘{loc}’ is not an available locale', HTTPStatus.BAD_REQUEST  # type: ignore
 
 	url = r.cookies.get(Cookie.REDIRECT, default="/")
 	resp = flask.make_response(flask.redirect(url))
