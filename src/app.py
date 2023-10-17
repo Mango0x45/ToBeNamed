@@ -28,6 +28,7 @@ from xtypes import (
 class ServerArgs:
 	debug: bool
 	hostname: str
+	port: int
 
 
 def get_locale() -> str:
@@ -107,6 +108,7 @@ def setup_watcher() -> None:
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", "--debug", action="store_true")
+	parser.add_argument("-p", "--port", type=int, default=5000)
 	parser.add_argument("hostname", nargs="?", default="localhost")
 	server_args = parser.parse_args(namespace=ServerArgs())
 
@@ -118,4 +120,4 @@ if __name__ == "__main__":
 		logging.root.debug(f"Registered blueprint ‘{bp.name}’")
 
 	logging.getLogger("werkzeug").disabled = True
-	app.run(debug=server_args.debug)
+	app.run(debug=server_args.debug, port=server_args.port)
