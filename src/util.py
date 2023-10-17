@@ -2,8 +2,11 @@ import os.path
 from typing import Callable, Iterable, TypeVar
 
 import flask_babel
+from flask_babel import _
 from icu import Collator, InvalidArgsError
 from icu import Locale as IcuLocale
+
+from xtypes import COUNTRIES, Country
 
 T = TypeVar("T")
 
@@ -26,6 +29,10 @@ def locale_sort(
 	else:
 		collator = Collator.createInstance(locale)
 		return sorted(xs, key=lambda x: collator.getSortKey(key(x)))
+
+
+def countries_by_locale() -> list[Country]:
+	return locale_sort(COUNTRIES, key=lambda x: _(x.name))
 
 
 def strip_jinja(s: str) -> str:

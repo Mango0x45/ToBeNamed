@@ -14,16 +14,11 @@ from xtypes import (
 	COUNTRIES,
 	CaseInsensitiveString,
 	CoinType,
-	Country,
 	MintageCoin,
 	MintageJson,
 )
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
-
-
-def countries_by_locale() -> list[Country]:
-	return util.locale_sort(COUNTRIES, key=lambda x: _(x.name))
 
 
 @coins.route("/", methods=[HTTPMethod.GET])
@@ -39,7 +34,7 @@ def designs(code: CaseInsensitiveString | None = None) -> str:
 
 	return flask.render_template(
 		"coins/designs/index.html",
-		countries=countries_by_locale(),
+		countries=util.countries_by_locale(),
 	)
 
 
@@ -122,7 +117,7 @@ def mintages() -> str:
 	return flask.render_template(
 		"coins/mintages.html",
 		country=country,
-		countries=countries_by_locale(),
+		countries=util.countries_by_locale(),
 		denoms=COIN_DENOMINATIONS,
 		rows=rows,
 		detailed=detailed,
@@ -142,5 +137,5 @@ def varieties(
 
 	return flask.render_template(
 		"coins/varieties/index.html",
-		countries=countries_by_locale(),
+		countries=util.countries_by_locale(),
 	)
