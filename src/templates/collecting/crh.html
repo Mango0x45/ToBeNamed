@@ -81,7 +81,7 @@
 		{% if code == "cy" %}
 		<h3>{{ _("Bank of Cyprus") }}</h3>
 		<p>
-			{% trans two_euro=2.00 | eur_format %}
+			{% trans two_euro=eur_format("2.00") %}
 			At the Bank of Cyprus it is possible to buy bags of coins without being a
 			customer, and without paying any additional fees.  Depending on the branch
 			you visit you may have coin roll machine available.  Do note that the bags
@@ -116,21 +116,21 @@
 		<dl>
 			<dt>ABN AMRO</dt>
 			<dd>
-				{% trans roll_fee=0.30 | eur_format %}
+				{% trans roll_fee=eur_format("0.30") %}
 				{{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>
 
 			<dt>ING</dt>
 			<dd>
-				{% trans base_fee=7.00 | eur_format, roll_fee=0.35 | eur_format %}
+				{% trans base_fee=eur_format("7.00"), roll_fee=eur_format("0.35") %}
 				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>
 
 			<dt>RaboBank</dt>
 			<dd>
-				{% trans base_fee=7.00 | eur_format, roll_fee=0.50 | eur_format %}
+				{% trans base_fee=eur_format("7.00"), roll_fee=eur_format("0.50") %}
 				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>

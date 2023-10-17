@@ -41,9 +41,6 @@ def get_locale() -> str:
 
 
 app = Flask(__name__)
-app.jinja_env.filters["eur_format"] = lambda x: flask_babel.format_currency(
-	x, "EUR"
-)
 app.jinja_env.policies["ext.i18n.trimmed"] = True
 app.url_map.converters["ci_str"] = CaseInsensitiveStringConverter
 babel = Babel(app, locale_selector=get_locale)
@@ -54,6 +51,7 @@ def inject_params() -> dict[str, Any]:
 	return {
 		"lang": Locale.from_str(get_locale()).as_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
+		"eur_format": lambda x: flask_babel.format_currency(x, "EUR"),
 	}
 
 
