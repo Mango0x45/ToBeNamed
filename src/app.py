@@ -104,10 +104,6 @@ def setup_watcher() -> None:
 	app.logger.debug("Started article watcher")
 
 
-for bp in blueprints.BLUEPRINTS:
-	app.register_blueprint(bp)
-
-
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", "--debug", action="store_true")
@@ -117,6 +113,9 @@ if __name__ == "__main__":
 	logger.setup(server_args.debug)
 	setup_watcher()
 
-	log = logging.getLogger("werkzeug")
-	log.disabled = True
+	for bp in blueprints.BLUEPRINTS:
+		app.register_blueprint(bp)
+		logging.root.debug(f"Registered blueprint ‘{bp.name}’")
+
+	logging.getLogger("werkzeug").disabled = True
 	app.run(debug=server_args.debug)
