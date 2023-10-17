@@ -13,15 +13,24 @@ You should now be able to run the development environment with `python3
 src/app.py` so long as you’ve got the virtual environment active.  You can enter
 the virtual environment with `pipenv shell`.
 
-When running the development environment, it’s recommended to pass the `-d` flag
-to enable debug mode.  This will cause the environment to automatically update
-whenever you make changes to a file.
+When running the development environment, it’s recommended to pass the `-d` or
+`--debug` flags to enable debug mode.  This will cause the environment to
+automatically update whenever you make changes to a file.  You can also pass an
+extra hostname parameter if you would like to use a hostname that isn’t the
+default ‘localhost’.
 
 ## Example
 
+Getting dependencies:
+
     $ pipenv shell
     $ pipenv install --dev
-    $ python src/app.py -d
 
+Different ways to run the server:
+
+    $ python src/app.py -d
+    $ python src/app.py --debug
+    $ python src/app.py 127.0.0.1
+    $ python src/app.py -d 127.0.0.1
 
 [1]: https://pypi.org/project/pipenv/

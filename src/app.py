@@ -1,5 +1,5 @@
+import argparse
 import os.path
-import sys
 import urllib.parse
 from http import HTTPMethod
 from typing import Any
@@ -21,6 +21,11 @@ from xtypes import (
 	Locale,
 	Theme,
 )
+
+
+class ServerArgs:
+	debug: bool
+	hostname: str
 
 
 def get_locale() -> str:
@@ -51,7 +56,7 @@ def pre_request_hook() -> Response | None:
 	def get_redirect() -> str:
 		if req.endpoint == "root.set_language":
 			url = urllib.parse.urlparse(req.referrer)
-			return req.referrer if url.hostname == HOSTNAME else "/"
+			return req.referrer if url.hostname == server_args.hostname else "/"
 		return req.full_path or "/"
 
 	req = flask.request
@@ -98,18 +103,13 @@ def setup_watcher() -> None:
 for bp in blueprints.BLUEPRINTS:
 	app.register_blueprint(bp)
 
-if __name__ == "__main__":
-	debug = False
-	HOSTNAME = "localhost"
 
-	match sys.argv[1:]:
-		case ["-d", s]:
-			debug = True
-			HOSTNAME = s
-		case ["-d"]:
-			debug = True
-		case [s]:
-			HOSTNAME = s
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument("-d", "--debug", action="store_true")
+	parser.add_argument("hostname", nargs="?", default="localhost")
+	server_args = parser.parse_args(namespace=ServerArgs())
 
 	setup_watcher()
-	app.run(debug=debug)
+
+	app.run(host=server_args.hostname, debug=server_args.debug)
