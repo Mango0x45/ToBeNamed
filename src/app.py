@@ -51,7 +51,7 @@ def inject_params() -> dict[str, Any]:
 	return {
 		"lang": Locale.from_str(get_locale()).as_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
-		"babel": flask_babel,
+		"eur_format": lambda x: flask_babel.format_currency(x, "EUR"),
 	}
 
 
