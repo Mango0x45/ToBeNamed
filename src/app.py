@@ -112,4 +112,4 @@ if __name__ == "__main__":
 
 	setup_watcher()
 
-	app.run(host=server_args.hostname, debug=server_args.debug)
+	app.run(debug=server_args.debug)
