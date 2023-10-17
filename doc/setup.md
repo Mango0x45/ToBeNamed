@@ -17,7 +17,8 @@ When running the development environment, it’s recommended to pass the `-d` or
 `--debug` flags to enable debug mode.  This will cause the environment to
 automatically update whenever you make changes to a file.  You can also pass an
 extra hostname parameter if you would like to use a hostname that isn’t the
-default ‘localhost’.
+default ‘localhost’.  By default the server runs on port 5000, but this too can
+be customized through the `-p` or `--port` flags.
 
 ## Example
 
@@ -32,5 +33,6 @@ Different ways to run the server:
     $ python src/app.py --debug
     $ python src/app.py 127.0.0.1
     $ python src/app.py -d 127.0.0.1
+    $ python src/app.py -d --port=1234
 
 [1]: https://pypi.org/project/pipenv/
