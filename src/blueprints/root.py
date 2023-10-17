@@ -70,17 +70,19 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 		loc = r.form[Cookie.LOCALE]
 		assert loc in LOCALES
 	except KeyError:
-		return (
-			f'‘{Cookie.LOCALE}’ key missing from request form',
-			HTTPStatus.BAD_REQUEST,
-		)
+		s = f"‘{Cookie.LOCALE}’ key missing from request form"
+		logging.root.warning(s)
+		return s, HTTPStatus.BAD_REQUEST,
 	except AssertionError:
-		return f'Locale ‘{loc}’ is not an available locale', HTTPStatus.BAD_REQUEST  # type: ignore
+		s = f"Locale ‘{loc}’ is not an available locale" # type: ignore
+		logging.root.warning(s)
+		return s, HTTPStatus.BAD_REQUEST
 
 	url = r.cookies.get(Cookie.REDIRECT, default="/")
 	resp = flask.make_response(flask.redirect(url))
 	resp.delete_cookie(Cookie.REDIRECT)
 	resp.set_cookie(key=Cookie.LOCALE, value=loc, max_age=2**31 - 1)
+	logging.root.debug(f"‘{Cookie.LOCALE}’ cookie set to ‘{loc}’")
 
 	return resp
 
@@ -91,10 +93,12 @@ def toggle_theme() -> Response:
 
 	theme = r.cookies.get(Cookie.THEME)
 	resp = flask.make_response(flask.redirect(r.referrer))
+	theme = Theme.DARK if theme == Theme.LIGHT else Theme.LIGHT
 	resp.set_cookie(
 		key=Cookie.THEME,
-		value=Theme.DARK if theme == Theme.LIGHT else Theme.LIGHT,
+		value=theme,
 		max_age=2**31 - 1,
 	)
+	logging.root.debug(f"‘{Cookie.THEME}’ cookie set to ‘{theme}’")
 
 	return resp
