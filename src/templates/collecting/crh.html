@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Coin Roll Hunting") }}</h1>
+		<p>{{ _("Transporting thousands of euros in cash") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<h2>{{ _("What is Coin Roll Hunting?") }}</h2>
+	<p>
+		{% trans %}
+		Coin roll hunting is a popular method of coin collecting in which you
+		withdrawal cash from your bank in the form of coins which you then search
+		through to find new additions to your collection.  Once you’ve searched
+		through all your coins, you will typically deposit your left over coins at
+		the bank and withdrawal new coins.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		This type of coin collecting is often called ‘Coin Roll Hunting’ due to the
+		fact that coins are often withdrawn in paper-wrapped rolls.  You may however
+		find that your coins come in plastic bags instead (common in countries like
+		Ireland).
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		Depending on your bank and branch, the process of obtaining coins may
+		differ.  Some banks require you speak to a teller, others have coin
+		machines.  Some banks may also require that you are a customer or even to
+		have a business account.  If you aren’t sure about if you can get coins we
+		suggest you contact your bank, although further down this page we also have
+		information about the withdrawal of coins in various countries and major
+		banks.
+		{% endtrans %}
+	</p>
+
+	<h2>{{ _("Getting Started") }}</h2>
+	<p>
+		{% trans %}
+		To get started with coin roll hunting you should first contact your bank or
+		check their website to find details regarding coin withdrawal.  You will
+		then typically need to go to the bank to pick up your coins.  Depending on
+		your bank you may be able to withdrawal coins from a machine, although often
+		you can pick up your coins from the banks tellers.  You will also often need
+		to pay a small fee for each roll, although some banks don’t charge fees.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		It is also important to find details regarding the deposit of coins.
+		Depositing coins often also requires the payment of a fee — one which is
+		typically more expensive than the withdrawal fees.  If depositing your coins
+		is too expensive you can always exchange your left over coins at shops for
+		banknotes.  It is often cheaper (or even free) to deposit banknotes.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		In some countries such as Austria it is even common to be able to withdrawal
+		new coins from your account by exchanging the left over coins you already
+		have.
+		{% endtrans %}
+	</p>
+
+	<h2>{{ _("Country-Specific Details") }}</h2>
+	{% for country in countries %}
+	<details>
+		<summary>{{ _(country.name) }}</summary>
+		{% with code=country.iso_3166_1 %}
+		{% if code == "cy" %}
+		<h3>{{ _("Bank of Cyprus") }}</h3>
+		<p>
+			{% trans two_euro=babel.format_currency("2.00", "EUR") %}
+			At the Bank of Cyprus it is possible to buy bags of coins without being a
+			customer, and without paying any additional fees.  Depending on the branch
+			you visit you may have coin roll machine available.  Do note that the bags
+			provided by the Bank of Cyprus are around twice as large as usual with
+			{{ two_euro }} bags containing 50 coins and the other denomination bags
+			containing 100 coins.
+			{% endtrans %}
+		</p>
+		{% elif code == "nl" %}
+		<p>
+			{% trans link="https://www.locatiewijzer.geldmaat.nl/nl/" %}
+			Banks in the Netherlands do not carry cash, and as such it’s not
+			possible to obtain rolls from bank tellers.  Obtaining coins from the
+			Dutch Central Bank (De Nederlandsche Bank) is also not possible.  If you
+			want to obtain coin rolls you need to use a Geldmaat coin roll machine
+			which can be found in specific branches of GAMMA and Karwei.  Geldmaat
+			offers a map on their website where you can search for branches with
+			these machines; you can find that map <a href="{{ link }}"
+			target="_blank">here</a>.
+			{% endtrans %}
+		</p>
+
+		<p>
+			{% trans %}
+			In order to be able to use a Geldmaat coin machine, you must be a customer
+			of either ABN AMRO, ING, or RaboBank.  You also cannot pay by cash, only
+			card payments are allowed.  All three banks charge a withdrawal fee for
+			getting coin rolls, which are detailed in the list below.
+			{% endtrans %}
+		</p>
+
+		<dl>
+			<dt>ABN AMRO</dt>
+			<dd>
+				{% trans roll_fee=babel.format_currency("0.30", "EUR") %}
+				{{ roll_fee }} per roll.
+				{% endtrans %}
+			</dd>
+
+			<dt>ING</dt>
+			<dd>
+				{% trans
+					base_fee=babel.format_currency("7.00", "EUR"),
+					roll_fee=babel.format_currency("0.35", "EUR")
+				%}
+				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
+				{% endtrans %}
+			</dd>
+
+			<dt>RaboBank</dt>
+			<dd>
+				{% trans
+					base_fee=babel.format_currency("7.00", "EUR"),
+					roll_fee=babel.format_currency("0.50", "EUR")
+				%}
+				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
+				{% endtrans %}
+			</dd>
+		</dl>
+
+		<p>
+			{% trans %}
+			One- and two-cent coins have been removed from circulation and cannot be
+			obtained.
+			{% endtrans %}
+		</p>
+		{% else %}
+		<p>
+			{% trans country=_(country.name) %}
+			We currently have no information regarding coin roll hunting in
+			{{ country }}.
+			{% endtrans %}
+		</p>
+		{% endif %}
+		{% endwith %}
+	</details>
+	{% endfor %}
+</main>
+
+{% endblock %}
