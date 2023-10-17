@@ -72,9 +72,9 @@ def set_language() -> Response | tuple[str, HTTPStatus]:
 	except KeyError:
 		s = f"‘{Cookie.LOCALE}’ key missing from request form"
 		logging.root.warning(s)
-		return s, HTTPStatus.BAD_REQUEST,
+		return s, HTTPStatus.BAD_REQUEST
 	except AssertionError:
-		s = f"Locale ‘{loc}’ is not an available locale" # type: ignore
+		s = f"Locale ‘{loc}’ is not an available locale"  # type: ignore
 		logging.root.warning(s)
 		return s, HTTPStatus.BAD_REQUEST
 
