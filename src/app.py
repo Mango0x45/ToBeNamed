@@ -1,4 +1,5 @@
 import argparse
+import logging
 import os.path
 import urllib.parse
 from http import HTTPMethod
@@ -12,6 +13,7 @@ from watchdog.observers import Observer
 
 import article_watcher
 import blueprints
+import logger
 from xtypes import (
 	EZ_LOCALES,
 	LOCALES,
@@ -95,9 +97,11 @@ def pre_request_hook() -> Response | None:
 def setup_watcher() -> None:
 	path = os.path.join(os.path.dirname(__file__), "templates/news/articles")
 	article_watcher.watcher.init_articles(path)
+	app.logger.debug(f"Watching for articles in ‘{path}’")
 	observer = Observer()
 	observer.schedule(article_watcher.watcher, path=path)
 	observer.start()
+	app.logger.debug("Started article watcher")
 
 
 for bp in blueprints.BLUEPRINTS:
@@ -110,6 +114,9 @@ if __name__ == "__main__":
 	parser.add_argument("hostname", nargs="?", default="localhost")
 	server_args = parser.parse_args(namespace=ServerArgs())
 
+	logger.setup(server_args.debug)
 	setup_watcher()
 
+	log = logging.getLogger("werkzeug")
+	log.disabled = True
 	app.run(debug=server_args.debug)

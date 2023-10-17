@@ -1,3 +1,4 @@
+import logging
 from http import HTTPMethod, HTTPStatus
 from typing import NamedTuple
 
@@ -29,11 +30,15 @@ def index() -> str:
 	except IndexError:
 		return flask.render_template("index.html", article=None)
 
-	path = util.from_root(f"templates/news/articles/{newest.date}.html")
-	with open(path, "r") as f:
-		p = HTMLParser(f.read())
+	try:
+		path = util.from_root(f"templates/news/articles/{newest.date}.html")
+		with open(path, "r") as f:
+			p = HTMLParser(f.read())
+	except Exception as e:
+		logging.root.error(e)
+		p = None
 
-	if sample := p.css_first("main p"):
+	if p is not None and (sample := p.css_first("main p")):
 		sample = util.strip_jinja(sample.text())
 	else:
 		sample = _("No article preview found")

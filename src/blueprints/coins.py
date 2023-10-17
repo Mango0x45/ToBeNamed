@@ -20,7 +20,6 @@ from xtypes import (
 )
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
-logger = logging.getLogger(__name__)
 
 
 def countries_by_locale() -> list[Country]:
@@ -100,7 +99,7 @@ def mintages() -> str:
 			data: MintageJson = json.loads(f.read())
 	except Exception as e:
 		data = {}
-		logger.error(e)
+		logging.root.error(e)
 
 	detailed = []
 	for k, v in data.items():
@@ -138,6 +137,8 @@ def varieties(
 ) -> str:
 	if code is not None and name is not None:
 		return flask.render_template(f"coins/varieties/{code}/{name}.html")
+	if code is not None or name is not None:
+		logging.root.warning(f"Got {code=} and {name=}; should be unreachable")
 
 	return flask.render_template(
 		"coins/varieties/index.html",
