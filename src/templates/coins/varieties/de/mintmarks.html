@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("German Mintmarks") }}</h1>
+		<p>{{ _("Trying to make German coins interesting") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		All German coins have 5 different varieties — one for each mintmark.  The
+		mintmark represents where the coin was minted, and can be one of ‘A’, ‘D’,
+		‘F’, ‘G’, or ‘J’.  These mintmarks represent the cities of Berlin, Munich,
+		Stuttgart, Karlsruhe, and Hamburg respectively.
+		{% endtrans %}
+	</p>
+	<p>
+		{% trans %}
+		The location of the mintmark differs per design.  On the standard issue
+		coins the mintmark can be found near the year of issue, but this is not
+		always the case with Germany’s comemmorative releases.  Additionally, German
+		commemorative coins beginning in the year 2010 feature the letter ‘D’ for
+		‘Deutschland’ (German for ‘Germany’) which is easy to confuse for the actual
+		mintmark.
+		{% endtrans %}
+	</p>
+</main>
+
+{% endblock %}

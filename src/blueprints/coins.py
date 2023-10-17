@@ -129,3 +129,17 @@ def mintages() -> str:
 		detailed=detailed,
 		opts=opts,
 	)
+
+
+@coins.route("/varieties", methods=[HTTPMethod.GET])
+@coins.route("/varieties/<ci_str:code>/<name>", methods=[HTTPMethod.GET])
+def varieties(
+	code: CaseInsensitiveString | None = None, name: str | None = None
+) -> str:
+	if code is not None and name is not None:
+		return flask.render_template(f"coins/varieties/{code}/{name}.html")
+
+	return flask.render_template(
+		"coins/varieties/index.html",
+		countries=countries_by_locale(),
+	)

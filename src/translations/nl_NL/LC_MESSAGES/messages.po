@@ -1,13 +1,9 @@
-# Dutch (Netherlands) translations for TO-BE-NAMED.
-# Copyright (C) 2023 ORGANIZATION
-# This file is distributed under the same license as the TO-BE-NAMED project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-16 16:17+0200\n"
+"POT-Creation-Date: 2023-10-17 16:08+0200\n"
 "PO-Revision-Date: 2023-10-16 16:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl_NL\n"
@@ -333,10 +329,12 @@ msgstr ""
 msgid "Too many to count!"
 msgstr ""
 
+#, python-format
 msgid ""
 "Here you’ll be able to view all the coin designs for each country in the "
 "Eurozone.  This section of the site doesn’t include minor varieties such as "
-"different mintmarks or errors; those are on the <a href=#>varieties</a> page."
+"different mintmarks or errors; those are on the <a "
+"href=%(link)s>varieties</a> page."
 msgstr ""
 
 msgid "Dutch Euro Coin Designs"
@@ -369,6 +367,48 @@ msgid ""
 " looking more worn than their first series counterparts."
 msgstr ""
 
+msgid "Euro Coin Varieties"
+msgstr ""
+
+msgid "Belgium will never learn"
+msgstr ""
+
+#, python-format
+msgid ""
+"Here you’ll be able to view all the different known varieties of Euro coins. "
+"If you’re interested in the different designs instead of the minor varieties,"
+" check out the <a href=%(link)s>designs</a> page."
+msgstr ""
+
+msgid "Mintmarks"
+msgstr ""
+
+#, python-format
+msgid "The coins from %(country)s have no varieties."
+msgstr ""
+
+msgid "German Mintmarks"
+msgstr ""
+
+msgid "Trying to make German coins interesting"
+msgstr ""
+
+msgid ""
+"All German coins have 5 different varieties — one for each mintmark.  The "
+"mintmark represents where the coin was minted, and can be one of ‘A’, ‘D’, "
+"‘F’, ‘G’, or ‘J’.  These mintmarks represent the cities of Berlin, Munich, "
+"Stuttgart, Karlsruhe, and Hamburg respectively."
+msgstr ""
+
+msgid ""
+"The location of the mintmark differs per design.  On the standard issue coins"
+" the mintmark can be found near the year of issue, but this is not always the"
+" case with Germany’s comemmorative releases.  Additionally, German "
+"commemorative coins beginning in the year 2010 feature the letter ‘D’ for "
+"‘Deutschland’ (German for ‘Germany’) which is easy to confuse for the actual "
+"mintmark."
+msgstr ""
+
 msgid "News Articles"
 msgstr ""
 
@@ -387,17 +427,6 @@ msgid ""
 msgstr ""
 
 msgid "Articles"
-msgstr ""
-
-msgid "Hello, World!"
-msgstr ""
-
-msgid "Let’s see if this works"
-msgstr ""
-
-msgid ""
-"This is the first article on the site.  There isn’t much to see here, I’m "
-"just testing out some of the site features to make sure they work."
 msgstr ""
 
 msgid "IFC"

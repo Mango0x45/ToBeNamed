@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% macro list_item(text, name, country) %}
+<li>
+	<a href='{{ url_for("coins.varieties", code=country.iso_3166_1, name=name) }}'>
+		{{ text }}
+	</a>
+</li>
+{% endmacro %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Euro Coin Varieties") }}</h1>
+		<p>{{ _("Belgium will never learn") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans link=url_for("coins.designs") %}
+		Here you’ll be able to view all the different known varieties of Euro coins.
+		If you’re interested in the different designs instead of the minor
+		varieties, check out the <a href={{ link }}>designs</a> page.
+		{% endtrans %}
+	</p>
+
+	<hr>
+
+	{% for country in countries %}
+	<details>
+		<summary>{{ _(country.name) }}</summary>
+		{% if country.iso_3166_1 == "de" %}
+			<ul>
+				{{ list_item(_("Mintmarks"), "mintmarks", country) }}
+				{# <li>Hamburg Old Map</li> #}
+			</ul>
+		{% else %}
+			{% trans country=_(country.name) %}
+			The coins from {{ country }} have no varieties.
+			{% endtrans %}
+		{% endif %}
+	</details>
+	{% endfor %}
+</main>
+
+{% endblock %}

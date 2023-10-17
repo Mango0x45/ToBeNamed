@@ -12,11 +12,11 @@
 
 <main>
 	<p>
-		{% trans %}
+		{% trans link=url_for("coins.varieties") %}
 		Here you’ll be able to view all the coin designs for each country in the
 		Eurozone.  This section of the site doesn’t include minor varieties such as
-		different mintmarks or errors; those are on the <a href=#>varieties</a>
-		page.
+		different mintmarks or errors; those are on the
+		<a href={{ link }}>varieties</a> page.
 		{% endtrans %}
 	</p>
 
