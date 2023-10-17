@@ -14,11 +14,13 @@ def setup(debug: bool) -> None:
 				"console": {
 					"class": "logging.StreamHandler",
 					"formatter": "default",
+					"level": "DEBUG",
 					"stream": "ext://sys.stderr",
 				},
 				"syslog": {
 					"class": "logging.handlers.SysLogHandler",
 					"formatter": "default",
+					"level": "INFO",
 					"address": "/dev/log",
 				},
 			},
