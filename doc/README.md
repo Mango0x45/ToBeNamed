@@ -4,3 +4,4 @@
 - [Project setup](setup.md)
 - [British- and American English](english.md)
 - [Project Structure](project-fs.md)
+- [Backend Logging](logging.md)
