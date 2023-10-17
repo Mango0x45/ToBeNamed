@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-17 23:32+0200\n"
+"POT-Creation-Date: 2023-10-18 00:16+0200\n"
 "PO-Revision-Date: 2023-10-15 23:14+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_GB\n"
@@ -507,6 +507,37 @@ msgid ""
 "provided by the Bank of Cyprus are around twice as large as usual with "
 "%(two_euro)s bags containing 50 coins and the other denomination bags "
 "containing 100 coins."
+msgstr ""
+
+#, python-format
+msgid ""
+"Banks in the Netherlands do not carry cash, and as such it’s not possible to "
+"obtain rolls from bank tellers.  Obtaining coins from the Dutch Central Bank "
+"(De Nederlandsche Bank) is also not possible.  If you want to obtain coin "
+"rolls you need to use a Geldmaat coin roll machine which can be found in "
+"specific branches of GAMMA and Karwei.  Geldmaat offers a map on their "
+"website where you can search for branches with these machines; you can find "
+"that map <a href=\"%(link)s\" target=\"_blank\">here</a>."
+msgstr ""
+
+msgid ""
+"In order to be able to use a Geldmaat coin machine, you must be a customer of"
+" either ABN AMRO, ING, or RaboBank.  You also cannot pay by cash, only card "
+"payments are allowed.  All three banks charge a withdrawal fee for getting "
+"coin rolls, which are detailed in the list below."
+msgstr ""
+
+#, python-format
+msgid "%(roll_fee)s per roll."
+msgstr ""
+
+#, python-format
+msgid "Base fee of %(base_fee)s + %(roll_fee)s per roll."
+msgstr ""
+
+msgid ""
+"One- and two-cent coins have been removed from circulation and cannot be "
+"obtained."
 msgstr ""
 
 #, python-format
