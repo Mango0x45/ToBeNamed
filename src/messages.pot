@@ -1,10 +1,14 @@
-
+# Translations template for TO-BE-NAMED.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the TO-BE-NAMED project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-17 16:34+0200\n"
+"POT-Creation-Date: 2023-10-17 22:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +54,9 @@ msgid "British- & American English"
 msgstr ""
 
 msgid "Icelandic"
+msgstr ""
+
+msgid "Euro Cash"
 msgstr ""
 
 msgid "Copyright © 2023 The WEBSITE NAME Contributors"
@@ -167,7 +174,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-msgid "Coin Hunting"
+msgid "Coin Collecting"
 msgstr ""
 
 msgid "Coins"
@@ -406,6 +413,36 @@ msgid ""
 "commemorative coins beginning in the year 2010 feature the letter ‘D’ for "
 "‘Deutschland’ (German for ‘Germany’) which is easy to confuse for the actual "
 "mintmark."
+msgstr ""
+
+msgid "Euro Coin Hunting"
+msgstr ""
+
+msgid "We all love cigarette machines"
+msgstr ""
+
+msgid ""
+"On this section of the site you can find everything there is to know about "
+"collecting Euro coins.  If this is a hobby that interests you, join the "
+"Discord server linked at the top!"
+msgstr ""
+
+msgid "Shop Hunting"
+msgstr ""
+
+msgid "All you need to know about coin collecting in shops!"
+msgstr ""
+
+msgid "Vending Machines"
+msgstr ""
+
+msgid "All you need to know about using vending machines to collect coins!"
+msgstr ""
+
+msgid "Coin Storage"
+msgstr ""
+
+msgid "Learn about the different methods and techniques to store your collection!"
 msgstr ""
 
 msgid "News Articles"
