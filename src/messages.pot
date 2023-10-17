@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-17 22:51+0200\n"
+"POT-Creation-Date: 2023-10-17 23:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -415,6 +415,82 @@ msgid ""
 "mintmark."
 msgstr ""
 
+msgid "Transporting thousands of euros in cash"
+msgstr ""
+
+msgid "What is Coin Roll Hunting?"
+msgstr ""
+
+msgid ""
+"Coin roll hunting is a popular method of coin collecting in which you "
+"withdrawal cash from your bank in the form of coins which you then search "
+"through to find new additions to your collection.  Once you’ve searched "
+"through all your coins, you will typically deposit your left over coins at "
+"the bank and withdrawal new coins."
+msgstr ""
+
+msgid ""
+"This type of coin collecting is often called ‘Coin Roll Hunting’ due to the "
+"fact that coins are often withdrawn in paper-wrapped rolls.  You may however "
+"find that your coins come in plastic bags instead (common in countries like "
+"Ireland)."
+msgstr ""
+
+msgid ""
+"Depending on your bank and branch, the process of obtaining coins may differ."
+"  Some banks require you speak to a teller, others have coin machines.  Some "
+"banks may also require that you are a customer or even to have a business "
+"account.  If you aren’t sure about if you can get coins we suggest you "
+"contact your bank, although further down this page we also have information "
+"about the withdrawal of coins in various countries and major banks."
+msgstr ""
+
+msgid "Getting Started"
+msgstr ""
+
+msgid ""
+"To get started with coin roll hunting you should first contact your bank or "
+"check their website to find details regarding coin withdrawal.  You will then"
+" typically need to go to the bank to pick up your coins.  Depending on your "
+"bank you may be able to withdrawal coins from a machine, although often you "
+"can pick up your coins from the banks tellers.  You will also often need to "
+"pay a small fee for each roll, although some banks don’t charge fees."
+msgstr ""
+
+msgid ""
+"It is also important to find details regarding the deposit of coins. "
+"Depositing coins often also requires the payment of a fee — one which is "
+"typically more expensive than the withdrawal fees.  If depositing your coins "
+"is too expensive you can always exchange your left over coins at shops for "
+"banknotes.  It is often cheaper (or even free) to deposit banknotes."
+msgstr ""
+
+msgid ""
+"In some countries such as Austria it is even common to be able to withdrawal "
+"new coins from your account by exchanging the left over coins you already "
+"have."
+msgstr ""
+
+msgid "Country-Specific Details"
+msgstr ""
+
+msgid "Bank of Cyprus"
+msgstr ""
+
+#, python-format
+msgid ""
+"At the Bank of Cyprus it is possible to buy bags of coins without being a "
+"customer, and without paying any additional fees.  Depending on the branch "
+"you visit you may have coin roll machine available.  Do note that the bags "
+"provided by the Bank of Cyprus are around twice as large as usual with "
+"%(two_euro)s bags containing 50 coins and the other denomination bags "
+"containing 100 coins."
+msgstr ""
+
+#, python-format
+msgid "We currently have no information regarding coin roll hunting in %(country)s."
+msgstr ""
+
 msgid "Euro Coin Hunting"
 msgstr ""
 
@@ -427,6 +503,15 @@ msgid ""
 "Discord server linked at the top!"
 msgstr ""
 
+msgid "Learn about the most popular and effective way to grow your collection!"
+msgstr ""
+
+msgid "Coin Storage"
+msgstr ""
+
+msgid "Learn about the different methods and techniques to store your collection!"
+msgstr ""
+
 msgid "Shop Hunting"
 msgstr ""
 
@@ -437,12 +522,6 @@ msgid "Vending Machines"
 msgstr ""
 
 msgid "All you need to know about using vending machines to collect coins!"
-msgstr ""
-
-msgid "Coin Storage"
-msgstr ""
-
-msgid "Learn about the different methods and techniques to store your collection!"
 msgstr ""
 
 msgid "News Articles"

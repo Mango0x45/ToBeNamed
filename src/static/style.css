@@ -2353,3 +2353,7 @@ a[role=button].outline:is(:hover, :active, :focus) {
 .design-container + p {
 	margin-top: var(--block-spacing-vertical);
 }
+
+div.grid:not(:first-of-type) {
+	margin-top: var(--grid-spacing-vertical);
+}
