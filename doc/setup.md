@@ -35,4 +35,8 @@ Different ways to run the server:
     $ python src/app.py -d 127.0.0.1
     $ python src/app.py -d --port=1234
 
+You can also just execute the server directly:
+
+    $ src/app.py -d
+
 [1]: https://pypi.org/project/pipenv/
