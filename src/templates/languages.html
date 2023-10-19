@@ -5,7 +5,12 @@
 	<form action="/set-language" method="POST">
 		<div class="lang-grid">
 			{% for locale in lang_set %}
-			<button type="submit" name="{{ cname }}" value="{{ locale }}">
+			<button
+				type="submit"
+				name="{{ cname }}"
+				value="{{ locale }}"
+				{% if not locale.enabled %}disabled{% endif %}
+			>
 				<span data-code="{{ locale.iso_639_1.upper() }}">{{ locale.name }}</span>
 			</button>
 			{% endfor %}
