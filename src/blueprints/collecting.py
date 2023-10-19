@@ -19,3 +19,7 @@ def crh() -> str:
 		"collecting/crh.html",
 		countries=util.countries_by_locale(),
 	)
+
+@collecting.route("/vending", methods=[HTTPMethod.GET])
+def vending() -> str:
+	return flask.render_template("collecting/vending.html")
