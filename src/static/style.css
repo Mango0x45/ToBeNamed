@@ -2242,20 +2242,6 @@ textarea,
 	min-width: 0;
 }
 
-dl {
-	display: grid;
-	grid-template-columns: max-content auto;
-	row-gap: var(--spacing);
-}
-
-dt {
-	grid-column-start: 1;
-}
-
-dd {
-	grid-column-start: 2;
-}
-
 .country-grid {
 	row-gap: var(--grid-spacing-vertical);
 }
@@ -2356,4 +2342,30 @@ a[role=button].outline:is(:hover, :active, :focus) {
 
 div.grid:not(:first-of-type) {
 	margin-top: var(--grid-spacing-vertical);
+}
+
+@media (min-width: 576px) {
+	dl {
+		display: grid;
+		grid-template-columns: max-content auto;
+		row-gap: var(--spacing);
+	}
+
+	dt {
+		grid-column-start: 1;
+	}
+
+	dd {
+		grid-column-start: 2;
+	}
+}
+
+@media (max-width: 575px) {
+	dt {
+		text-decoration: underline;
+	}
+
+	dl dt:not(:first-child) {
+		margin-top: var(--block-spacing-vertical);
+	}
 }
