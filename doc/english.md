@@ -29,3 +29,7 @@ while ‘en_US’ refers to American English.
   prefers it in the quotes.
 
   - For example, ‘he said “wow”.’ vs “he said ‘wow.’”
+
+- en_GB prefers spaces around the em-dash while en_US preferes no spaces.
+
+  - For example, ‘and then — it happened’ vs “and then—it happened”.
