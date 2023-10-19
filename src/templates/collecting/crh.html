@@ -75,10 +75,110 @@
 
 	<h2>{{ _("Country-Specific Details") }}</h2>
 	{% for country in countries %}
-	<details>
+	<details id="{{ country.iso_3166_1 }}">
 		<summary>{{ _(country.name) }}</summary>
-		{% with code=country.iso_3166_1 %}
-		{% if code == "cy" %}
+		{% with code = country.iso_3166_1 %}
+		{% if code == "ad" %}
+		<p>
+			{% trans %}
+			Coin rolls can be obtained from Andbank, Crèdit Andorrà, and MoraBanc.
+			All three of these banks require that you are a customer to get rolls.
+			There have however been reports of individuals managing to get rolls
+			without any fees and without being a customer by simply asking kindly at
+			the bank.
+			{% endtrans %}
+		</p>
+		{% elif code == "at" %}
+		<h3>{{ _("Austrian National Bank") }}</h3>
+		<p>
+			{% trans %}
+			The Austrian National Bank does not distribute circulated rolls but sells
+			rolls of commemorative coins at face value on release as well as
+			uncirculated rolls for all denominations.
+			{% endtrans %}
+		</p>
+
+		<h3>Bank Austria</h3>
+		<p>
+			{% trans
+				twenty_cents = eur_format(0.20),
+				LINK = "https://filialen.bankaustria.at/de/"
+			%}
+			There is a fee of {{ twenty_cents }} per roll.  Rolls can be purchased
+			with cash at machines.  These machines are available to everyone, but not
+			in all branches.  Look for the ‘Münzrollengeber’ filter option
+			<a href="{{ LINK }}">here</a>.
+			{% endtrans %}
+		</p>
+
+		<h3>Erste Bank</h3>
+		<p>
+			{% trans ten_cents = eur_format(0.10) %}
+			There is a fee of {{ ten_cents }} per roll.  You must be a customer to use
+			machines to get rolls.  Rolls have no fees when purchased at counters, but
+			counters redirect you to machines if they work; counters accept cash.  You
+			must present an Erste Bank card to buy rolls from machines, but you can
+			pay with cash.
+			{% endtrans %}
+		</p>
+
+		<p>
+			{% trans hundred_euros = eur_format(100) %}
+			Depositing coins is free for up to {{ hundred_euros }} a day, at which
+			point you pay 1% for any additional deposited coins.  You must also be a
+			customer.  Depositing coins is free for all Erste Bank customers at
+			Dornbirner Sparkasse with no limit.
+			{% endtrans %}
+		</p>
+
+		<h3>Raiffeisenbank</h3>
+		<p>
+			{% trans one_euro = eur_format(1), thirty_cents = eur_format(0.30) %}
+			There is a fee of {{ one_euro }} per roll if you aren’t a customer, and
+			{{ thirty_cents }} otherwise.  Coin deposits are free if you’re a
+			customer.
+			{% endtrans %}
+		</p>
+
+		<h3>Volksbank</h3>
+		<p>
+			{% trans %}
+			Reportedly fee-less with no need of being a customer, but this is
+			unconfirmed.
+			{% endtrans %}
+		</p>
+		{% elif code == "be" %}
+		<h3>Argenta</h3>
+		<p>
+			{% trans one_fifty = eur_format(1.50) %}
+			There is a {{ one_fifty }} fee with no limit on the number of rolls.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("Belgian Central Bank") }}</h3>
+		<p>
+			{% trans two_thousand = eur_format(2000) %}
+			You can visit the Belgium Central Bank in Brussels as an EU citizen.  You
+			can order coin rolls for no fee up to {{ two_thousand }} in value.  They
+			seem to distribute uncirculated coins (no commemoratives).
+			{% endtrans %}
+		</p>
+
+		<h3>KBC</h3>
+		<p>
+			{% trans %}
+			Free for customers but getting coin rolls is still difficult sometimes.
+			Non-customers cannot get rolls.
+			{% endtrans %}
+		</p>
+
+		<h3>Belfius</h3>
+		<p>
+			{% trans %}
+			Free for customers when you order through their online platform.
+			{% endtrans %}
+		</p>
+		{% elif code == "cy" %}
 		<h3>{{ _("Bank of Cyprus") }}</h3>
 		<p>
 			{% trans two_euro=eur_format("2.00") %}
@@ -88,6 +188,188 @@
 			provided by the Bank of Cyprus are around twice as large as usual with
 			{{ two_euro }} bags containing 50 coins and the other denomination bags
 			containing 100 coins.
+			{% endtrans %}
+		</p>
+		{% elif code == "de" %}
+		<p>
+			{% trans %}
+			Coin roll availability may vary across banks and branches, as well as the
+			price.  You must be a customer to purchase coin rolls unless specified
+			otherwise.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("German Federal Bank (Deutsche Bundesbank)") }}</h3>
+		<p>
+			{% trans %}
+			You can obtain regular- and commemorative coins for face value including
+			5-, 10-, and 20 euro coins.  You do not need to be a customer although
+			depending on your branch you may need to make an appointment.  The
+			purchase of coins can only be done with cash.
+			{% endtrans %}
+		</p>
+
+		<h3>Deutsche Post</h3>
+		<p>
+			{% trans %}
+			Hand-rolled coin rolls can be obtained with no additional fees.
+			{% endtrans %}
+		</p>
+
+		<h3>Sparkasse</h3>
+		<p>
+			{% trans fifty_cents = eur_format(0.50), one_fifty = eur_format(1.50) %}
+			Coin rolls can be obtained for a fee of {{ fifty_cents }}–{{ one_fifty }}
+			per roll.  The amount varies per branch.
+			{% endtrans %}
+		</p>
+
+		<h3>Volksbank</h3>
+		<p>
+			{% trans twenty_five_cents = eur_format(0.25) %}
+			Coin rolls can be obtained for a fee of {{ twenty_five_cents }} per roll.
+			{% endtrans %}
+		</p>
+		{% elif code == "ee" %}
+		<p>
+			{% trans %}
+			Obtaining coin rolls in Estonia is typically quite difficult, and often
+			expensive.  You also often need to make an appointment in advance.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("Central Bank of Estonia Museum") }}</h3>
+		<p>
+			{% trans %}
+			You can purchase commemorative coins (even those released years ago) at
+			face value.  It is also an interesting museum to visit in general.
+			{% endtrans %}
+		</p>
+		{% elif code == "es" %}
+		<h3>Banco Santander</h3>
+		<p>{{ _("Coin rolls are free but you must be a customer.") }}</p>
+
+		<h3>{{ _("Bank of Spain") }}</h3>
+		<p>
+			{% trans LINK = "https://youtu.be/QRFuD6olH80?t=135" %}
+			You can purchase individual coins and commemorative coin rolls (even those
+			of other countries).  <a href="{{ LINK }}" target="_blank">You can watch
+			here to see how to do it</a>.
+			{% endtrans %}
+		</p>
+
+		<h3>BBVA</h3>
+		<dl>
+			<dt>Alicante</dt>
+			<dd>
+				{% trans two_euros = eur_format(2) %}
+				Coin rolls have a fee of {{ two_euros }} for 5 rolls.  This seems to
+				vary by region.
+				{% endtrans %}
+			</dd>
+			<dt>Madrid</dt>
+			<dd>{{ _("Coin rolls have no fees.") }}</dd>
+		</dl>
+
+		<h3>{{ _("La Caixa") }}</h3>
+		<p>
+			{% trans %}
+			Coin rolls have no fees and can be purcahsed with cash.  You do not need
+			to be a customer, although this needs to be re-verified.
+			{% endtrans %}
+		</p>
+		{% elif code == "fi" %}
+		<p>
+			{% trans %}
+			Finland has no coin roll machines, but you can find vending machines or
+			coin exchange machines (albeit they are rare).
+			{% endtrans %}
+		</p>
+
+		<h3>Aktia</h3>
+		<p>{{ _("Coin rolls can be obtained with no fees.") }}</p>
+
+		<h3>{{ _("Bank of Finland") }}</h3>
+		<p>
+			{% trans %}
+			It is probably not possible to obtain coin rolls, but this is not
+			confirmed.
+			{% endtrans %}
+		</p>
+		{% elif code == "fr" %}
+		<p>
+			{% trans %}
+			Coin roll machines are uncommon, only some banks have them and you need to
+			be a customer.  You may also need to order them in advance.
+			{% endtrans %}
+		</p>
+
+		<h3>Caisse d’Épargne</h3>
+		<p>
+			{% trans %}
+			Coin rolls can be obtained with no fee.  You must be a customer.
+			{% endtrans %}
+		</p>
+
+		<h3>CIC {{ _("and") }} Crédit Mutuel</h3>
+		<p>
+			{% trans one_euro = eur_format(1) %}
+			Free coin rolls if you are a customer or {{ one_euro }} per roll if you
+			are not a customer.  There are coin roll machines.
+			{% endtrans %}
+		</p>
+
+		<h3>Crédit Agricole</h3>
+		<p>
+			{% trans %}
+			Coin rolls can be obtained with no fee.  You must be a customer.
+			{% endtrans %}
+		</p>
+
+		<h3>Le Crédit Lyonnais (LCL)</h3>
+		<p>
+			{% trans %}
+			There are coin roll machines but it is not yet known if you need to be a
+			customer or if there are fees.
+			{% endtrans %}
+		</p>
+		{% elif code == "gr" %}
+		<h3>{{ _("Bank of Greece (Τράπεζα της Ελλάδος)") }}</h3>
+		<p>
+			{% trans %}
+			Fee-less coin rolls for everyone (you will need to show ID).  The latest
+			commemorative coins are also sold for face value.
+			{% endtrans %}
+		</p>
+
+		<h3>Piraeus Bank</h3>
+		<p>
+			{% trans one_euro = eur_format(1) %}
+			Fee-less coin bags for everyone (no ID necessary).  Smaller denominations
+			are often not given out, and the coin bags you recieve are very large
+			(there are reports of {{ one_euro }} bags containing 250 coins).
+			{% endtrans %}
+		</p>
+		{% elif code == "ie" %}
+		<p>
+			{% trans one_euro = eur_format(1) %}
+			In general, coin rolls are available at banks with a fee of {{ one_euro }}
+			per roll; rolls could potentially have no fee if you only need a few.
+			{% endtrans %}
+		</p>
+		{% elif code == "it" %}
+		<h3>Banca Cambiano</h3>
+		<p>
+			{% trans %}
+			There are coin roll machines but it is unknown if you need to be a
+			customer or if there are additional fees.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("Bank of Italy") }}</h3>
+		<p>
+			{% trans %}
+			Coin rolls are available to everyone.
 			{% endtrans %}
 		</p>
 		{% elif code == "nl" %}
@@ -107,7 +389,7 @@
 		<p>
 			{% trans %}
 			In order to be able to use a Geldmaat coin machine, you must be a customer
-			of either ABN AMRO, ING, or RaboBank.  You also cannot pay by cash, only
+			of either ABN AMRO, ING, or Rabobank.  You also cannot pay by cash, only
 			card payments are allowed.  All three banks charge a withdrawal fee for
 			getting coin rolls, which are detailed in the list below.
 			{% endtrans %}
@@ -128,7 +410,7 @@
 				{% endtrans %}
 			</dd>
 
-			<dt>RaboBank</dt>
+			<dt>Rabobank</dt>
 			<dd>
 				{% trans base_fee=eur_format("7.00"), roll_fee=eur_format("0.50") %}
 				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
