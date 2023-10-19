@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-18 00:16+0200\n"
+"POT-Creation-Date: 2023-10-19 19:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.13.0\n"
 
 msgid "No headline found"
 msgstr ""
@@ -553,6 +553,136 @@ msgid "Vending Machines"
 msgstr ""
 
 msgid "All you need to know about using vending machines to collect coins!"
+msgstr ""
+
+msgid "Vending Machine Hunting"
+msgstr ""
+
+msgid "How to look strange in public"
+msgstr ""
+
+msgid "What is Vending Machine Hunting?"
+msgstr ""
+
+msgid ""
+"‘Vending machine hunting’ is a strategy of collecting coins whereby you "
+"continuously insert coins into a vending machine and cancel the transaction "
+"by pressing the return button.  When returning your coins to you, you will "
+"often get different coins from the ones you put in, and you can repeat this "
+"process until you’ve searched through every coin in the machine."
+msgstr ""
+
+msgid "The Test Coins"
+msgstr ""
+
+msgid ""
+"First, you want to make sure the vending machine you come across actually "
+"gives back change — sometimes they don’t!  Throw in a 10 cent coin and press "
+"the return button.  If it doesn’t give the coin back, you can move on to the "
+"next machine; there’s a high chance it won't return higher denominations "
+"either.  Next throw in a random 2 euro coin and press the return button. You "
+"should do this because vending machines may not return 2 euro coins, but "
+"rather 1 euro- or 50 cent coins instead.  It's better to find out immediately"
+" rather than throwing in all of your 2 euro coins!"
+msgstr ""
+
+msgid "The Stopper"
+msgstr ""
+
+msgid ""
+"We want to be able to know when we’ve gone through all the coins in the "
+"vending machine.  To do this, take out a coin and mark it with something "
+"(drawing on it with a Sharpie works well), then put it into the machine. Next"
+" time you get the same coin back, you know you’ve gone through everything."
+msgstr ""
+
+msgid "Rejected Stoppers and Coins"
+msgstr ""
+
+msgid ""
+"Sometimes you may throw a stopper in, but you hear a ‘clunk’ sound, as if the"
+" coin was dropped into a box (normally adding a coin should be silent after "
+"you throw it in).  This means the coin was not added to the stack properly, "
+"and so it will not be returned.  Pay attention to this noise, because you "
+"won’t be getting the stopper back!  Throw in another marked coin instead "
+"until the machine accepts the coin."
+msgstr ""
+
+msgid "(Non-)Merging Machines"
+msgstr ""
+
+msgid "We generally identify between two main types of vending machines."
+msgstr ""
+
+msgid "Merging"
+msgstr ""
+
+#, python-format
+msgid ""
+"The vending machine merges change together.  For example if you throw in 5 "
+"%(fifty_cent)s coins, the machine returns either 2 %(one_euro)s and 1 "
+"%(fifty_cent)s coin or 1 %(two_euro)s and 1 %(fifty_cent)s coin. This usually"
+" means you can hunt 2 euro coins very quickly but other denominations only "
+"one at a time.  A good tip is to throw in an odd number of euros and 80 cents"
+" if you want to sort through all denominations."
+msgstr ""
+
+msgid "Non-Merging"
+msgstr ""
+
+#, python-format
+msgid ""
+"The vending machine does not merge change together. This means if you throw "
+"in 5 %(fifty_cent)s coins it will return 5 %(fifty_cent)s coins. This makes "
+"it very easy to hunt a large amount of a specific denomination."
+msgstr ""
+
+msgid "Limits"
+msgstr ""
+
+msgid "There are some limits to vending machine hunts which you need to be aware of."
+msgstr ""
+
+msgid "Maximum Input Limit"
+msgstr ""
+
+#, python-format
+msgid ""
+"The machine has a maximum amount you can throw in, and will reject anything "
+"higher.  For example machines with a max limit of five euros will reject any "
+"additional coins if you throw in five euros.  You can try to go above the "
+"limit if you throw in, say, %(four_eighty)s and then another one- or two euro"
+" coin; the machine will probably accept it."
+msgstr ""
+
+msgid "Maximum Change Limit"
+msgstr ""
+
+msgid ""
+"Some machines will either give back large amounts of change in bills or will "
+"not give back large amounts of change (usually cigarette machines). Read the "
+"labels on all machines carefully since these limits are usually written "
+"there."
+msgstr ""
+
+msgid "Cigarette Machines"
+msgstr ""
+
+#, python-format
+msgid ""
+"In some countries where cigarette machines are legal, you can hunt through "
+"them as well.  Unless you’re in Malta, you must verify your age on them by "
+"either sliding an ID card through a sensor or holding a debit card on an RFID"
+" scanner; you must do this for every cycle.  Sometimes you must also select "
+"something to purchase, throw in less money than the cost, and then cancel the"
+" purchase.  Note that most cigarette machines in Austria have a "
+"%(four_ninty)s max change limit."
+msgstr ""
+
+msgid ""
+"For RFID scanner machines it helps to wear a glove and slide a debit card "
+"into the back of it so you can easily use both hands and don’t have to fumble"
+" with a card and coins."
 msgstr ""
 
 msgid "News Articles"
