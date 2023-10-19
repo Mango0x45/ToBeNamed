@@ -775,7 +775,7 @@ ul li {
 	list-style: square;
 }
 
-:target,
+dt > a:target,
 mark {
 	padding: 0.125rem 0.25rem;
 	background-color: var(--mark-background-color);
