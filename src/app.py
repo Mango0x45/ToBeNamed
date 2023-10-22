@@ -2,7 +2,6 @@
 
 import argparse
 import logging
-import os.path
 import urllib.parse
 from http import HTTPMethod
 from typing import Any
@@ -11,7 +10,6 @@ import flask
 import flask_babel
 from flask import Flask, Response
 from flask_babel import Babel
-from watchdog.observers import Observer
 
 import article_watcher
 import blueprints
@@ -98,16 +96,6 @@ def pre_request_hook() -> Response | None:
 	return resp
 
 
-def setup_watcher() -> None:
-	path = os.path.join(os.path.dirname(__file__), "templates/news/articles")
-	article_watcher.watcher.init_articles(path)
-	app.logger.debug(f"Watching for articles in ‘{path}’")
-	observer = Observer()
-	observer.schedule(article_watcher.watcher, path=path)
-	observer.start()
-	app.logger.debug("Started article watcher")
-
-
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", "--debug", action="store_true")
@@ -116,7 +104,7 @@ if __name__ == "__main__":
 	server_args = parser.parse_args(namespace=ServerArgs())
 
 	logger.setup(server_args.debug)
-	setup_watcher()
+	article_watcher.setup_watcher()
 
 	for bp in blueprints.BLUEPRINTS:
 		app.register_blueprint(bp)

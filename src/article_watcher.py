@@ -1,4 +1,5 @@
 import datetime
+import logging
 import os
 import time
 from threading import Lock, Thread
@@ -14,6 +15,7 @@ from watchdog.events import (
 	FileSystemEvent,
 	FileSystemEventHandler,
 )
+from watchdog.observers import Observer
 
 import util
 from xtypes import ListExt
@@ -140,6 +142,16 @@ def file_to_date(filename: str) -> datetime.date | None:
 	except ValueError:
 		return
 	return datetime.date(year=y, month=m, day=d)
+
+
+def setup_watcher() -> None:
+	path = os.path.join(os.path.dirname(__file__), "templates/news/articles")
+	watcher.init_articles(path)
+	logging.root.debug(f"Watching for articles in ‘{path}’")
+	observer = Observer()
+	observer.schedule(watcher, path=path)
+	observer.start()
+	logging.root.debug("Started article watcher")
 
 
 watcher = ArticleWatcher()
