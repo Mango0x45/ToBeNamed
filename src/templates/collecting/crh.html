@@ -80,11 +80,12 @@
 
 	<h2>{{ _("Country-Specific Details") }}</h2>
 	<p>
-		{% trans %}
+		{% trans LINK = "/about#contact" %}
 		Below you can find all sorts of country-specific information we have
 		regarding obtaining coin rolls.  We lack a lot of information for many of
 		the countries, so if you have any additional information such as your banks
 		fees, the availability of coin roll machines, etc. feel free to contact us!
+		You can find our contact information <a href="{{ LINK }}">here</a>.
 		{% endtrans %}
 	</p>
 
