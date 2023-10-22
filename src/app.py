@@ -104,7 +104,7 @@ if __name__ == "__main__":
 	server_args = parser.parse_args(namespace=ServerArgs())
 
 	logger.setup(server_args.debug)
-	article_watcher.setup_watcher()
+	article_watcher.setup()
 
 	for bp in blueprints.BLUEPRINTS:
 		app.register_blueprint(bp)
