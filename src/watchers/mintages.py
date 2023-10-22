@@ -1,5 +1,4 @@
 import logging
-import os.path
 import time
 from threading import Lock, Thread
 
@@ -13,7 +12,8 @@ from watchdog.events import (
 )
 from watchdog.observers import Observer
 
-from xtypes.mintage import MintageJson
+import util
+from xtypes import MintageJson
 
 
 class MintageWatcher(FileSystemEventHandler):
@@ -70,7 +70,7 @@ class MintageWatcher(FileSystemEventHandler):
 
 
 def setup() -> None:
-	path = os.path.join(os.path.dirname(__file__), "../data/mintages")
+	path = util.from_root("data/mintages")
 	watcher.init_mintages(path)
 	logging.root.debug(f"Watching for mintages in ‘{path}’")
 	observer = Observer()

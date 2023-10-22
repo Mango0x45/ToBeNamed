@@ -153,7 +153,7 @@ def file_to_date(filename: str) -> datetime.date | None:
 
 
 def setup() -> None:
-	path = os.path.join(os.path.dirname(__file__), "../templates/news/articles")
+	path = util.from_root("templates/news/articles")
 	watcher.init_articles(path)
 	logging.root.debug(f"Watching for articles in ‘{path}’")
 	observer = Observer()
