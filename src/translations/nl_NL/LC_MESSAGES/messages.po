@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-20 00:19+0200\n"
+"POT-Creation-Date: 2023-10-22 20:26+0200\n"
 "PO-Revision-Date: 2023-10-16 16:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 msgid "No headline found"
 msgstr ""
@@ -33,6 +33,21 @@ msgid ""
 "This website is a collaborative effort between the developers who built the "
 "site, the researchers who found all the data found on the site, and the "
 "translators who helped make the site accessible to a wider audience."
+msgstr ""
+
+msgid "Contact Us"
+msgstr ""
+
+#, python-format
+msgid ""
+"While we try to stay as up-to-date as possible and to fact check our "
+"information, it is always possible that we get something wrong, lack a "
+"translation, or are missing some piece of data you may have.  In such a case "
+"don’t hesitate to contact us; we’ll try to get the site updated or fixed as "
+"soon as possible.  You are always free to contribute via a pull request on "
+"GitHub if you are more technically included, but if not you can always send "
+"an email to <a href=\"mailto:%(email)s\">%(email)s</a> or contact "
+"‘@onetruemangoman’ on Discord."
 msgstr ""
 
 msgid "Special Thanks"
@@ -471,6 +486,15 @@ msgstr ""
 msgid "Country-Specific Details"
 msgstr ""
 
+#, python-format
+msgid ""
+"Below you can find all sorts of country-specific information we have "
+"regarding obtaining coin rolls.  We lack a lot of information for many of the"
+" countries, so if you have any additional information such as your banks "
+"fees, the availability of coin roll machines, etc. feel free to contact us! "
+"You can find our contact information <a href=\"%(LINK)s\">here</a>."
+msgstr ""
+
 msgid ""
 "Coin rolls can be obtained from Andbank, Crèdit Andorrà, and MoraBanc. All "
 "three of these banks require that you are a customer to get rolls. There have"
@@ -530,7 +554,7 @@ msgstr ""
 
 #, python-format
 msgid ""
-"You can visit the Belgium Central Bank in Brussels as an EU citizen.  You can"
+"You can visit the Belgian Central Bank in Brussels as an EU citizen.  You can"
 " order coin rolls for no fee up to %(two_thousand)s in value.  They seem to "
 "distribute uncirculated coins (no commemoratives)."
 msgstr ""
@@ -702,6 +726,46 @@ msgid "Coin rolls are available to everyone."
 msgstr ""
 
 #, python-format
+msgid "Works, but with very high fees (5%% of cost)."
+msgstr ""
+
+#, python-format
+msgid "Fee of %(two_euro)s per roll of 2 euro coins."
+msgstr ""
+
+msgid ""
+"As far as we are aware, Lietuvos Bankas only distributes coin rolls to "
+"businesses."
+msgstr ""
+
+msgid "It may be worth checking out payout machines to exchange banknotes into coins."
+msgstr ""
+
+msgid "Luxembourgish Central Bank (Banque Centrale du Luxembourg)"
+msgstr ""
+
+msgid ""
+"We currently have no information regarding regular coins, however their "
+"webshop sells commemorative coins (for a high premium, but better than most "
+"resellers).  Commemorative coins are also available for purchase in-person."
+msgstr ""
+
+msgid "You should be able to get coin rolls with no additional fees."
+msgstr ""
+
+#, python-format
+msgid ""
+"In general coin rolls are sold with a fee of %(sixty_cents)s per roll, but "
+"we’re lacking a lot of information."
+msgstr ""
+
+#, python-format
+msgid ""
+"You can get rolls for a fee of %(thirty_cents)s per roll.  You must order "
+"coin rolls through their online platform, and you must be a customer."
+msgstr ""
+
+#, python-format
 msgid ""
 "Banks in the Netherlands do not carry cash, and as such it’s not possible to "
 "obtain rolls from bank tellers.  Obtaining coins from the Dutch Central Bank "
@@ -730,6 +794,42 @@ msgstr ""
 msgid ""
 "One- and two-cent coins have been removed from circulation and cannot be "
 "obtained."
+msgstr ""
+
+msgid "Coin bags are sold with no additional fees to bank customers."
+msgstr ""
+
+msgid "Bank of Portugal (Banco de Portugal)"
+msgstr ""
+
+msgid "Coin bags are sold with no additional fees to everyone."
+msgstr ""
+
+#, python-format
+msgid "In general there is a %(one_twenty)s fee for coin rolls."
+msgstr ""
+
+msgid "Bank of Slovenia (Banka Slovenije)"
+msgstr ""
+
+msgid ""
+"You can purchase commemorative coins for face value, and coin rolls are sold "
+"with no fees to everyone."
+msgstr ""
+
+msgid "National Bank of Slovakia (Národná banka Slovenska)"
+msgstr ""
+
+msgid "You may be able to get uncirculated rolls, but this is not yet confirmed."
+msgstr ""
+
+#, python-format
+msgid ""
+"You can get an unlimited number of rolls for a %(five_euros)s fee.  You must "
+"be a customer of the bank."
+msgstr ""
+
+msgid "Ask the Pope nicely and he’ll probably give you some Vatican coins for free."
 msgstr ""
 
 #, python-format
