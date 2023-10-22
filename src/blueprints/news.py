@@ -4,8 +4,8 @@ import flask
 import flask_babel
 from flask import Blueprint
 
-import article_watcher
-from article_watcher import RawArticle
+import watchers.articles
+from watchers.articles import RawArticle
 
 
 class Article(NamedTuple):
@@ -26,7 +26,7 @@ def index() -> str:
 			date=flask_babel.format_date(ra.date, "short"),
 		)
 
-	articles = map(raw_to_article, article_watcher.watcher.articles)
+	articles = map(raw_to_article, watchers.articles.watcher.articles)
 	return flask.render_template("news/index.html", articles=articles)
 
 

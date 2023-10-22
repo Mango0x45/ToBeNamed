@@ -8,8 +8,8 @@ from flask import Blueprint, Response
 from flask_babel import _
 from selectolax.parser import HTMLParser
 
-import article_watcher
 import util
+import watchers.articles
 from xtypes import LOCALES, Cookie, Theme
 
 
@@ -26,7 +26,7 @@ root = Blueprint("root", __name__, url_prefix="/")
 @root.route("/", methods=[HTTPMethod.GET])
 def index() -> str:
 	try:
-		newest = article_watcher.watcher.articles[0]
+		newest = watchers.articles.watcher.articles[0]
 	except IndexError:
 		return flask.render_template("index.html", article=None)
 

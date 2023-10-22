@@ -11,9 +11,9 @@ import flask_babel
 from flask import Flask, Response
 from flask_babel import Babel
 
-import article_watcher
 import blueprints
 import logger
+import watchers
 from xtypes import (
 	EZ_LOCALES,
 	LOCALES,
@@ -104,7 +104,8 @@ if __name__ == "__main__":
 	server_args = parser.parse_args(namespace=ServerArgs())
 
 	logger.setup(server_args.debug)
-	article_watcher.setup()
+	for watcher_setup in watchers.SETUP_FUNCS:
+		watcher_setup()
 
 	for bp in blueprints.BLUEPRINTS:
 		app.register_blueprint(bp)
