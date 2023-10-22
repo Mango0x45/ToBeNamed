@@ -79,6 +79,15 @@
 	</p>
 
 	<h2>{{ _("Country-Specific Details") }}</h2>
+	<p>
+		{% trans %}
+		Below you can find all sorts of country-specific information we have
+		regarding obtaining coin rolls.  We lack a lot of information for many of
+		the countries, so if you have any additional information such as your banks
+		fees, the availability of coin roll machines, etc. feel free to contact us!
+		{% endtrans %}
+	</p>
+
 	{% for country in countries %}
 	<details id="{{ country.iso_3166_1 }}">
 		<summary>{{ _(country.name) }}</summary>
@@ -377,6 +386,66 @@
 			Coin rolls are available to everyone.
 			{% endtrans %}
 		</p>
+		{% elif code == "lt" %}
+		<h3>ExchangeLT</h3>
+		<p>{{ _("Works, but with very high fees (5%% of cost).") }}</p>
+
+		<h3>Top Exchange</h3>
+		<p>
+			{% trans two_euro = eur_format(2) %}
+			Fee of {{ two_euro }} per roll of 2 euro coins.
+			{% endtrans %}
+		</p>
+
+		<h3>Lietuvos Bankas</h3>
+		<p>
+			{% trans %}
+			As far as we are aware, Lietuvos Bankas only distributes coin rolls to
+			businesses.
+			{% endtrans %}
+		</p>
+
+		<p>
+			{% trans %}
+			It may be worth checking out payout machines to exchange banknotes into
+			coins.
+			{% endtrans %}
+		</p>
+		{% elif code == "lu" %}
+		<h3>
+			{{ _("Luxembourgish Central Bank (Banque Centrale du Luxembourg)") }}
+		</h3>
+		<p>
+			{% trans %}
+			We currently have no information regarding regular coins, however their
+			webshop sells commemorative coins (for a high premium, but better than
+			most resellers).  Commemorative coins are also available for purchase
+			in-person.
+			{% endtrans %}
+		</p>
+
+		<h3>Dexia-Bank</h3>
+		<p>
+			{% trans %}
+			You should be able to get coin rolls with no additional fees.
+			{% endtrans %}
+		</p>
+		{% elif code == "lv" %}
+		<p>
+			{% trans sixty_cents = eur_format(0.60) %}
+			In general coin rolls are sold with a fee of {{ sixty_cents }} per roll,
+			but we’re lacking a lot of information.
+			{% endtrans %}
+		</p>
+		{% elif code == "mt" %}
+		<h3>Bank of Valletta {{ _("and") }} HSBC Bank Malta</h3>
+		<p>
+			{% trans thirty_cents = eur_format(0.30) %}
+			You can get rolls for a fee of {{ thirty_cents }} per roll.  You must
+			order coin rolls through their online platform, and you must be a
+			customer.
+			{% endtrans %}
+		</p>
 		{% elif code == "nl" %}
 		<p>
 			{% trans link="https://www.locatiewijzer.geldmaat.nl/nl/" %}
@@ -427,6 +496,56 @@
 			{% trans %}
 			One- and two-cent coins have been removed from circulation and cannot be
 			obtained.
+			{% endtrans %}
+		</p>
+		{% elif code == "pt" %}
+		<h3>Banco Comercial Português</h3>
+		<p>
+			{% trans %}
+			Coin bags are sold with no additional fees to bank customers.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("Bank of Portugal (Banco de Portugal)") }}</h3>
+		<p>
+			{% trans %}
+			Coin bags are sold with no additional fees to everyone.
+			{% endtrans %}
+		</p>
+		{% elif code == "si" %}
+		<p>
+			{% trans one_twenty = eur_format(1.20) %}
+			In general there is a {{ one_twenty }} fee for coin rolls.
+			{% endtrans %}
+		</p>
+
+		<h3>{{ _("Bank of Slovenia (Banka Slovenije)") }}</h3>
+		<p>
+			{% trans %}
+			You can purchase commemorative coins for face value, and coin rolls are
+			sold with no fees to everyone.
+			{% endtrans %}
+		</p>
+		{% elif code == "sk" %}
+		<h3>{{ _("National Bank of Slovakia (Národná banka Slovenska)") }}</h3>
+		<p>
+			{% trans %}
+			You may be able to get uncirculated rolls, but this is not yet confirmed.
+			{% endtrans %}
+		</p>
+
+		<h3>Tatra Banka</h3>
+		<p>
+			{% trans five_euros = eur_format(5) %}
+			You can get an unlimited number of rolls for a {{ five_euros }} fee.  You
+			must be a customer of the bank.
+			{% endtrans %}
+		</p>
+		{% elif code == "va" %}
+		<p>
+			{% trans %}
+			Ask the Pope nicely and he’ll probably give you some Vatican coins for
+			free.
 			{% endtrans %}
 		</p>
 		{% else %}
