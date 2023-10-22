@@ -58,6 +58,8 @@ class ArticleWatcher(FileSystemEventHandler):
 				self.on_moved(event)
 
 	def on_created(self, event: FileCreatedEvent) -> None:
+		logging.root.debug(f"Detected article creation event ‘{event!r}’")
+
 		headline = extract_header(event.src_path)
 		date = file_to_date(event.src_path)
 		if not headline or not date:
@@ -68,6 +70,8 @@ class ArticleWatcher(FileSystemEventHandler):
 			self.__xs.sorted_insert(ra)
 
 	def on_deleted(self, event: FileDeletedEvent) -> None:
+		logging.root.debug(f"Detected article deletion event ‘{event!r}’")
+
 		if (date := file_to_date(event.src_path)) is None:
 			return
 
@@ -75,6 +79,8 @@ class ArticleWatcher(FileSystemEventHandler):
 			self.__xs.try_remove(RawArticle(headline="", date=date))
 
 	def on_modified(self, event: FileModifiedEvent) -> None:
+		logging.root.debug(f"Detected article modification event ‘{event!r}’")
+
 		headline = extract_header(event.src_path)
 		date = file_to_date(event.src_path)
 		if not headline or not date:
@@ -86,6 +92,8 @@ class ArticleWatcher(FileSystemEventHandler):
 			self.__xs.sorted_insert(ra)
 
 	def on_moved(self, event: FileMovedEvent) -> None:
+		logging.root.debug(f"Detected article move event ‘{event!r}’")
+
 		headline = extract_header(event.dest_path)
 		old = file_to_date(event.src_path)
 		new = file_to_date(event.dest_path)
