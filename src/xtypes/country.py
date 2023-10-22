@@ -1,5 +1,8 @@
+from typing import Self
+
 from flask_babel import _
 
+import util
 from xtypes import CaseInsensitiveString
 
 
@@ -34,6 +37,14 @@ class Country:
 		Return the countries ISO 3166-1 Alpha-2 code.
 		"""
 		return self.iso_3166_1
+
+	@classmethod
+	def sorted_by_locale(cls) -> list[Self]:
+		"""
+		Return a list of all the countries in COUNTRIES, but sorted according to
+		the users current locale.
+		"""
+		return util.locale_sort(COUNTRIES, key=lambda x: _(x.name))
 
 
 COUNTRIES = (

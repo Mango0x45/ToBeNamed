@@ -14,6 +14,7 @@ from xtypes import (
 	COUNTRIES,
 	CaseInsensitiveString,
 	CoinType,
+	Country,
 	MintageCoin,
 	MintageJson,
 )
@@ -34,7 +35,7 @@ def designs(code: CaseInsensitiveString | None = None) -> str:
 
 	return flask.render_template(
 		"coins/designs/index.html",
-		countries=util.countries_by_locale(),
+		countries=Country.sorted_by_locale(),
 	)
 
 
@@ -117,7 +118,7 @@ def mintages() -> str:
 	return flask.render_template(
 		"coins/mintages.html",
 		country=country,
-		countries=util.countries_by_locale(),
+		countries=Country.sorted_by_locale(),
 		denoms=COIN_DENOMINATIONS,
 		rows=rows,
 		detailed=detailed,
@@ -137,5 +138,5 @@ def varieties(
 
 	return flask.render_template(
 		"coins/varieties/index.html",
-		countries=util.countries_by_locale(),
+		countries=Country.sorted_by_locale(),
 	)

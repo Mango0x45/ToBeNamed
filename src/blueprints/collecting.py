@@ -3,7 +3,7 @@ from http import HTTPMethod
 import flask
 from flask import Blueprint
 
-import util
+from xtypes import Country
 
 collecting = Blueprint("collecting", __name__, url_prefix="/collecting")
 
@@ -17,7 +17,7 @@ def index() -> str:
 def crh() -> str:
 	return flask.render_template(
 		"collecting/crh.html",
-		countries=util.countries_by_locale(),
+		countries=Country.sorted_by_locale(),
 	)
 
 
