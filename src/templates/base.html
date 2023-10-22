@@ -13,7 +13,14 @@
 		{% block content %}
 		{% endblock content %}
 		<footer>
-			<p><small>{{ _("Copyright © 2023 The WEBSITE NAME Contributors") }}</small></p>
+			<p>
+				<small>
+					{% trans LINK = url_for("root.about", _anchor="contact") %}
+					Found a mistake or have missing information?
+					<a href="{{ LINK }}">Feel free to contact us!</a>
+					{% endtrans %}
+				</small>
+			</p>
 		</footer>
 	</body>
 </html>
