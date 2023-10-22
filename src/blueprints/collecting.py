@@ -21,6 +21,11 @@ def crh() -> str:
 	)
 
 
+@collecting.route("/storage", methods=[HTTPMethod.GET])
+def storage() -> str:
+	return flask.render_template("collecting/storage.html")
+
+
 @collecting.route("/vending", methods=[HTTPMethod.GET])
 def vending() -> str:
 	return flask.render_template("collecting/vending.html")
