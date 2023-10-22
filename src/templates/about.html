@@ -11,11 +11,39 @@
 </header>
 
 <main>
+	<h2>{{ _("Cookies") }}</h2>
 	<p>
 		{% trans %}
-		This website is a collaborative effort between the developers who built the
-		site, the researchers who found all the data found on the site, and the
-		translators who helped make the site accessible to a wider audience.
+		This website uses cookies, but we are not evil.  We do not, and we will
+		never spy on you.  In total we use three cookies, and they perform the
+		following functions:
+		{% endtrans %}
+	</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>{{ _("Cookie Name") }}</th>
+				<th>{{ _("Cookie Function") }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>locale</td>
+				<td>{{ _("Used to remember your preferred language.") }}</td>
+			</tr>
+			<tr>
+				<td>redirect</td>
+				<td>
+					{{ _("Used very rarely, to make sure the right pages are loaded.") }}
+				</td>
+			</tr>
+			<tr>
+				<td>theme</td>
+				<td>{{ _("Used to remember if you use a light- or dark theme.") }}</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<h2>{{ _("Open Source") }}</h2>
 	<p>
