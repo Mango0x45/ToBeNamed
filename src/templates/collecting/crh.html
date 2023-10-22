@@ -80,7 +80,7 @@
 
 	<h2>{{ _("Country-Specific Details") }}</h2>
 	<p>
-		{% trans LINK = "/about#contact" %}
+		{% trans LINK = url_for("root.about", _anchor="contact") %}
 		Below you can find all sorts of country-specific information we have
 		regarding obtaining coin rolls.  We lack a lot of information for many of
 		the countries, so if you have any additional information such as your banks
