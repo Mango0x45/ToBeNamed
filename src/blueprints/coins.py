@@ -53,17 +53,17 @@ def mintages() -> str:
 
 	def mintage(x: MintageCoin) -> int:
 		s = 0
-		u = True
+		u = False
 
 		if opts.ifc:
 			s += max(x["ifc"], 0)
-			u = u and x["ifc"] == -1
+			u = u or x["ifc"] == -1
 		if opts.nifc:
 			s += max(x["nifc"], 0)
-			u = u and x["nifc"] == -1
+			u = u or x["nifc"] == -1
 		if opts.proof:
 			s += max(x["proof"], 0)
-			u = u and x["proof"] == -1
+			u = u or x["proof"] == -1
 
 		return -1 if u else s
 
