@@ -1,4 +1,3 @@
-import json
 import logging
 from http import HTTPMethod
 from typing import NamedTuple
@@ -8,7 +7,6 @@ import flask_babel
 from flask import Blueprint
 from flask_babel import _
 
-import util
 import watchers.mintages
 from xtypes import (
 	COIN_DENOMINATIONS,
@@ -17,7 +15,6 @@ from xtypes import (
 	CoinType,
 	Country,
 	MintageCoin,
-	MintageJson,
 )
 
 coins = Blueprint("coins", __name__, url_prefix="/coins")
