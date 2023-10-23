@@ -33,9 +33,11 @@ class Locale:
 		return f"%s-%s" % (self.iso_639_1.lower(), self.iso_3166_1.upper())
 
 	@classmethod
-	def from_str(cls, locale: str) -> Self:
-		i = LOCALES.index(locale)
-		return LOCALES[i if i != -1 else LOCALES.index("en_GB")]
+	def from_str(cls, code: str) -> Self:
+		try:
+			return LOCALES[LOCALES.index(code)]
+		except ValueError:
+			return LOCALES[LOCALES.index("en_GB")]
 
 
 EZ_LOCALES = (
