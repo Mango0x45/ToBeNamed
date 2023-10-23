@@ -1,0 +1,716 @@
+{
+	"2007": [
+		{
+			"ifc": 44600000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 44150000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 43700000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 42700000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 37150000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 32300000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 29650000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 21250000,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2008": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2009": [
+		{
+			"ifc": 17900000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 12300000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2010": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2011": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2012": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2013": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2014": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2015": [
+		{
+			"ifc": 10000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2016": [
+		{
+			"ifc": 25000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2017": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2018": [
+		{
+			"ifc": 16000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 6000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 3000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2019": [
+		{
+			"ifc": 38000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 22000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 17000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 22000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 8000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2020": [
+		{
+			"ifc": 14000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 11000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 4000000,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2021": [
+		{
+			"ifc": 13000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 7000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 7000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 4000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2022": [
+		{
+			"ifc": 9000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 5000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 4000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 13000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 5000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 3000000,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2023": [
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": -1,
+			"nifc": -1,
+			"proof": -1
+		}
+	]
+}
