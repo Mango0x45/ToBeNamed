@@ -20,14 +20,18 @@ class CaseInsensitiveString(str):
 		return hash(self.casefold())
 
 	def __eq__(self, other: object) -> bool:
-		if type(other) is str:
-			return self.casefold() == other.casefold()
-		return False
+		return (
+			self.casefold() == other.casefold()
+			if isinstance(other, str)
+			else False
+		)
 
 	def __ne__(self, other: object) -> bool:
-		if type(other) is str:
-			return self.casefold() != other.casefold()
-		return False
+		return (
+			self.casefold() != other.casefold()
+			if isinstance(other, str)
+			else False
+		)
 
 	def __lt__(self, other: str) -> bool:
 		return self.casefold() < other.casefold()
