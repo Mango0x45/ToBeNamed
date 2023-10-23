@@ -121,6 +121,7 @@ class ArticleWatcher(FileSystemEventHandler):
 			if headline and date:
 				ra = RawArticle(headline=headline, date=date)
 				self.__xs.sorted_insert(ra)
+				logging.root.debug(f"Initialized article ‘{headline}’")
 
 	def _process(self) -> None:
 		while True:
