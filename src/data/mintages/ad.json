@@ -44,379 +44,379 @@
 	"2015": [
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		},
 		{
 			"ifc": 1072400,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 40000,
+			"proof": 0
 		}
 	],
 	"2016": [
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 2339200,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 35000,
+			"proof": 0
 		}
 	],
 	"2017": [
 		{
 			"ifc": 2582395,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 1515000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 2191421,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 1103000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 1213000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 968800,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 17000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		},
 		{
 			"ifc": 794588,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 22000,
+			"proof": 0
 		}
 	],
 	"2018": [
 		{
 			"ifc": 2430000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 2550000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 1800000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 980000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 1014000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 890000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		},
 		{
 			"ifc": 868000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 20000,
+			"proof": 0
 		}
 	],
 	"2019": [
 		{
 			"ifc": 2447000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 1727000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 2100000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 1610000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 1570000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 930000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		},
 		{
 			"ifc": 1058310,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 15000,
+			"proof": 0
 		}
 	],
 	"2020": [
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 860000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 175000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 740000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		},
 		{
 			"ifc": 1500000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 12000,
+			"proof": 0
 		}
 	],
 	"2021": [
 		{
 			"ifc": 200000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 700000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 1400000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 1420000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 600000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 50000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 1474500,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		}
 	],
 	"2022": [
 		{
 			"ifc": 700000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 450000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 400000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 700000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 700000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 380000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 1708000,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		}
 	],
 	"2023": [
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 0,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		},
 		{
 			"ifc": 2075250,
-			"nifc": -1,
-			"proof": -1
+			"nifc": 10500,
+			"proof": 0
 		}
 	]
 }
