@@ -1,0 +1,380 @@
+{
+	"2014": [
+		{
+			"ifc": 120000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 80000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 50000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 40000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 35800000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 25700000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 30400000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 20200000,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2015": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2016": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 10000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2017": [
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		},
+		{
+			"ifc": 0,
+			"nifc": 0,
+			"proof": 0
+		}
+	],
+	"2018": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2019": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 15000000,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2020": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2021": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	],
+	"2022": [
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		},
+		{
+			"ifc": 0,
+			"nifc": -1,
+			"proof": -1
+		}
+	]
+}
