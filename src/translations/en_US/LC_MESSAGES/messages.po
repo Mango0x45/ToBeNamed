@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-22 22:12+0200\n"
+"POT-Creation-Date: 2023-10-23 22:42+0200\n"
 "PO-Revision-Date: 2023-10-15 23:16+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -12,10 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
-
-msgid "No headline found"
-msgstr ""
+"Generated-By: Babel 2.13.0\n"
 
 msgid "Unknown"
 msgstr ""
@@ -29,10 +26,41 @@ msgstr ""
 msgid "We’re cool aren’t we?"
 msgstr ""
 
+msgid "Cookies"
+msgstr ""
+
 msgid ""
-"This website is a collaborative effort between the developers who built the "
-"site, the researchers who found all the data found on the site, and the "
-"translators who helped make the site accessible to a wider audience."
+"This website uses cookies, but we are not evil.  We do not, and we will never"
+" spy on you.  In total we use three cookies, and they perform the following "
+"functions:"
+msgstr ""
+
+msgid "Cookie Name"
+msgstr ""
+
+msgid "Cookie Function"
+msgstr ""
+
+msgid "Used to remember your preferred language."
+msgstr ""
+
+msgid "Used very rarely, to make sure the right pages are loaded."
+msgstr ""
+
+msgid "Used to remember if you use a light- or dark theme."
+msgstr ""
+
+msgid "Open Source"
+msgstr ""
+
+#, python-format
+msgid ""
+"This website is an open project, and a collaboration between developers, "
+"translators, and researchers.  All source code, data, images, and more for "
+"the website are open source and can be found <a href=\"%(LINK)s\" "
+"target=\"_blank\">here</a>.  This site is licensed under the BSD 0-Clause "
+"license giving you the full freedom to do whatever you would like with any of"
+" the content on this site."
 msgstr ""
 
 msgid "Contact Us"
@@ -79,7 +107,10 @@ msgstr ""
 msgid "Euro Cash"
 msgstr ""
 
-msgid "Copyright © 2023 The WEBSITE NAME Contributors"
+#, python-format
+msgid ""
+"Found a mistake or have missing information? <a href=\"%(LINK)s\">Feel free "
+"to contact us!</a>"
 msgstr ""
 
 msgid "The Euro Cash Compendium"
@@ -1171,10 +1202,13 @@ msgstr ""
 msgid "Articles"
 msgstr ""
 
-msgid "IFC"
+msgid "No headline found"
 msgstr ""
 
-msgid "NIFC"
+msgid "Circulation Coin"
+msgstr ""
+
+msgid "NIFC / BU Sets"
 msgstr ""
 
 msgid "Proof"
@@ -1251,15 +1285,4 @@ msgstr ""
 
 msgid "Vatican City"
 msgstr ""
-
-#~ msgid ""
-#~ "In order to be able to use a "
-#~ "Geldmaat coin machine, you must be a"
-#~ " customer of either ABN AMRO, ING, "
-#~ "or RaboBank.  You also cannot pay by"
-#~ " cash, only card payments are allowed."
-#~ "  All three banks charge a withdrawal "
-#~ "fee for getting coin rolls, which are"
-#~ " detailed in the list below."
-#~ msgstr ""
 
