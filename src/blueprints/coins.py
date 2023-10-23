@@ -9,6 +9,7 @@ from flask import Blueprint
 from flask_babel import _
 
 import util
+import watchers.mintages
 from xtypes import (
 	COIN_DENOMINATIONS,
 	COUNTRIES,
@@ -86,16 +87,16 @@ def mintages() -> str:
 		opts = Options(ifc=True, nifc=False, proof=False)
 
 	# Assert that the user hasn’t just passed garbage data through the URL
-	country = (
-		c if (c := flask.request.args.get("c")) in COUNTRIES else COUNTRIES[0]
-	)
+	try:
+		country = COUNTRIES[COUNTRIES.index(flask.request.args.get("c"))]
+	except ValueError:
+		country = COUNTRIES[0]
 
 	try:
-		with open(util.from_root(f"data/mintages/{country}.json"), "r") as f:
-			data: MintageJson = json.loads(f.read())
-	except Exception as e:
+		data = watchers.mintages.watcher.mintages[country.iso_3166_1]
+	except KeyError as e:
+		logging.root.exception(e)
 		data = {}
-		logging.root.error(e)
 
 	detailed = []
 	for k, v in data.items():
