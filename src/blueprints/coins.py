@@ -121,6 +121,7 @@ def mintages() -> str:
 		rows=rows,
 		detailed=detailed,
 		opts=opts,
+		CoinType=CoinType,
 	)
 
 

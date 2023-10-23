@@ -8,6 +8,6 @@ class CoinType(StrEnum):
 	A simple enum so that we can translate these coin types properly.
 	"""
 
-	IFC = _("IFC")
-	NIFC = _("NIFC")
+	IFC = _("Circulation Coin")
+	NIFC = _("NIFC / BU Sets")
 	PROOF = _("Proof")

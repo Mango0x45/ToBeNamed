@@ -50,7 +50,7 @@
 							checked
 							{% endif %}
 						>
-						{{ _("Circulation Coins") }}
+						{{ _(CoinType.IFC) }}
 					</label>
 					<label for="compact-nifc">
 						<input
@@ -61,7 +61,7 @@
 							checked
 							{% endif %}
 						>
-						{{ _("NIFC / BU Sets") }}
+						{{ _(CoinType.NIFC) }}
 					</label>
 					<label for="compact-proof">
 						<input
@@ -72,7 +72,7 @@
 							checked
 							{% endif %}
 						>
-						{{ _("Proof") }}
+						{{ _(CoinType.PROOF) }}
 					</label>
 				</fieldset>
 			</div>
@@ -121,7 +121,7 @@
 						<tbody>
 							{% for k in row[1].keys() %}
 							<tr>
-								<th scope="col">{{ k }}</th>
+								<th scope="col">{{ _(k) }}</th>
 								{% for col in row[1:] %}
 								<td>{{ col[k] }}</td>
 								{% endfor %}
