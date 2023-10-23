@@ -64,9 +64,8 @@ class MintageWatcher(FileSystemEventHandler):
 		code, ext = path_parts(path)
 		if ext != ".json":
 			return
-		with self.__lock:
-			with open(path, "r") as f:
-				self.__mintages[code] = json.load(f)
+		with self.__lock, open(path, "r") as f:
+			self.__mintages[code] = json.load(f)
 
 	def _del_mintage(self, path: str) -> None:
 		code, ext = path_parts(path)
