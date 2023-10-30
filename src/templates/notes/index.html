@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Euro Banknotes") }}</h1>
+		<p>{{ _("Bring back the 500!") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		On this section of the site you can find everything there is to know about
+		the banknotes of the Eurozone.
+		{% endtrans %}
+	</p>
+
+	<hr>
+
+	<section>
+		<div class="grid">
+			<a class="no-deco" href='{{ url_for("notes.designs") }}'>
+				<article>
+					<header>
+						<h3>{{ _("Designs") }}</h3>
+					</header>
+					<main>
+						{{ _("View the different Euro-note designs!") }}
+					</main>
+				</article>
+			</a>
+			<a class="no-deco" href='{{ url_for("notes.codes") }}'>
+				<article>
+					<header>
+						<h3>{{ _("Location Codes") }}</h3>
+					</header>
+					<main>
+						{{ _("Find out where your notes were printed!") }}
+					</main>
+				</article>
+			</a>
+			<a class="no-deco" href='{{ url_for("notes.test") }}'>
+				<article>
+					<header>
+						<h3>{{ _("Test Notes") }}</h3>
+					</header>
+					<main>
+						{{ _("Find out if your note was a test note!") }}
+					</main>
+				</article>
+			</a>
+		</div>
+	</section>
+</main>
+
+{% endblock %}
