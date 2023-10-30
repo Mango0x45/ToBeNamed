@@ -80,7 +80,7 @@
 			<button type="submit">{{ _("Filter") }}</button>
 		</form>
 
-		<details open>
+		<details>
 			<summary>{{ _("Compact Mintages") }}</summary>
 
 			<figure>
@@ -133,6 +133,29 @@
 			</details>
 			{% endfor %}
 		</details>
+
+		{% if country in ["nl"] %}
+		<h2>{{ _("Additional Notes") }}</h2>
+		<ul>
+			{% if country == "nl" %}
+			<li>
+				{% trans %}
+				Most coins from the years 2003–2013 are listed as NIFC coins while other
+				popular sources such as Numista claim they were minted for circulation.
+				For more information on why others are wrong, click here.
+				{% endtrans %}
+			</li>
+			<li>
+				{% trans num1 = num_format(217503), num2 = num_format(177003) %}
+				In 2003 Numista calculated a total of {{ num1 }} coins issues for coin
+				sets per denomination.  Our own calculations found only {{ num2 }}.
+				Numista also forgot to include the many hundred thousand coins from the
+				coin roll sets that were produced.
+				{% endtrans %}
+			</li>
+			{% endif %}
+		</ul>
+		{% endif %}
 	</section>
 </main>
 
