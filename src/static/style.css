@@ -2340,6 +2340,10 @@ a[role=button].outline:is(:hover, :active, :focus) {
 	margin-top: var(--block-spacing-vertical);
 }
 
+img.big {
+	width: 100%;
+}
+
 div.grid:not(:first-of-type) {
 	margin-top: var(--grid-spacing-vertical);
 }
