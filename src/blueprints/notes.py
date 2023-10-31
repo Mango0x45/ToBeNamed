@@ -13,7 +13,7 @@ def index() -> str:
 
 @notes.route("/codes", methods=[HTTPMethod.GET])
 def codes() -> str:
-	raise NotImplementedError
+	return flask.render_template("notes/codes.html")
 
 
 @notes.route("/designs", methods=[HTTPMethod.GET])
