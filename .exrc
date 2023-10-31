@@ -8,3 +8,4 @@ nnoremap <leader>f :!pipenv run make format<CR>
 
 let @t = 'i{% trans %}{% endtrans %}k'
 let @i = 'i{{ _("") }}4hi'
+let @p = 'i<p></p>citk@t>itji	'
