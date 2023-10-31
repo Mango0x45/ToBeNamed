@@ -21,6 +21,152 @@
 		{% endtrans %}
 	</p>
 
+	<h2>{{ _("Printer Code") }}</h2>
+	<p>
+		{% trans %}
+		The printer code (not to be confused with the serial number) is a small code
+		printed on banknotes with information about where the banknote was printed,
+		along with other information.  All printer codes take the form of ‘X000X0’,
+		in other words a letter followed by 3 numbers, a letter, and a final number.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		The printer code can be a bit tricky to find.  The following dropdowns will
+		show you where to find the printer code on each note.
+		{% endtrans %}
+	</p>
+
+	<details>
+		<summary>{{ _("2002 Series Printer Codes") }}</summary>
+		<p>{{ _("All these images are taken from eurobilltracker.com.") }}</p>
+
+		<details>
+			<summary>{{ _("5 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-5e.jpg"
+				alt='{{ _("Printer code on a 5 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("10 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-10e.jpg"
+				alt='{{ _("Printer code on a 10 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("20 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-20e.jpg"
+				alt='{{ _("Printer code on a 20 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("50 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-50e.jpg"
+				alt='{{ _("Printer code on a 50 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("100 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-100e.jpg"
+				alt='{{ _("Printer code on a 100 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("200 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-200e.jpg"
+				alt='{{ _("Printer code on a 200 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("500 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-2002-500e.jpg"
+				alt='{{ _("Printer code on a 500 euro bill") }}'
+			>
+		</details>
+	</details>
+
+	<details>
+		<summary>{{ _("Europa Series Printer Codes") }}</summary>
+
+		<details>
+			<summary>{{ _("5 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-5e.jpg"
+				alt='{{ _("Printer code on a 5 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("10 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-10e.jpg"
+				alt='{{ _("Printer code on a 10 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("20 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-20e.jpg"
+				alt='{{ _("Printer code on a 20 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("50 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-50e.jpg"
+				alt='{{ _("Printer code on a 50 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("100 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-100e.jpg"
+				alt='{{ _("Printer code on a 100 euro bill") }}'
+			>
+		</details>
+		<details>
+			<summary>{{ _("200 Euro") }}</summary>
+			<img
+				class="big"
+				src="/static/img/pc-europa-200e.jpg"
+				alt='{{ _("Printer code on a 200 euro bill") }}'
+			>
+		</details>
+	</details>
+
+	<p>
+		{% trans %}
+		The first letter in the printer code identifies the specific printer at
+		which the banknote was printed.  The tables below will tell you which
+		letters correspond to which printers.  The final letter and number form a
+		pair (such as ‘A2’ or ‘D6’).  This pair acts as a set of coordinates telling
+		you where on the sheet of paper the banknote was located.  During printing,
+		banknotes will be printed multiple times on a large sheet of paper which is
+		later cut into smaller individual banknotes.  A note with the pair ‘A1’ will
+		have been at the upper-left most corner of the printing sheet, with ‘A2’ to
+		it’s right and ‘B1’ below it.
+		{% endtrans %}
+	</p>
+
 	<h2>{{ _("2002 Series") }}</h2>
 	<p>
 		{% trans %}
