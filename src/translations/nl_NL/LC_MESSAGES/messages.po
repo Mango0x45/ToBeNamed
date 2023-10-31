@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TO-BE-NAMED VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-23 22:42+0200\n"
+"POT-Creation-Date: 2023-10-31 22:03+0100\n"
 "PO-Revision-Date: 2023-10-16 16:15+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nl_NL\n"
@@ -279,6 +279,23 @@ msgid ""
 "Here you’ll be able to view all the known mintages for all coins. You’ll also"
 " be able to filter on country, denomination, etc.  If you have any mintage "
 "data that’s missing from our site, feel free to contact us."
+msgstr ""
+
+msgid "Additional Notes"
+msgstr ""
+
+msgid ""
+"Most coins from the years 2003–2013 are listed as NIFC coins while other "
+"popular sources such as Numista claim they were minted for circulation. For "
+"more information on why others are wrong, click here."
+msgstr ""
+
+#, python-format
+msgid ""
+"In 2003 Numista calculated a total of %(num1)s coins issues for coin sets per"
+" denomination.  Our own calculations found only %(num2)s. Numista also forgot"
+" to include the many hundred thousand coins from the coin roll sets that were"
+" produced."
 msgstr ""
 
 msgid "Country"
@@ -982,6 +999,47 @@ msgid ""
 "space-efficient than simply using flips or an album without flips."
 msgstr ""
 
+msgid "Coin Rolls"
+msgstr ""
+
+msgid ""
+"This is probably the most inexpensive way to store your coins.  If you take "
+"good care of the paper when opening your coin rolls, you can simply reuse "
+"them for storage.  Just roll your coins back up and put some rubber bands on "
+"the ends.  You can also get reusable plastic rolls that can be opened and "
+"closed.  You will need different rolls based on the denomination you want to "
+"store, but they are very space-efficient."
+msgstr ""
+
+msgid "Examples"
+msgstr ""
+
+msgid ""
+"In case you’re looking for some inspiration on how to store your collections,"
+" here are some examples."
+msgstr ""
+
+msgid "Flips in a case"
+msgstr ""
+
+msgid "Capsules in a case"
+msgstr ""
+
+msgid "Flips and capsules in a box"
+msgstr ""
+
+msgid "Coins in an album"
+msgstr ""
+
+msgid "Coins in an album with labels"
+msgstr ""
+
+msgid "Coins in a reusable roll"
+msgstr ""
+
+msgid "Flips in an album"
+msgstr ""
+
 msgid "Vending Machine Hunting"
 msgstr ""
 
@@ -1132,6 +1190,206 @@ msgstr ""
 msgid "Articles"
 msgstr ""
 
+msgid "Location Codes"
+msgstr ""
+
+msgid "Still not monetized by Monaco"
+msgstr ""
+
+msgid ""
+"Euro banknotes have two codes on them.  One code is the printer code, it "
+"tells you about where the note was printed.  The other code is the serial "
+"number.  In the 2002 series of banknotes the serial number tells you which "
+"country issued the banknote, but in the Europa series it tells you where the "
+"note was printed, just like the printer code."
+msgstr ""
+
+msgid "Printer Code"
+msgstr ""
+
+msgid ""
+"The printer code (not to be confused with the serial number) is a small code "
+"printed on banknotes with information about where the banknote was printed, "
+"along with other information.  All printer codes take the form of ‘X000X0’, "
+"in other words a letter followed by 3 numbers, a letter, and a final number."
+msgstr ""
+
+msgid ""
+"The printer code can be a bit tricky to find.  The following dropdowns will "
+"show you where to find the printer code on each note."
+msgstr ""
+
+msgid "2002 Series Printer Codes"
+msgstr ""
+
+msgid "All these images are taken from eurobilltracker.com."
+msgstr ""
+
+msgid "5 Euro"
+msgstr ""
+
+msgid "Printer code on a 5 euro bill"
+msgstr ""
+
+msgid "10 Euro"
+msgstr ""
+
+msgid "Printer code on a 10 euro bill"
+msgstr ""
+
+msgid "20 Euro"
+msgstr ""
+
+msgid "Printer code on a 20 euro bill"
+msgstr ""
+
+msgid "50 Euro"
+msgstr ""
+
+msgid "Printer code on a 50 euro bill"
+msgstr ""
+
+msgid "100 Euro"
+msgstr ""
+
+msgid "Printer code on a 100 euro bill"
+msgstr ""
+
+msgid "200 Euro"
+msgstr ""
+
+msgid "Printer code on a 200 euro bill"
+msgstr ""
+
+msgid "500 Euro"
+msgstr ""
+
+msgid "Printer code on a 500 euro bill"
+msgstr ""
+
+msgid "Europa Series Printer Codes"
+msgstr ""
+
+msgid ""
+"The first letter in the printer code identifies the specific printer at which"
+" the banknote was printed.  The tables below will tell you which letters "
+"correspond to which printers.  The final letter and number form a pair (such "
+"as ‘A2’ or ‘D6’).  This pair acts as a set of coordinates telling you where "
+"on the sheet of paper the banknote was located.  During printing, banknotes "
+"will be printed multiple times on a large sheet of paper which is later cut "
+"into smaller individual banknotes.  A note with the pair ‘A1’ will have been "
+"at the upper-left most corner of the printing sheet, with ‘A2’ to it’s right "
+"and ‘B1’ below it."
+msgstr ""
+
+msgid "2002 Series"
+msgstr ""
+
+msgid ""
+"In the 2002 series, the first letter of the serial number can be used to "
+"identify the country that issued the banknote.  The following table shows "
+"which countries map to which codes."
+msgstr ""
+
+msgid "Code"
+msgstr ""
+
+msgid "Estonia"
+msgstr "Estland"
+
+msgid "Slovakia"
+msgstr "Slowakije"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Cyprus"
+msgstr "Cyprus"
+
+msgid "Slovenia"
+msgstr "Slovenië"
+
+msgid "Finland"
+msgstr "Finland"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Austria"
+msgstr "Oostenrijk"
+
+msgid "Netherlands"
+msgstr "Nederland"
+
+msgid "Italy"
+msgstr "Italië"
+
+msgid "Ireland"
+msgstr "Ierland"
+
+msgid "France"
+msgstr "Frankrijk"
+
+msgid "Spain"
+msgstr "Spanje"
+
+msgid "Germany"
+msgstr "Duitsland"
+
+msgid "Greece"
+msgstr "Griekenland"
+
+msgid "Belgium"
+msgstr "België"
+
+msgid ""
+"The first letter of the printer code can also be used to identify the "
+"specific printer at which the banknote was printed.  The printer- and country"
+" codes do not need to line up; a banknote issued by a country will often be "
+"printed in another."
+msgstr ""
+
+msgid "Printer"
+msgstr ""
+
+msgid "United Kingdom"
+msgstr "Verenigd Koninkrijk"
+
+msgid "Europa Series"
+msgstr ""
+
+msgid ""
+"In the Europa series the first letter of the serial number can be used to "
+"identify the printer that printed the banknote, just like the printer code. "
+"The following table shows which countries map to which codes."
+msgstr ""
+
+msgid "Bulgaria"
+msgstr "Bulgarije"
+
+msgid "Euro Banknotes"
+msgstr ""
+
+msgid "Bring back the 500!"
+msgstr ""
+
+msgid ""
+"On this section of the site you can find everything there is to know about "
+"the banknotes of the Eurozone."
+msgstr ""
+
+msgid "View the different Euro-note designs!"
+msgstr ""
+
+msgid "Find out where your notes were printed!"
+msgstr ""
+
+msgid "Test Notes"
+msgstr ""
+
+msgid "Find out if your note was a test note!"
+msgstr ""
+
 msgid "No headline found"
 msgstr ""
 
@@ -1147,41 +1405,8 @@ msgstr ""
 msgid "Andorra"
 msgstr "Andorra"
 
-msgid "Austria"
-msgstr "Oostenrijk"
-
-msgid "Belgium"
-msgstr "België"
-
-msgid "Cyprus"
-msgstr "Cyprus"
-
-msgid "Germany"
-msgstr "Duitsland"
-
-msgid "Estonia"
-msgstr "Estland"
-
-msgid "Spain"
-msgstr "Spanje"
-
-msgid "Finland"
-msgstr "Finland"
-
-msgid "France"
-msgstr "Frankrijk"
-
-msgid "Greece"
-msgstr "Griekenland"
-
 msgid "Croatia"
 msgstr "Kroatië"
-
-msgid "Ireland"
-msgstr "Ierland"
-
-msgid "Italy"
-msgstr "Italië"
 
 msgid "Lithuania"
 msgstr "Litouwen"
@@ -1194,21 +1419,6 @@ msgstr "Letland"
 
 msgid "Monaco"
 msgstr "Monaco"
-
-msgid "Malta"
-msgstr "Malta"
-
-msgid "Netherlands"
-msgstr "Nederland"
-
-msgid "Portugal"
-msgstr "Portugal"
-
-msgid "Slovenia"
-msgstr "Slovenië"
-
-msgid "Slovakia"
-msgstr "Slowakije"
 
 msgid "San Marino"
 msgstr "San Marino"
