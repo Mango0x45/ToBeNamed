@@ -1,4 +1,4 @@
-au BufNewFile,BufRead *.html setl tw=80
+au BufNewFile,BufRead *.html setl tw=80 ft=jinja.html
 au BufNewFile,BufRead *.md   setl tw=80
 
 inoremap ĳ ij
