@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+for f in "$@"
+do
+	case "$f" in
+	*.png)
+		convert "$f" "${f%png}jpg"
+		echo "${f%png}jpg"
+		;;
+	*)
+		echo "$f"
+	esac
+done | xargs jpegoptim -t -w$(nproc) -m20
