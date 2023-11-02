@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("Euro Banknote Designs") }}</h1>
+		<p>{{ _("The bridges are a lie") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		Here you’ll be able to view all the banknote designs.  This section of the
+		site doesn’t include minor varieties such as errors.
+		{% endtrans %}
+	</p>
+
+	<hr>
+
+	<div class="series-grid">
+		<a
+			role="button"
+			class="outline"
+			href='{{ url_for("notes.designs", series="2002") }}'
+		>
+			{{ _("2002 Series") }}
+		</a>
+		<a
+			role="button"
+			class="outline"
+			href='{{ url_for("notes.designs", series="europa") }}'
+		>
+			{{ _("Europa Series") }}
+		</a>
+	</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+	{% include "nav.html" %}
+
+	<hgroup>
+		<h1>{{ _("2002 Banknote Designs") }}</h1>
+		<p>{{ _("The originals") }}</p>
+	</hgroup>
+</header>
+
+<main>
+	<p>
+		{% trans %}
+		The 2002 series of banknotes follow the theme of ‘The Ages and Styles of
+		Europe’, featuring a building or window on the front with a bridge on the
+		back in different European architectural styles.  All buildings and bridges
+		featured on the banknotes are purely fictional.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		The 5-, 10-, and 20 euro banknotes all feature a security strip on the right
+		hand side as an anti-counterfieting measure while the 50-, 100-, 200-, and
+		500 euro banknotes feature a blob rather than a full strip.  All the notes
+		also feature the stars of Europe on the front and back of the notes as well
+		as the flag of Europe in the top left.
+		{% endtrans %}
+	</p>
+
+	<table role="grid">
+		<thead>
+			<tr>
+				<th>{{ _("Denomination") }}</th>
+				<th>{{ _("Size") }}</th>
+				<th>{{ _("Color") }}</th>
+				<th>{{ _("Style") }}</th>
+				<th>{{ _("Century") }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ eur_format(5, cents=False) }}</td>
+				<td>{{ _("120 × 62 mm") }}</td>
+				<td>{{ _("Grey") }}</td>
+				<td>{{ _("Classical") }}</td>
+				<td>{{ _("< 5th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(10, cents=False) }}</td>
+				<td>{{ _("127 × 67 mm") }}</td>
+				<td>{{ _("Red") }}</td>
+				<td>{{ _("Romanesque") }}</td>
+				<td>{{ _("11–12th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(20, cents=False) }}</td>
+				<td>{{ _("133 × 72 mm") }}</td>
+				<td>{{ _("Blue") }}</td>
+				<td>{{ _("Gothic") }}</td>
+				<td>{{ _("12–14th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(50, cents=False) }}</td>
+				<td>{{ _("140 × 77 mm") }}</td>
+				<td>{{ _("Orange") }}</td>
+				<td>{{ _("Renaissance") }}</td>
+				<td>{{ _("15–16th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(100, cents=False) }}</td>
+				<td>{{ _("147 × 82 mm") }}</td>
+				<td>{{ _("Green") }}</td>
+				<td>{{ _("Baroque and Rococo") }}</td>
+				<td>{{ _("17–18th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(200, cents=False) }}</td>
+				<td>{{ _("153 × 82 mm") }}</td>
+				<td>{{ _("Yellow") }}</td>
+				<td>{{ _("Art Nouveau") }}</td>
+				<td>{{ _("19–20th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(500, cents=False) }}</td>
+				<td>{{ _("160 × 82 mm") }}</td>
+				<td>{{ _("Purple") }}</td>
+				<td>{{ _("Modern") }}</td>
+				<td>{{ _("20–21st") }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>{{ _("Images") }}</h2>
+	<details>
+		<summary>{{ _("5 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/005-front.jpg"
+				alt="Front of a 5 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/005-back.jpg"
+				alt="Back of a 5 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("10 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/010-front.jpg"
+				alt="Front of a 10 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/010-back.jpg"
+				alt="Back of a 10 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("20 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/020-front.jpg"
+				alt="Front of a 20 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/020-back.jpg"
+				alt="Back of a 20 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("50 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/050-front.jpg"
+				alt="Front of a 50 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/050-back.jpg"
+				alt="Back of a 50 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("100 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/100-front.jpg"
+				alt="Front of a 100 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/100-back.jpg"
+				alt="Back of a 100 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("200 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/200-front.jpg"
+				alt="Front of a 200 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/200-back.jpg"
+				alt="Back of a 200 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("500 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/2002/500-front.jpg"
+				alt="Front of a 500 euro banknote"
+			>
+			<img
+				src="/static/designs/2002/500-back.jpg"
+				alt="Back of a 500 euro banknote"
+			>
+		</div>
+	</details>
+</main>
+
+{% endblock %}
