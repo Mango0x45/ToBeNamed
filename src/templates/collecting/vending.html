@@ -66,25 +66,21 @@
 	<dl>
 		<dt>{{ _("Merging") }}</dt>
 		<dd>
-			{% trans
-				fifty_cent=eur_format(0.50),
-				one_euro=eur_format(1.00),
-				two_euro=eur_format(2.00)
-			%}
+			{% trans %}
 			The vending machine merges change together.  For example if you throw in
-			5 {{ fifty_cent }} coins, the machine returns either 2 {{ one_euro }} and
-			1 {{ fifty_cent }} coin or 1 {{ two_euro }} and 1 {{ fifty_cent }} coin.
-			This usually means you can hunt 2 euro coins very quickly but other
-			denominations only one at a time.  A good tip is to throw in an odd number
-			of euros and 80 cents if you want to sort through all denominations.
+			five 50 cent coins, the machine returns either two 1 euro coins and
+			one 50 cent coin or one 2 euro and one 50 cent coin.  This usually means
+			you can hunt 2 euro coins very quickly but other denominations only one at
+			a time.  A good tip is to throw in an odd number of euros and 80 cents if
+			you want to sort through all denominations.
 			{% endtrans %}
 		</dd>
 		<dt>{{ _("Non-Merging") }}</dt>
 		<dd>
-			{% trans fifty_cent=eur_format(0.50) %}
-			The vending machine does not merge change together. This means if you
-			throw in 5 {{ fifty_cent }} coins it will return 5 {{ fifty_cent }} coins.
-			This makes it very easy to hunt a large amount of a specific denomination.
+			{% trans %}
+			The vending machine does not merge change together.  This means if you
+			throw in five 50 cent coins it will return five 50 cent coins.  This makes
+			it very easy to hunt a large amount of a specific denomination.
 			{% endtrans %}
 		</dd>
 	</dl>

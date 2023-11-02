@@ -2,6 +2,7 @@
 
 import argparse
 import logging
+import re
 import urllib.parse
 from http import HTTPMethod
 from typing import Any
@@ -45,13 +46,19 @@ app.jinja_env.policies["ext.i18n.trimmed"] = True
 app.url_map.converters["ci_str"] = CaseInsensitiveStringConverter
 babel = Babel(app, locale_selector=get_locale)
 
+CENTS_RE = re.compile(r"(.*)([,.]\d\d)(.*)")
+
 
 @app.context_processor
 def inject_params() -> dict[str, Any]:
+	def eur_format(n: str | int | float, cents: bool = True) -> str:
+		s = flask_babel.format_currency(n, "EUR")
+		return s if cents else re.sub(CENTS_RE, r"\1\3", s)
+
 	return {
 		"lang": Locale.from_str(get_locale()).as_lang(),
 		"theme": flask.request.cookies.get(Cookie.THEME, Theme.DARK),
-		"eur_format": lambda x: flask_babel.format_currency(x, "EUR"),
+		"eur_format": eur_format,
 		"num_format": flask_babel.format_number,
 	}
 

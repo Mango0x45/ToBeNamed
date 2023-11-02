@@ -138,7 +138,7 @@
 		</p>
 
 		<p>
-			{% trans hundred_euros = eur_format(100) %}
+			{% trans hundred_euros = eur_format(100, cents=False) %}
 			Depositing coins is free for up to {{ hundred_euros }} a day, at which
 			point you pay 1% for any additional deposited coins.  You must also be a
 			customer.  Depositing coins is free for all Erste Bank customers at
@@ -172,7 +172,7 @@
 
 		<h3>{{ _("Belgian Central Bank") }}</h3>
 		<p>
-			{% trans two_thousand = eur_format(2000) %}
+			{% trans two_thousand = eur_format(2000, cents=False) %}
 			You can visit the Belgian Central Bank in Brussels as an EU citizen.  You
 			can order coin rolls for no fee up to {{ two_thousand }} in value.  They
 			seem to distribute uncirculated coins (no commemoratives).
@@ -196,7 +196,7 @@
 		{% elif code == "cy" %}
 		<h3>{{ _("Bank of Cyprus") }}</h3>
 		<p>
-			{% trans two_euro=eur_format("2.00") %}
+			{% trans two_euro=eur_format(2.00) %}
 			At the Bank of Cyprus it is possible to buy bags of coins without being a
 			customer, and without paying any additional fees.  Depending on the branch
 			you visit you may have coin roll machine available.  Do note that the bags
@@ -473,21 +473,21 @@
 		<dl>
 			<dt>ABN AMRO</dt>
 			<dd>
-				{% trans roll_fee=eur_format("0.30") %}
+				{% trans roll_fee=eur_format(0.30) %}
 				{{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>
 
 			<dt>ING</dt>
 			<dd>
-				{% trans base_fee=eur_format("7.00"), roll_fee=eur_format("0.35") %}
+				{% trans base_fee=eur_format(7.00), roll_fee=eur_format(0.35) %}
 				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>
 
 			<dt>Rabobank</dt>
 			<dd>
-				{% trans base_fee=eur_format("7.00"), roll_fee=eur_format("0.50") %}
+				{% trans base_fee=eur_format(7.00), roll_fee=eur_format(0.50) %}
 				Base fee of {{ base_fee }} + {{ roll_fee }} per roll.
 				{% endtrans %}
 			</dd>
