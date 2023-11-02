@@ -11,6 +11,168 @@
 </header>
 
 <main>
+	<p>
+		{% trans %}
+		The Europa series of banknotes were a redesign of the original 2002 series
+		of banknotes aimed at improving security.  This series notably lacks the 500
+		euro banknote that was introduced in the 2002 series.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		Unlike the previous series, in the Europa series all banknotes featured a
+		full security strip.  The text on the banknotes were also expanded to
+		support the languages of newer European Union members, including text in the
+		cyrillic script.  As per the series name, all banknotes feature a watermark
+		of the goddess Europa, as well as an image of Europa in the window of the
+		security strip.
+		{% endtrans %}
+	</p>
+
+	<p>
+		{% trans %}
+		The 100- and 200 euro banknotes were also made slightly shorter, at 77
+		millimeters in length as opposed to the previous 82 millimeters.  This gives
+		them the same width as the 50 euro banknote.
+		{% endtrans %}
+	</p>
+
+	<table role="grid">
+		<thead>
+			<tr>
+				<th>{{ _("Denomination") }}</th>
+				<th>{{ _("Size") }}</th>
+				<th>{{ _("Color") }}</th>
+				<th>{{ _("Style") }}</th>
+				<th>{{ _("Century") }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ eur_format(5, cents=False) }}</td>
+				<td>{{ _("120 × 62 mm") }}</td>
+				<td>{{ _("Grey") }}</td>
+				<td>{{ _("Classical") }}</td>
+				<td>{{ _("< 5th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(10, cents=False) }}</td>
+				<td>{{ _("127 × 67 mm") }}</td>
+				<td>{{ _("Red") }}</td>
+				<td>{{ _("Romanesque") }}</td>
+				<td>{{ _("11–12th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(20, cents=False) }}</td>
+				<td>{{ _("133 × 72 mm") }}</td>
+				<td>{{ _("Blue") }}</td>
+				<td>{{ _("Gothic") }}</td>
+				<td>{{ _("12–14th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(50, cents=False) }}</td>
+				<td>{{ _("140 × 77 mm") }}</td>
+				<td>{{ _("Orange") }}</td>
+				<td>{{ _("Renaissance") }}</td>
+				<td>{{ _("15–16th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(100, cents=False) }}</td>
+				<td>{{ _("147 × 77 mm") }}</td>
+				<td>{{ _("Green") }}</td>
+				<td>{{ _("Baroque and Rococo") }}</td>
+				<td>{{ _("17–18th") }}</td>
+			</tr>
+			<tr>
+				<td>{{ eur_format(200, cents=False) }}</td>
+				<td>{{ _("153 × 77 mm") }}</td>
+				<td>{{ _("Yellow") }}</td>
+				<td>{{ _("Art Nouveau") }}</td>
+				<td>{{ _("19–20th") }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>{{ _("Images") }}</h2>
+	<details>
+		<summary>{{ _("5 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/005-front.jpg"
+				alt="Front of a 5 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/005-back.jpg"
+				alt="Back of a 5 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("10 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/010-front.jpg"
+				alt="Front of a 10 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/010-back.jpg"
+				alt="Back of a 10 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("20 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/020-front.jpg"
+				alt="Front of a 20 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/020-back.jpg"
+				alt="Back of a 20 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("50 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/050-front.jpg"
+				alt="Front of a 50 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/050-back.jpg"
+				alt="Back of a 50 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("100 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/100-front.jpg"
+				alt="Front of a 100 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/100-back.jpg"
+				alt="Back of a 100 euro banknote"
+			>
+		</div>
+	</details>
+	<details>
+		<summary>{{ _("200 Euro Banknote") }}</summary>
+		<div class="bnote-design-container">
+			<img
+				src="/static/designs/europa/200-front.jpg"
+				alt="Front of a 200 euro banknote"
+			>
+			<img
+				src="/static/designs/europa/200-back.jpg"
+				alt="Back of a 200 euro banknote"
+			>
+		</div>
+	</details>
 </main>
 
 {% endblock %}
